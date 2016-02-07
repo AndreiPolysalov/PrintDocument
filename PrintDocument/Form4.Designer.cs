@@ -34,7 +34,6 @@
             this.textBox_Address = new System.Windows.Forms.TextBox();
             this.textBox_Relations = new System.Windows.Forms.TextBox();
             this.comboBox_FIO = new System.Windows.Forms.ComboBox();
-            this.button_Print = new System.Windows.Forms.Button();
             this.button_PrintPreview = new System.Windows.Forms.Button();
             this.ButtonBack = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.button_Print = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -120,15 +120,6 @@
             this.comboBox_FIO.Name = "comboBox_FIO";
             this.comboBox_FIO.Size = new System.Drawing.Size(192, 21);
             this.comboBox_FIO.TabIndex = 257;
-            // 
-            // button_Print
-            // 
-            this.button_Print.Location = new System.Drawing.Point(382, 257);
-            this.button_Print.Name = "button_Print";
-            this.button_Print.Size = new System.Drawing.Size(114, 40);
-            this.button_Print.TabIndex = 256;
-            this.button_Print.Text = "Печать";
-            this.button_Print.UseVisualStyleBackColor = true;
             // 
             // button_PrintPreview
             // 
@@ -272,6 +263,15 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // button_Print
+            // 
+            this.button_Print.Location = new System.Drawing.Point(382, 257);
+            this.button_Print.Name = "button_Print";
+            this.button_Print.Size = new System.Drawing.Size(114, 40);
+            this.button_Print.TabIndex = 256;
+            this.button_Print.Text = "Печать";
+            this.button_Print.UseVisualStyleBackColor = true;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,7 +309,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button_Print;
         private System.Windows.Forms.Button button_PrintPreview;
         private System.Windows.Forms.Button ButtonBack;
         private System.Windows.Forms.ComboBox comboBox_FIO;
@@ -318,5 +317,6 @@
         private System.Windows.Forms.TextBox textBox_Relations;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button button_Print;
     }
 }

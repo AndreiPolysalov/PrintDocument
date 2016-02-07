@@ -7,11 +7,6 @@ namespace PrintDocument
 {
     public partial class Form4 : Form
     {
-        private Form1 _f1;
-        private Form2 _f2;
-        private Form3 _f3;
-        private Form4 _f4;
-
         private Bitmap ListA4_1 = Properties.Resources.ListA4_1;
         private Bitmap ListA4_2 = Properties.Resources.ListA4_2;
         private Bitmap ListA4_3 = Properties.Resources.ListA4_3;
@@ -34,10 +29,7 @@ namespace PrintDocument
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            _f1 = Program.f1;
-            _f2 = Program.f2;
-            _f3 = Program.f3;
-            _f4 = Program.f4;
+
         }
 
         private void ButtonBack_Click(object sender, EventArgs e)
