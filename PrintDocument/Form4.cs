@@ -90,21 +90,12 @@ namespace PrintDocument
             else { MessageBox.Show("Выберите пол"); return; }
 
             e.Graphics.DrawString(_f1.textBox_DateOfTime.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 480, 380);//Дата рождения
-            e.Graphics.DrawString(_f1.textBox_Citizenship.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 140, 415);//Гражданство в настоящее время
+            e.Graphics.DrawString("РФ", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 140, 415);//Гражданство в настоящее время
             e.Graphics.DrawString(_f1.textBox_CityRegionCountry.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 230, 452);//Страна рождения
             e.Graphics.DrawString(_f1.textBox_OrdinaryPassportNumber.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 390, 497);//Номер общегражданского паспорта гражданина
 
             //Вид паспорта
-            if (_f1.radioButton_PassportDiplomatic.Checked) e.Graphics.DrawImage(Krestik, 362, 529, 15, 15);//Дипломатический
-            else if (_f1.radioButton_PassportService.Checked) e.Graphics.DrawImage(Krestik, 544, 529, 15, 15);//Служебный
-            else if (_f1.radioButton_PassportOrdinary.Checked) e.Graphics.DrawImage(Krestik, 362, 552, 15, 15);//Общегражданский
-            else if (_f1.radioButton_PassportOther.Checked)
-            {
-                if (string.IsNullOrEmpty(_f1.textBox_PassportOther.Text)) { MessageBox.Show("Поле " + '"' + "Вид паспорта Иное " + '"' + "не заполнено"); return; }
-                e.Graphics.DrawImage(Krestik, 362, 570, 15, 15);//Крестик иное
-                e.Graphics.DrawString(_f1.textBox_PassportOther.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 600, 567);//Текст Иное
-            }
-            else { MessageBox.Show("Выберите вид паспорта"); return; }
+            e.Graphics.DrawImage(Krestik, 362, 552, 15, 15);//Общегражданский
 
             e.Graphics.DrawString(_f1.textBox_PassportNumber.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 180, 602);//Номер паспорта
             e.Graphics.DrawString(_f1.textBox_DateOfIssue.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 566, 602);//Дата выдачи паспорта
@@ -112,33 +103,10 @@ namespace PrintDocument
             e.Graphics.DrawString(_f1.textBox_PassportValidUntil.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 600, 635);//Паспорт действителен до
 
             //Профессия
-            if (_f1.checkBox_OccupationBusinessman.Checked) e.Graphics.DrawImage(Krestik, 177, 672, 15, 15);//Бизнесмен
             if (_f1.checkBox_OccupationOtherCompanies.Checked) e.Graphics.DrawImage(Krestik, 177, 697, 15, 15);//Служащий в раз. компаниях
-            if (_f1.checkBox_OccupationArtist.Checked) e.Graphics.DrawImage(Krestik, 177, 721, 15, 15);//Артист
-            if (_f1.checkBox_OccupationAgriculturalWorker.Checked) e.Graphics.DrawImage(Krestik, 177, 744, 15, 15);//Промышленный работник
             if (_f1.checkBox_OccupationStudent.Checked) e.Graphics.DrawImage(Krestik, 177, 785, 15, 15);//Студент
-            if (_f1.checkBox_OccupationCrewMember.Checked) e.Graphics.DrawImage(Krestik, 177, 808, 15, 15);//Член экипажа
             if (_f1.checkBox_OccupationPrivateEnterpreneuer.Checked) e.Graphics.DrawImage(Krestik, 177, 832, 15, 15);//Частный предпринематель
-            if (_f1.checkBox_OccupationUnemployed.Checked) e.Graphics.DrawImage(Krestik, 177, 855, 15, 15);//Безработный
             if (_f1.checkBox_OccupationRetired.Checked) e.Graphics.DrawImage(Krestik, 177, 878, 15, 15);//Пенсионеры
-            if (_f1.checkBox_OccupationNPOStaff.Checked) e.Graphics.DrawImage(Krestik, 449, 840, 15, 15);//Сотрудники НПО
-            if (_f1.checkBox_OccupationCleric.Checked) e.Graphics.DrawImage(Krestik, 449, 864, 15, 15);//Священослужитель
-            if (_f1.checkBox_OccupationMediaWorker.Checked) e.Graphics.DrawImage(Krestik, 449, 886, 15, 15);//Работник СМИ
-            if (!string.IsNullOrEmpty(_f1.textBox_OccupationDeputy.Text))
-            {
-                e.Graphics.DrawString(_f1.textBox_OccupationDeputy.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 560, 704);//Депутат
-                e.Graphics.DrawImage(Krestik, 449, 666, 15, 15);
-            }
-            if (!string.IsNullOrEmpty(_f1.textBox_OccupationOfficial.Text))
-            {
-                e.Graphics.DrawString(_f1.textBox_OccupationOfficial.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 560, 768);//Чиновник
-                e.Graphics.DrawImage(Krestik, 449, 730, 15, 15);
-            }
-            if (!string.IsNullOrEmpty(_f1.textBox_OccupationMilitary.Text))
-            {
-                e.Graphics.DrawString(_f1.textBox_OccupationMilitary.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 560, 814);//Военнослужащий
-                e.Graphics.DrawImage(Krestik, 449, 794, 15, 15);
-            }
             if (!string.IsNullOrEmpty(_f1.textBox_OccupationOther.Text))
             {
                 e.Graphics.DrawString(_f1.textBox_OccupationOther.Text, new Font("Arial", 10, FontStyle.Bold), Brushes.Black, 367, 917);//Иное
@@ -173,12 +141,6 @@ namespace PrintDocument
             //Семейное положение
             if (_f1.radioButton_FamilyStatusMarried.Checked) e.Graphics.DrawImage(Krestik, 311, 132, 15, 15);
             else if (_f1.radioButton_FamilyStatusSingle.Checked) e.Graphics.DrawImage(Krestik, 460, 132, 15, 15);
-            else if (_f1.radioButton_FamilyStatusOther.Checked)
-            {
-                if (string.IsNullOrEmpty(_f1.textBox_FamilyStatusOther.Text)) { MessageBox.Show("Поле " + '"' + "Семейное положение Иное " + '"' + "не заполнено"); return; }
-                e.Graphics.DrawImage(Krestik, 312, 157, 15, 15);//Крестик иное
-                e.Graphics.DrawString(_f1.textBox_FamilyStatusOther.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 456, 157);//Текст Иное
-            }
 
             //Основные члены семьи
             e.Graphics.DrawString(_f1.textBox_Row1FIO.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 168, 220);//Стр1 ФИО
@@ -203,7 +165,7 @@ namespace PrintDocument
             e.Graphics.DrawString(_f1.textBox_ChPNumberMobilePhone.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 510, 370);//Домашний индекс
             e.Graphics.DrawString(_f1.textBox_ChPRelation.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 308, 415);//Домашний телефон
 
-            e.Graphics.DrawString(_f1.textBox_CountryLocation.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 472, 460);//Страна нахождения заявителя
+            e.Graphics.DrawString("РФ", new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 472, 460);//Страна или территория нахождения заявителя
 
 
             /////////////////////////////////
@@ -211,25 +173,8 @@ namespace PrintDocument
             /////////////////////////////////
 
             //Цель поездки в КНР
-            if (_f2.checkBox_TargetOfficialVisit.Checked) e.Graphics.DrawImage(Krestik, 167, 521, 15, 15);//Официальный визит
             if (_f2.checkBox_TargetTourism.Checked) e.Graphics.DrawImage(Krestik, 167, 547, 15, 15);//Туризм
-            if (_f2.checkBox_TargetBusinessTrip.Checked) e.Graphics.DrawImage(Krestik, 167, 573, 15, 15);//Неделовой визит
             if (_f2.checkBox_TargetBusiness.Checked) e.Graphics.DrawImage(Krestik, 167, 594, 15, 15);//Бизнес
-            if (_f2.checkBox_TargetIntroductionOfTalent.Checked) e.Graphics.DrawImage(Krestik, 167, 617, 15, 15);//Введение талатнов
-            if (_f2.checkBox_TargetCrewMember.Checked) e.Graphics.DrawImage(Krestik, 167, 639, 15, 15);//Член экипажа
-            if (_f2.checkBox_TargetTransit.Checked) e.Graphics.DrawImage(Krestik, 167, 661, 15, 15);//Транзит
-            if (_f2.checkBox_TargetVizit1.Checked) e.Graphics.DrawImage(Krestik, 167, 682, 15, 15);//Краткосрочный визит к гражданину КНР
-            if (_f2.checkBox_TargetVizit2.Checked) e.Graphics.DrawImage(Krestik, 167, 783, 15, 15);//Краткосрочный визит к иностранному гражданину
-            if (_f2.checkBox_TargetTraining1.Checked) e.Graphics.DrawImage(Krestik, 165, 855, 15, 15);//Краткосрочное обучение
-            if (_f2.checkBox_TargetTraining2.Checked) e.Graphics.DrawImage(Krestik, 480, 855, 15, 15);//Долгосрочное обучение
-            if (_f2.checkBox_TargetTripCorrespondents.Checked) e.Graphics.DrawImage(Krestik, 165, 891, 15, 15);//командировка корреспондентов
-            if (_f2.checkBox_TargetAccreditedCorrespondents.Checked) e.Graphics.DrawImage(Krestik, 480, 891, 15, 15);//аккредитование корреспондентов 
-            if (_f2.checkBox_TargetResidentDiplomat.Checked) e.Graphics.DrawImage(Krestik, 480, 522, 15, 15);//в качестве резидента дипломата
-            if (_f2.checkBox_TargetPermanentResidents.Checked) e.Graphics.DrawImage(Krestik, 480, 573, 15, 15);//Постоянные резиденты
-            if (_f2.checkBox_TargetJob.Checked) e.Graphics.DrawImage(Krestik, 480, 593, 15, 15);//Работа
-            if (_f2.checkBox_TargetFosterFamily.Checked) e.Graphics.DrawImage(Krestik, 480, 618, 15, 15);//Приемная семья
-            if (_f2.checkBox_TargetFamilyReunification.Checked) e.Graphics.DrawImage(Krestik, 480, 683, 15, 15);//Воссоединение с семьей
-            if (_f2.checkBox_TargetAccompaniment.Checked) e.Graphics.DrawImage(Krestik, 480, 784, 15, 15);//сопровождающий член семьи
             if (_f2.checkBox_TargetOther.Checked)
             {
                 if (string.IsNullOrEmpty(_f2.textBox_TargetOther.Text)) { MessageBox.Show("Поле " + '"' + "Цель поездки в КНР Иное " + '"' + "не заполнено"); return; }
@@ -249,7 +194,7 @@ namespace PrintDocument
                 e.Graphics.DrawString(_f2.textBox_VisitsOther.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 380, 1035);//Текст Иное
             }
 
-            //Обязательный сервис
+            //Срочный сервис
             if (_f2.radioButton_ServiceYes.Checked) e.Graphics.DrawImage(Krestik, 546, 1073, 15, 15);
             else if (_f2.radioButton_ServiceNo.Checked) e.Graphics.DrawImage(Krestik, 675, 1073, 15, 15);
         }
@@ -259,84 +204,56 @@ namespace PrintDocument
             e.Graphics.DrawImage(ListA4_3, 0, 0, e.PageBounds.Width, e.PageBounds.Height);
 
             e.Graphics.DrawString(_f2.textBox_ArrivalDate.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 530, 54);//Предполагаемая дата въезда в КНР
-            e.Graphics.DrawString(_f2.textBox_Tenure.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 530, 96);//Срок пребывания каждой поездки
+            e.Graphics.DrawString(_f2.comboBox_Tenure.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 630, 95);//Срок пребывания каждой поездки
 
             //Маршрут в КНР
-            e.Graphics.DrawString(_f2.textBox_RouteDataRow1.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 226, 168);//Дата стр 1
-            e.Graphics.DrawString(_f2.textBox_RouteDataRow2.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 226, 211);//Дата стр 2
-            e.Graphics.DrawString(_f2.textBox_RouteDataRow3.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 226, 251);//Дата стр 3
-            e.Graphics.DrawString(_f2.textBox_RouteDataRow4.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 226, 293);//Дата стр 4
-            e.Graphics.DrawString(_f2.textBox_RouteDataRow5.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 226, 339);//Дата стр 5
-            e.Graphics.DrawString(_f2.textBox_RouteAddressRow1.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 530, 168);//Адрес стр 1
-            e.Graphics.DrawString(_f2.textBox_RouteAddressRow2.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 530, 211);//Адрес стр 2
-            e.Graphics.DrawString(_f2.textBox_RouteAddressRow3.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 530, 251);//Адрес стр 3
-            e.Graphics.DrawString(_f2.textBox_RouteAddressRow4.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 530, 293);//Адрес стр 4
-            e.Graphics.DrawString(_f2.textBox_RouteAddressRow5.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 530, 339);//Адрес стр 5
+            e.Graphics.DrawString(_f2.textBox_RouteData.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 236, 168);//Дата стр 1
+            e.Graphics.DrawString("№1, Nanheyan street," +"\n"+ "Beijing 100006", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 164);//Адрес стр 1
+            e.Graphics.DrawString("Jade Garden Hotel,", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 540, 216);//Адрес стр 2
+            e.Graphics.DrawString("tel: 010 – 5858 0909", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 540, 258);//Адрес стр 3
 
-            e.Graphics.DrawString(_f2.textBox_Costs.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 530, 383);//Кто оплачивает расходы заявителя
+            //Кто оплачивает расходы заявителя
+            if (_f2.radioButton_PaysApplicant.Checked) e.Graphics.DrawString("Заявитель", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 600, 392);
+            else if (_f2.radioButton_PaysParents.Checked) e.Graphics.DrawString("Родители", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 600, 392);
 
             //Информация о приглашающей стороне
-            e.Graphics.DrawString(_f2.textBox_InvitingName.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 370, 445);//Название
-            e.Graphics.DrawString(_f2.textBox_invitingAddress.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 370, 490);//Адрес
-            e.Graphics.DrawString(_f2.textBox_invitingNumber.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 370, 535);//Номер телефона
-            e.Graphics.DrawString(_f2.textBox_invitingRelation.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 370, 580);//Отношения с заявителем
+            if (_f2.radioButton_VisitsRepeatedly.Checked || _f2.radioButton_VisitsRepeatedly2.Checked)
+            {
+                e.Graphics.DrawString("maofahaiwaibu@hotmail.com", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 370, 445);//Название
+                e.Graphics.DrawString("010-65224434", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 370, 535);//Номер телефона
+            }
+
 
             e.Graphics.DrawString(_f2.textBox_PaymentOfExpenses.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 530, 620);//Вам когда-нибудь были предоставлены китайские визы?
             e.Graphics.DrawString(_f2.textBox_OtherСountries.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 530, 685);//Были ли вы в других странах 
+
+
 
             //////////////////////////////
             //Раздел 3
             //////////////////////////////
 
-            //Были ли вы в КНР
-            if (_f3.radioButton_UnlawfulPresenceYes.Checked) e.Graphics.DrawImage(Krestik, 605, 788, 15, 15);
-            else if (_f3.radioButton_UnlawfulPresenceNo.Checked) e.Graphics.DrawImage(Krestik, 676, 788, 15, 15);
-
-            //Вам когда-либо отказывали
-            if (_f3.radioButton_FailureYes.Checked) e.Graphics.DrawImage(Krestik, 605, 826, 15, 15);
-            else if (_f3.radioButton_FailureNo.Checked) e.Graphics.DrawImage(Krestik, 676, 826, 15, 15);
-
-            //Наличие судимости в КНР
-            if (_f3.radioButton_PreviousConvictionYes.Checked) e.Graphics.DrawImage(Krestik, 605, 863, 15, 15);
-            else if (_f3.radioButton_PreviousConvictionNo.Checked) e.Graphics.DrawImage(Krestik, 676, 862, 15, 15);
-
-            //Болеете ли вы 
-            if (_f3.radioButton_DiseasesYes.Checked) e.Graphics.DrawImage(Krestik, 605, 915, 15, 15);
-            else if (_f3.radioButton_DiseasesNo.Checked) e.Graphics.DrawImage(Krestik, 676, 914, 15, 15);
-
-            //Были ли вы в странах
-            if (_f3.radioButton_InfectionYes.Checked) e.Graphics.DrawImage(Krestik, 605, 968, 15, 15);
-            else if (_f3.radioButton_InfectionNo.Checked) e.Graphics.DrawImage(Krestik, 676, 968, 15, 15);
 
 
+            e.Graphics.DrawImage(Krestik, 676, 788, 15, 15);//Были ли вы в КНР
+            e.Graphics.DrawImage(Krestik, 676, 826, 15, 15);//Вам когда-либо отказывали
+            e.Graphics.DrawImage(Krestik, 676, 862, 15, 15);//Наличие судимости в КНР
+            e.Graphics.DrawImage(Krestik, 676, 914, 15, 15);//Болеете ли вы 
+            e.Graphics.DrawImage(Krestik, 676, 968, 15, 15);//Были ли вы в странах
         }
 
         private void PageFour(PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(ListA4_4, 0, 0, e.PageBounds.Width, e.PageBounds.Height);
 
-            e.Graphics.DrawString(_f3.textBox_Explained.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 76, 71);//Просьба дать подробные разъяснения в случае 
-            e.Graphics.DrawString(_f3.textBox_MoreInfo.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 76, 202);//Если вы располагаете большей информацией
-
-            //Если кто-то путешествует с заявителем
-            e.Graphics.DrawString(_f3.textBox_ApplicantFIORow1.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 260, 434);//Если вы располагаете большей информацией
-            e.Graphics.DrawString(_f3.textBox_ApplicantFIORow2.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 446, 434);//Если вы располагаете большей информацией
-            e.Graphics.DrawString(_f3.textBox_ApplicantFIORow3.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 636, 434);//Если вы располагаете большей информацией
-            e.Graphics.DrawString(_f3.textBox_ApplicantGenderRow1.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 260, 495);//Если вы располагаете большей информацией
-            e.Graphics.DrawString(_f3.textBox_ApplicantGenderRow2.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 446, 495);//Если вы располагаете большей информацией
-            e.Graphics.DrawString(_f3.textBox_ApplicantGenderRow3.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 636, 495);//Если вы располагаете большей информацией
-            e.Graphics.DrawString(_f3.textBox_ApplicantDateOfBirthdayRow1.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 260, 526);//Если вы располагаете большей информацией
-            e.Graphics.DrawString(_f3.textBox_ApplicantDateOfBirthdayRow2.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 450, 526);//Если вы располагаете большей информацией
-            e.Graphics.DrawString(_f3.textBox_ApplicantDateOfBirthdayRow3.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 636, 526);//Если вы располагаете большей информацией
-
             //////////////////////////////
             //Раздел 5
             //////////////////////////////
 
-            e.Graphics.DrawString(_f4.comboBox_FIO.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 196, 923);//ФИО
-            e.Graphics.DrawString(_f4.textBox_Relations.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 604, 923);//Отношения с заявителем
-            e.Graphics.DrawString(_f4.textBox_Address.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 196, 965);//Адрес
-            e.Graphics.DrawString(_f4.textBox_Number.Text, new Font("Arial", 9, FontStyle.Bold), Brushes.Black, 604, 965);//Номер телефона
+            e.Graphics.DrawString(_f4.comboBox_FIO.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 196, 912);//ФИО
+            e.Graphics.DrawString("Представитель", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 604, 912);//Отношения с заявителем
+            e.Graphics.DrawString("Екатеринбург," +"\n"+ "пр. Ленина, 52/4", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 196, 945);//Адрес
+            e.Graphics.DrawString("8-922-100-66-55", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 604, 955);//Номер телефона
         }
     }
 }
