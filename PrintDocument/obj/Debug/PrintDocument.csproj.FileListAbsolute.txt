@@ -1,9 +1,6 @@
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\bin\Debug\PrintDocument.exe
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\bin\Debug\PrintDocument.pdb
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\obj\Debug\PrintDocument.Form1.resources
-C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\obj\Debug\PrintDocument.Form2.resources
-C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\obj\Debug\PrintDocument.Form3.resources
-C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\obj\Debug\PrintDocument.Form4.resources
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\obj\Debug\PrintDocument.Properties.Resources.resources
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\obj\Debug\PrintDocument.csproj.GenerateResource.Cache
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\obj\Debug\PrintDocument.exe

@@ -94,6 +94,8 @@
             this.checkBox_OccupationRetired = new System.Windows.Forms.CheckBox();
             this.textBox_DateOfTime = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_Print = new System.Windows.Forms.Button();
+            this.button_PrintPreview = new System.Windows.Forms.Button();
             this.comboBox_FIO = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.textBox_OtherСountries = new System.Windows.Forms.TextBox();
@@ -128,6 +130,7 @@
             this.checkBox_TargetBusiness = new System.Windows.Forms.CheckBox();
             this.checkBox_TargetTourism = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
@@ -161,11 +164,6 @@
             this.radioButton_FamilyStatusMarried = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.radioButton__EducationOther = new System.Windows.Forms.RadioButton();
             this.radioButton_EducationBachelor = new System.Windows.Forms.RadioButton();
             this.radioButton_EducationMaster = new System.Windows.Forms.RadioButton();
@@ -175,14 +173,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton__GenderWoman = new System.Windows.Forms.RadioButton();
             this.radioButton_GenderMan = new System.Windows.Forms.RadioButton();
-            this.button_Print = new System.Windows.Forms.Button();
-            this.button_PrintPreview = new System.Windows.Forms.Button();
-            this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
@@ -213,9 +209,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             this.SuspendLayout();
             // 
             // printPreviewDialog1
@@ -232,7 +226,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(11, 114);
+            this.label7.Location = new System.Drawing.Point(3, 114);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(144, 16);
             this.label7.TabIndex = 80;
@@ -242,7 +236,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(10, 149);
+            this.label11.Location = new System.Drawing.Point(3, 149);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(158, 16);
             this.label11.TabIndex = 82;
@@ -254,14 +248,13 @@
             this.textBox_CityRegionCountry.Location = new System.Drawing.Point(304, 146);
             this.textBox_CityRegionCountry.Name = "textBox_CityRegionCountry";
             this.textBox_CityRegionCountry.Size = new System.Drawing.Size(515, 22);
-            this.textBox_CityRegionCountry.TabIndex = 83;
-            this.textBox_CityRegionCountry.Text = "город Екатеринбург, свердловская область, Россия";
+            this.textBox_CityRegionCountry.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(10, 71);
+            this.label6.Location = new System.Drawing.Point(3, 71);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 16);
             this.label6.TabIndex = 77;
@@ -283,8 +276,7 @@
             this.TextBox_FirstName.Location = new System.Drawing.Point(400, 29);
             this.TextBox_FirstName.Name = "TextBox_FirstName";
             this.TextBox_FirstName.Size = new System.Drawing.Size(233, 22);
-            this.TextBox_FirstName.TabIndex = 75;
-            this.TextBox_FirstName.Text = "Андрей";
+            this.TextBox_FirstName.TabIndex = 2;
             // 
             // label3
             // 
@@ -302,14 +294,13 @@
             this.TextBox_LastName.Location = new System.Drawing.Point(400, 3);
             this.TextBox_LastName.Name = "TextBox_LastName";
             this.TextBox_LastName.Size = new System.Drawing.Size(233, 22);
-            this.TextBox_LastName.TabIndex = 71;
-            this.TextBox_LastName.Text = "Полысалов";
+            this.TextBox_LastName.TabIndex = 1;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(11, 186);
+            this.label12.Location = new System.Drawing.Point(3, 186);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(180, 16);
             this.label12.TabIndex = 91;
@@ -319,7 +310,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(10, 9);
+            this.label2.Location = new System.Drawing.Point(3, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 70;
@@ -331,18 +322,17 @@
             this.textBox_OrdinaryPassportNumber.Location = new System.Drawing.Point(305, 183);
             this.textBox_OrdinaryPassportNumber.Name = "textBox_OrdinaryPassportNumber";
             this.textBox_OrdinaryPassportNumber.Size = new System.Drawing.Size(233, 22);
-            this.textBox_OrdinaryPassportNumber.TabIndex = 92;
-            this.textBox_OrdinaryPassportNumber.Text = "72 124986945";
+            this.textBox_OrdinaryPassportNumber.TabIndex = 7;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(11, 223);
+            this.label24.Location = new System.Drawing.Point(3, 223);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(214, 16);
+            this.label24.Size = new System.Drawing.Size(218, 16);
             this.label24.TabIndex = 99;
-            this.label24.Text = "1.11Номер загран паспорта";
+            this.label24.Text = "1.11 Номер загран паспорта";
             // 
             // textBox_PassportNumber
             // 
@@ -351,13 +341,12 @@
             this.textBox_PassportNumber.Name = "textBox_PassportNumber";
             this.textBox_PassportNumber.Size = new System.Drawing.Size(233, 22);
             this.textBox_PassportNumber.TabIndex = 100;
-            this.textBox_PassportNumber.Text = "43 5435 1232";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(11, 260);
+            this.label25.Location = new System.Drawing.Point(3, 260);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(135, 16);
             this.label25.TabIndex = 101;
@@ -367,7 +356,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label26.Location = new System.Drawing.Point(10, 305);
+            this.label26.Location = new System.Drawing.Point(3, 305);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(219, 16);
             this.label26.TabIndex = 103;
@@ -381,13 +370,12 @@
             this.textBox_PassportPlaceOfIssue.Name = "textBox_PassportPlaceOfIssue";
             this.textBox_PassportPlaceOfIssue.Size = new System.Drawing.Size(233, 40);
             this.textBox_PassportPlaceOfIssue.TabIndex = 104;
-            this.textBox_PassportPlaceOfIssue.Text = "В ментовке";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(11, 350);
+            this.label27.Location = new System.Drawing.Point(3, 350);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(168, 16);
             this.label27.TabIndex = 105;
@@ -397,7 +385,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label29.Location = new System.Drawing.Point(10, 433);
+            this.label29.Location = new System.Drawing.Point(3, 433);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(142, 16);
             this.label29.TabIndex = 107;
@@ -424,7 +412,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label33.Location = new System.Drawing.Point(10, 553);
+            this.label33.Location = new System.Drawing.Point(3, 553);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(141, 16);
             this.label33.TabIndex = 123;
@@ -434,7 +422,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label38.Location = new System.Drawing.Point(9, 682);
+            this.label38.Location = new System.Drawing.Point(3, 682);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(195, 16);
             this.label38.TabIndex = 128;
@@ -447,7 +435,6 @@
             this.textBox_WorkName.Name = "textBox_WorkName";
             this.textBox_WorkName.Size = new System.Drawing.Size(357, 22);
             this.textBox_WorkName.TabIndex = 129;
-            this.textBox_WorkName.Text = "корпорация Ромашка";
             // 
             // label37
             // 
@@ -466,7 +453,6 @@
             this.textBox_WorkAddress.Name = "textBox_WorkAddress";
             this.textBox_WorkAddress.Size = new System.Drawing.Size(357, 22);
             this.textBox_WorkAddress.TabIndex = 131;
-            this.textBox_WorkAddress.Text = "Екатеринбург Новгородцевой 19/1 кв.82";
             // 
             // label36
             // 
@@ -485,7 +471,6 @@
             this.textBox_WorkPhoneNumber.Name = "textBox_WorkPhoneNumber";
             this.textBox_WorkPhoneNumber.Size = new System.Drawing.Size(357, 22);
             this.textBox_WorkPhoneNumber.TabIndex = 133;
-            this.textBox_WorkPhoneNumber.Text = "+7 912 61 84 203";
             // 
             // label35
             // 
@@ -504,7 +489,6 @@
             this.textBox_WorkPostcode.Name = "textBox_WorkPostcode";
             this.textBox_WorkPostcode.Size = new System.Drawing.Size(357, 22);
             this.textBox_WorkPostcode.TabIndex = 135;
-            this.textBox_WorkPostcode.Text = "620072";
             // 
             // label39
             // 
@@ -524,13 +508,12 @@
             this.textBox_HomeAddress.Name = "textBox_HomeAddress";
             this.textBox_HomeAddress.Size = new System.Drawing.Size(321, 57);
             this.textBox_HomeAddress.TabIndex = 137;
-            this.textBox_HomeAddress.Text = "Россия, Свердловская область, \r\nгород Екатеринбург Новгородцевой 19/1 \r\nкв.82";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label40.Location = new System.Drawing.Point(11, 770);
+            this.label40.Location = new System.Drawing.Point(3, 770);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(163, 16);
             this.label40.TabIndex = 138;
@@ -543,13 +526,12 @@
             this.textBox_HomePostcode.Name = "textBox_HomePostcode";
             this.textBox_HomePostcode.Size = new System.Drawing.Size(233, 22);
             this.textBox_HomePostcode.TabIndex = 139;
-            this.textBox_HomePostcode.Text = "620072";
             // 
             // label41
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label41.Location = new System.Drawing.Point(11, 827);
+            this.label41.Location = new System.Drawing.Point(3, 827);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(170, 16);
             this.label41.TabIndex = 140;
@@ -562,13 +544,12 @@
             this.textBox_HomeMobileNumber.Name = "textBox_HomeMobileNumber";
             this.textBox_HomeMobileNumber.Size = new System.Drawing.Size(233, 22);
             this.textBox_HomeMobileNumber.TabIndex = 141;
-            this.textBox_HomeMobileNumber.Text = "3483239";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label42.Location = new System.Drawing.Point(11, 862);
+            this.label42.Location = new System.Drawing.Point(3, 862);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(166, 16);
             this.label42.TabIndex = 142;
@@ -594,18 +575,18 @@
             this.tableLayoutPanel1.Controls.Add(this.label44, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label45, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox_Row1FIO, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(310, 985);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(302, 985);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.88462F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.11538F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.85714F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.14286F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(501, 190);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(509, 114);
             this.tableLayoutPanel1.TabIndex = 143;
             // 
             // textBox_Row2Relation
@@ -614,12 +595,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Row2Relation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Row2Relation.Location = new System.Drawing.Point(389, 131);
-            this.textBox_Row2Relation.Multiline = true;
+            this.textBox_Row2Relation.Location = new System.Drawing.Point(397, 88);
             this.textBox_Row2Relation.Name = "textBox_Row2Relation";
-            this.textBox_Row2Relation.Size = new System.Drawing.Size(108, 55);
+            this.textBox_Row2Relation.Size = new System.Drawing.Size(108, 20);
             this.textBox_Row2Relation.TabIndex = 156;
-            this.textBox_Row2Relation.Text = "Отношения 2\r\nОтношения 2\r\nОтношения 2";
             this.textBox_Row2Relation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row2Profession
@@ -628,12 +607,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Row2Profession.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Row2Profession.Location = new System.Drawing.Point(252, 131);
-            this.textBox_Row2Profession.Multiline = true;
+            this.textBox_Row2Profession.Location = new System.Drawing.Point(260, 88);
             this.textBox_Row2Profession.Name = "textBox_Row2Profession";
-            this.textBox_Row2Profession.Size = new System.Drawing.Size(130, 55);
+            this.textBox_Row2Profession.Size = new System.Drawing.Size(130, 20);
             this.textBox_Row2Profession.TabIndex = 155;
-            this.textBox_Row2Profession.Text = "Профессия 2\r\nПрофессия 2\r\nПрофессия 2";
             this.textBox_Row2Profession.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row2Citizenship
@@ -642,12 +619,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Row2Citizenship.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Row2Citizenship.Location = new System.Drawing.Point(119, 131);
-            this.textBox_Row2Citizenship.Multiline = true;
+            this.textBox_Row2Citizenship.Location = new System.Drawing.Point(122, 88);
             this.textBox_Row2Citizenship.Name = "textBox_Row2Citizenship";
-            this.textBox_Row2Citizenship.Size = new System.Drawing.Size(126, 55);
+            this.textBox_Row2Citizenship.Size = new System.Drawing.Size(131, 20);
             this.textBox_Row2Citizenship.TabIndex = 154;
-            this.textBox_Row2Citizenship.Text = "Российское _ 2\r\nРоссийское _ 2\r\nРоссийское _ 2";
             this.textBox_Row2Citizenship.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row2FIO
@@ -656,12 +631,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Row2FIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Row2FIO.Location = new System.Drawing.Point(4, 131);
-            this.textBox_Row2FIO.Multiline = true;
+            this.textBox_Row2FIO.Location = new System.Drawing.Point(4, 88);
             this.textBox_Row2FIO.Name = "textBox_Row2FIO";
-            this.textBox_Row2FIO.Size = new System.Drawing.Size(108, 55);
+            this.textBox_Row2FIO.Size = new System.Drawing.Size(111, 20);
             this.textBox_Row2FIO.TabIndex = 153;
-            this.textBox_Row2FIO.Text = "Фамилия _ 2\r\nФамилия _ 2\r\nФамилия _ 2";
             this.textBox_Row2FIO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row1Relation
@@ -670,12 +643,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Row1Relation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Row1Relation.Location = new System.Drawing.Point(389, 71);
-            this.textBox_Row1Relation.Multiline = true;
+            this.textBox_Row1Relation.Location = new System.Drawing.Point(397, 61);
             this.textBox_Row1Relation.Name = "textBox_Row1Relation";
-            this.textBox_Row1Relation.Size = new System.Drawing.Size(108, 53);
+            this.textBox_Row1Relation.Size = new System.Drawing.Size(108, 20);
             this.textBox_Row1Relation.TabIndex = 152;
-            this.textBox_Row1Relation.Text = "Отношения 1\r\nОтношения 1\r\nОтношения 1";
             this.textBox_Row1Relation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row1Profession
@@ -684,12 +655,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Row1Profession.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Row1Profession.Location = new System.Drawing.Point(252, 71);
-            this.textBox_Row1Profession.Multiline = true;
+            this.textBox_Row1Profession.Location = new System.Drawing.Point(260, 61);
             this.textBox_Row1Profession.Name = "textBox_Row1Profession";
-            this.textBox_Row1Profession.Size = new System.Drawing.Size(130, 53);
+            this.textBox_Row1Profession.Size = new System.Drawing.Size(130, 20);
             this.textBox_Row1Profession.TabIndex = 151;
-            this.textBox_Row1Profession.Text = "Профессия 1\r\nПрофессия 1\r\nПрофессия 1";
             this.textBox_Row1Profession.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row1Citizenship
@@ -698,12 +667,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Row1Citizenship.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Row1Citizenship.Location = new System.Drawing.Point(119, 71);
-            this.textBox_Row1Citizenship.Multiline = true;
+            this.textBox_Row1Citizenship.Location = new System.Drawing.Point(122, 61);
             this.textBox_Row1Citizenship.Name = "textBox_Row1Citizenship";
-            this.textBox_Row1Citizenship.Size = new System.Drawing.Size(126, 53);
+            this.textBox_Row1Citizenship.Size = new System.Drawing.Size(131, 20);
             this.textBox_Row1Citizenship.TabIndex = 150;
-            this.textBox_Row1Citizenship.Text = "Российское _ 1\r\nРоссийское _ 1\r\nРоссийское _ 1";
             this.textBox_Row1Citizenship.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label47
@@ -713,9 +680,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label47.Location = new System.Drawing.Point(389, 1);
+            this.label47.Location = new System.Drawing.Point(397, 1);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(108, 66);
+            this.label47.Size = new System.Drawing.Size(108, 56);
             this.label47.TabIndex = 148;
             this.label47.Text = "Отношения";
             this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -727,9 +694,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label46.Location = new System.Drawing.Point(252, 1);
+            this.label46.Location = new System.Drawing.Point(260, 1);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(130, 66);
+            this.label46.Size = new System.Drawing.Size(130, 56);
             this.label46.TabIndex = 147;
             this.label46.Text = "Профессия";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -743,7 +710,7 @@
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label44.Location = new System.Drawing.Point(4, 1);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(108, 66);
+            this.label44.Size = new System.Drawing.Size(111, 56);
             this.label44.TabIndex = 145;
             this.label44.Text = "Ф.И.О.";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -755,9 +722,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label45.Location = new System.Drawing.Point(119, 1);
+            this.label45.Location = new System.Drawing.Point(122, 1);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(126, 66);
+            this.label45.Size = new System.Drawing.Size(131, 56);
             this.label45.TabIndex = 146;
             this.label45.Text = "Гражданство";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -768,19 +735,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_Row1FIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Row1FIO.Location = new System.Drawing.Point(4, 71);
-            this.textBox_Row1FIO.Multiline = true;
+            this.textBox_Row1FIO.Location = new System.Drawing.Point(4, 61);
             this.textBox_Row1FIO.Name = "textBox_Row1FIO";
-            this.textBox_Row1FIO.Size = new System.Drawing.Size(108, 53);
+            this.textBox_Row1FIO.Size = new System.Drawing.Size(111, 20);
             this.textBox_Row1FIO.TabIndex = 149;
-            this.textBox_Row1FIO.Text = "Фамилия _ 1\r\nФамилия _ 1\r\nФамилия _ 1";
             this.textBox_Row1FIO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label43
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label43.Location = new System.Drawing.Point(9, 1057);
+            this.label43.Location = new System.Drawing.Point(3, 1036);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(212, 16);
             this.label43.TabIndex = 144;
@@ -790,7 +755,7 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label48.Location = new System.Drawing.Point(12, 1224);
+            this.label48.Location = new System.Drawing.Point(3, 1148);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(223, 16);
             this.label48.TabIndex = 147;
@@ -799,7 +764,7 @@
             // textBox_ChPFIO
             // 
             this.textBox_ChPFIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_ChPFIO.Location = new System.Drawing.Point(547, 1190);
+            this.textBox_ChPFIO.Location = new System.Drawing.Point(547, 1114);
             this.textBox_ChPFIO.Name = "textBox_ChPFIO";
             this.textBox_ChPFIO.Size = new System.Drawing.Size(233, 22);
             this.textBox_ChPFIO.TabIndex = 148;
@@ -808,7 +773,7 @@
             // 
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(308, 1193);
+            this.label51.Location = new System.Drawing.Point(308, 1117);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(54, 16);
             this.label51.TabIndex = 149;
@@ -817,7 +782,7 @@
             // textBox_ChPNumberMobilePhone
             // 
             this.textBox_ChPNumberMobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_ChPNumberMobilePhone.Location = new System.Drawing.Point(547, 1217);
+            this.textBox_ChPNumberMobilePhone.Location = new System.Drawing.Point(547, 1141);
             this.textBox_ChPNumberMobilePhone.Name = "textBox_ChPNumberMobilePhone";
             this.textBox_ChPNumberMobilePhone.Size = new System.Drawing.Size(233, 22);
             this.textBox_ChPNumberMobilePhone.TabIndex = 150;
@@ -826,7 +791,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label50.Location = new System.Drawing.Point(308, 1219);
+            this.label50.Location = new System.Drawing.Point(308, 1143);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(226, 16);
             this.label50.TabIndex = 151;
@@ -835,7 +800,7 @@
             // textBox_ChPRelation
             // 
             this.textBox_ChPRelation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_ChPRelation.Location = new System.Drawing.Point(547, 1244);
+            this.textBox_ChPRelation.Location = new System.Drawing.Point(547, 1168);
             this.textBox_ChPRelation.Name = "textBox_ChPRelation";
             this.textBox_ChPRelation.Size = new System.Drawing.Size(233, 22);
             this.textBox_ChPRelation.TabIndex = 152;
@@ -844,7 +809,7 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label49.Location = new System.Drawing.Point(308, 1245);
+            this.label49.Location = new System.Drawing.Point(308, 1169);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(195, 16);
             this.label49.TabIndex = 153;
@@ -853,8 +818,6 @@
             // checkBox_OccupationOtherCompanies
             // 
             this.checkBox_OccupationOtherCompanies.AutoSize = true;
-            this.checkBox_OccupationOtherCompanies.Checked = true;
-            this.checkBox_OccupationOtherCompanies.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_OccupationOtherCompanies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox_OccupationOtherCompanies.Location = new System.Drawing.Point(305, 389);
             this.checkBox_OccupationOtherCompanies.Name = "checkBox_OccupationOtherCompanies";
@@ -866,8 +829,6 @@
             // checkBox_OccupationStudent
             // 
             this.checkBox_OccupationStudent.AutoSize = true;
-            this.checkBox_OccupationStudent.Checked = true;
-            this.checkBox_OccupationStudent.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_OccupationStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox_OccupationStudent.Location = new System.Drawing.Point(305, 412);
             this.checkBox_OccupationStudent.Name = "checkBox_OccupationStudent";
@@ -879,8 +840,6 @@
             // checkBox_OccupationPrivateEnterpreneuer
             // 
             this.checkBox_OccupationPrivateEnterpreneuer.AutoSize = true;
-            this.checkBox_OccupationPrivateEnterpreneuer.Checked = true;
-            this.checkBox_OccupationPrivateEnterpreneuer.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_OccupationPrivateEnterpreneuer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox_OccupationPrivateEnterpreneuer.Location = new System.Drawing.Point(305, 435);
             this.checkBox_OccupationPrivateEnterpreneuer.Name = "checkBox_OccupationPrivateEnterpreneuer";
@@ -892,8 +851,6 @@
             // checkBox_OccupationRetired
             // 
             this.checkBox_OccupationRetired.AutoSize = true;
-            this.checkBox_OccupationRetired.Checked = true;
-            this.checkBox_OccupationRetired.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_OccupationRetired.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox_OccupationRetired.Location = new System.Drawing.Point(305, 458);
             this.checkBox_OccupationRetired.Name = "checkBox_OccupationRetired";
@@ -908,8 +865,7 @@
             this.textBox_DateOfTime.Location = new System.Drawing.Point(304, 110);
             this.textBox_DateOfTime.Name = "textBox_DateOfTime";
             this.textBox_DateOfTime.Size = new System.Drawing.Size(233, 21);
-            this.textBox_DateOfTime.TabIndex = 204;
-            this.textBox_DateOfTime.Text = "1993.04.17";
+            this.textBox_DateOfTime.TabIndex = 5;
             // 
             // panel1
             // 
@@ -976,7 +932,6 @@
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.groupBox5);
-            this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.textBox_PassportValidUntil);
             this.panel1.Controls.Add(this.textBox_DateOfIssue);
             this.panel1.Controls.Add(this.textBox_DateOfTime);
@@ -1035,7 +990,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(844, 661);
             this.panel1.TabIndex = 70;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button_Print
+            // 
+            this.button_Print.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_Print.Location = new System.Drawing.Point(10, 1925);
+            this.button_Print.Name = "button_Print";
+            this.button_Print.Size = new System.Drawing.Size(175, 40);
+            this.button_Print.TabIndex = 274;
+            this.button_Print.Text = "Печать";
+            this.button_Print.UseVisualStyleBackColor = true;
+            // 
+            // button_PrintPreview
+            // 
+            this.button_PrintPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_PrintPreview.Location = new System.Drawing.Point(10, 1866);
+            this.button_PrintPreview.Name = "button_PrintPreview";
+            this.button_PrintPreview.Size = new System.Drawing.Size(175, 40);
+            this.button_PrintPreview.TabIndex = 275;
+            this.button_PrintPreview.Text = "Предварительный просмотр";
+            this.button_PrintPreview.UseVisualStyleBackColor = true;
+            this.button_PrintPreview.Click += new System.EventHandler(this.button_PrintPreview_Click);
             // 
             // comboBox_FIO
             // 
@@ -1047,7 +1022,7 @@
             "Дмитрий",
             "Кристина",
             "Елена"});
-            this.comboBox_FIO.Location = new System.Drawing.Point(303, 1892);
+            this.comboBox_FIO.Location = new System.Drawing.Point(303, 1816);
             this.comboBox_FIO.Name = "comboBox_FIO";
             this.comboBox_FIO.Size = new System.Drawing.Size(252, 21);
             this.comboBox_FIO.TabIndex = 273;
@@ -1056,7 +1031,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(7, 1893);
+            this.label19.Location = new System.Drawing.Point(3, 1817);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(178, 16);
             this.label19.TabIndex = 272;
@@ -1065,19 +1040,17 @@
             // textBox_OtherСountries
             // 
             this.textBox_OtherСountries.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_OtherСountries.Location = new System.Drawing.Point(303, 1819);
+            this.textBox_OtherСountries.Location = new System.Drawing.Point(303, 1743);
             this.textBox_OtherСountries.Multiline = true;
             this.textBox_OtherСountries.Name = "textBox_OtherСountries";
             this.textBox_OtherСountries.Size = new System.Drawing.Size(252, 56);
             this.textBox_OtherСountries.TabIndex = 271;
-            this.textBox_OtherСountries.Text = "111111111111111111111111111111\r\n222222222222222222222222222222\r\n33333333333333333" +
-    "3333333333333";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(7, 1816);
+            this.label18.Location = new System.Drawing.Point(3, 1744);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(260, 48);
             this.label18.TabIndex = 270;
@@ -1086,19 +1059,17 @@
             // textBox_PaymentOfExpenses
             // 
             this.textBox_PaymentOfExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_PaymentOfExpenses.Location = new System.Drawing.Point(302, 1750);
+            this.textBox_PaymentOfExpenses.Location = new System.Drawing.Point(302, 1674);
             this.textBox_PaymentOfExpenses.Multiline = true;
             this.textBox_PaymentOfExpenses.Name = "textBox_PaymentOfExpenses";
             this.textBox_PaymentOfExpenses.Size = new System.Drawing.Size(253, 54);
             this.textBox_PaymentOfExpenses.TabIndex = 269;
-            this.textBox_PaymentOfExpenses.Text = "111111111111111111111111111111\r\n222222222222222222222222222222\r\n33333333333333333" +
-    "3333333333333\r\n";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(12, 1747);
+            this.label17.Location = new System.Drawing.Point(3, 1675);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(240, 48);
             this.label17.TabIndex = 268;
@@ -1108,9 +1079,9 @@
             // 
             this.groupBox6.Controls.Add(this.radioButton_PaysParents);
             this.groupBox6.Controls.Add(this.radioButton_PaysApplicant);
-            this.groupBox6.Location = new System.Drawing.Point(302, 1690);
+            this.groupBox6.Location = new System.Drawing.Point(302, 1614);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(257, 38);
+            this.groupBox6.Size = new System.Drawing.Size(253, 38);
             this.groupBox6.TabIndex = 267;
             this.groupBox6.TabStop = false;
             // 
@@ -1118,7 +1089,7 @@
             // 
             this.radioButton_PaysParents.AutoSize = true;
             this.radioButton_PaysParents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton_PaysParents.Location = new System.Drawing.Point(155, 12);
+            this.radioButton_PaysParents.Location = new System.Drawing.Point(152, 12);
             this.radioButton_PaysParents.Name = "radioButton_PaysParents";
             this.radioButton_PaysParents.Size = new System.Drawing.Size(98, 20);
             this.radioButton_PaysParents.TabIndex = 260;
@@ -1142,7 +1113,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(12, 1690);
+            this.label16.Location = new System.Drawing.Point(3, 1614);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(220, 48);
             this.label16.TabIndex = 266;
@@ -1152,7 +1123,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(302, 1655);
+            this.label14.Location = new System.Drawing.Point(302, 1579);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(48, 16);
             this.label14.TabIndex = 265;
@@ -1161,7 +1132,7 @@
             // textBox_RouteData
             // 
             this.textBox_RouteData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_RouteData.Location = new System.Drawing.Point(352, 1653);
+            this.textBox_RouteData.Location = new System.Drawing.Point(352, 1577);
             this.textBox_RouteData.Name = "textBox_RouteData";
             this.textBox_RouteData.Size = new System.Drawing.Size(203, 22);
             this.textBox_RouteData.TabIndex = 264;
@@ -1170,7 +1141,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(12, 1656);
+            this.label15.Location = new System.Drawing.Point(3, 1580);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(153, 16);
             this.label15.TabIndex = 263;
@@ -1184,7 +1155,7 @@
             "30",
             "60",
             "90"});
-            this.comboBox_Tenure.Location = new System.Drawing.Point(305, 1612);
+            this.comboBox_Tenure.Location = new System.Drawing.Point(305, 1536);
             this.comboBox_Tenure.Name = "comboBox_Tenure";
             this.comboBox_Tenure.Size = new System.Drawing.Size(250, 21);
             this.comboBox_Tenure.TabIndex = 262;
@@ -1193,7 +1164,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(12, 1609);
+            this.label13.Location = new System.Drawing.Point(3, 1533);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(224, 32);
             this.label13.TabIndex = 261;
@@ -1202,7 +1173,7 @@
             // textBox_ArrivalDate
             // 
             this.textBox_ArrivalDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_ArrivalDate.Location = new System.Drawing.Point(302, 1566);
+            this.textBox_ArrivalDate.Location = new System.Drawing.Point(305, 1490);
             this.textBox_ArrivalDate.Name = "textBox_ArrivalDate";
             this.textBox_ArrivalDate.Size = new System.Drawing.Size(253, 22);
             this.textBox_ArrivalDate.TabIndex = 260;
@@ -1211,7 +1182,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(12, 1565);
+            this.label10.Location = new System.Drawing.Point(3, 1489);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(209, 32);
             this.label10.TabIndex = 259;
@@ -1221,9 +1192,9 @@
             // 
             this.panel2.Controls.Add(this.radioButton_ServiceYes);
             this.panel2.Controls.Add(this.radioButton_ServiceNo);
-            this.panel2.Location = new System.Drawing.Point(303, 1514);
+            this.panel2.Location = new System.Drawing.Point(305, 1438);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(192, 37);
+            this.panel2.Size = new System.Drawing.Size(250, 37);
             this.panel2.TabIndex = 258;
             // 
             // radioButton_ServiceYes
@@ -1242,7 +1213,7 @@
             // 
             this.radioButton_ServiceNo.AutoSize = true;
             this.radioButton_ServiceNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton_ServiceNo.Location = new System.Drawing.Point(118, 10);
+            this.radioButton_ServiceNo.Location = new System.Drawing.Point(154, 10);
             this.radioButton_ServiceNo.Name = "radioButton_ServiceNo";
             this.radioButton_ServiceNo.Size = new System.Drawing.Size(54, 20);
             this.radioButton_ServiceNo.TabIndex = 251;
@@ -1254,7 +1225,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(12, 1526);
+            this.label9.Location = new System.Drawing.Point(3, 1450);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(99, 16);
             this.label9.TabIndex = 257;
@@ -1264,7 +1235,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(12, 1429);
+            this.label4.Location = new System.Drawing.Point(3, 1353);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(267, 16);
             this.label4.TabIndex = 252;
@@ -1278,7 +1249,7 @@
             this.groupBox2.Controls.Add(this.radioButton_VisitsTwice);
             this.groupBox2.Controls.Add(this.radioButton_VisitsSingle);
             this.groupBox2.Controls.Add(this.textBox_VisitsOther);
-            this.groupBox2.Location = new System.Drawing.Point(302, 1362);
+            this.groupBox2.Location = new System.Drawing.Point(305, 1286);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(513, 140);
             this.groupBox2.TabIndex = 253;
@@ -1295,6 +1266,7 @@
             this.radioButton_VisitsOther.TabStop = true;
             this.radioButton_VisitsOther.Text = "Иное (уточнить):";
             this.radioButton_VisitsOther.UseVisualStyleBackColor = true;
+            this.radioButton_VisitsOther.CheckedChanged += new System.EventHandler(this.radioButton_VisitsOther_CheckedChanged_1);
             // 
             // radioButton_VisitsRepeatedly2
             // 
@@ -1357,7 +1329,7 @@
             // 
             this.textBox_TargetOther.Enabled = false;
             this.textBox_TargetOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_TargetOther.Location = new System.Drawing.Point(463, 1325);
+            this.textBox_TargetOther.Location = new System.Drawing.Point(463, 1249);
             this.textBox_TargetOther.Name = "textBox_TargetOther";
             this.textBox_TargetOther.Size = new System.Drawing.Size(334, 22);
             this.textBox_TargetOther.TabIndex = 251;
@@ -1366,18 +1338,19 @@
             // 
             this.checkBox_TargetOther.AutoSize = true;
             this.checkBox_TargetOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_TargetOther.Location = new System.Drawing.Point(309, 1327);
+            this.checkBox_TargetOther.Location = new System.Drawing.Point(309, 1251);
             this.checkBox_TargetOther.Name = "checkBox_TargetOther";
             this.checkBox_TargetOther.Size = new System.Drawing.Size(152, 20);
             this.checkBox_TargetOther.TabIndex = 248;
             this.checkBox_TargetOther.Text = "Иное (уточнить):";
             this.checkBox_TargetOther.UseVisualStyleBackColor = true;
+            this.checkBox_TargetOther.CheckedChanged += new System.EventHandler(this.checkBox_TargetOther_CheckedChanged_1);
             // 
             // checkBox_TargetBusiness
             // 
             this.checkBox_TargetBusiness.AutoSize = true;
             this.checkBox_TargetBusiness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_TargetBusiness.Location = new System.Drawing.Point(309, 1304);
+            this.checkBox_TargetBusiness.Location = new System.Drawing.Point(309, 1228);
             this.checkBox_TargetBusiness.Name = "checkBox_TargetBusiness";
             this.checkBox_TargetBusiness.Size = new System.Drawing.Size(81, 20);
             this.checkBox_TargetBusiness.TabIndex = 249;
@@ -1388,7 +1361,7 @@
             // 
             this.checkBox_TargetTourism.AutoSize = true;
             this.checkBox_TargetTourism.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_TargetTourism.Location = new System.Drawing.Point(309, 1281);
+            this.checkBox_TargetTourism.Location = new System.Drawing.Point(309, 1205);
             this.checkBox_TargetTourism.Name = "checkBox_TargetTourism";
             this.checkBox_TargetTourism.Size = new System.Drawing.Size(83, 20);
             this.checkBox_TargetTourism.TabIndex = 250;
@@ -1399,16 +1372,26 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 1305);
+            this.label1.Location = new System.Drawing.Point(3, 1229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 16);
             this.label1.TabIndex = 247;
             this.label1.Text = "2.1 Цель поездки в КНР";
             // 
+            // pictureBox29
+            // 
+            this.pictureBox29.Image = global::PrintDocument.Properties.Resources.BlackLine;
+            this.pictureBox29.Location = new System.Drawing.Point(1, 1847);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(820, 3);
+            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox29.TabIndex = 233;
+            this.pictureBox29.TabStop = false;
+            // 
             // pictureBox28
             // 
             this.pictureBox28.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox28.Location = new System.Drawing.Point(0, 1881);
+            this.pictureBox28.Location = new System.Drawing.Point(0, 1805);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(820, 3);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1418,7 +1401,7 @@
             // pictureBox27
             // 
             this.pictureBox27.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox27.Location = new System.Drawing.Point(0, 1810);
+            this.pictureBox27.Location = new System.Drawing.Point(0, 1734);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(820, 3);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1428,7 +1411,7 @@
             // pictureBox26
             // 
             this.pictureBox26.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox26.Location = new System.Drawing.Point(0, 1741);
+            this.pictureBox26.Location = new System.Drawing.Point(0, 1665);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(820, 3);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1438,7 +1421,7 @@
             // pictureBox25
             // 
             this.pictureBox25.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox25.Location = new System.Drawing.Point(0, 1681);
+            this.pictureBox25.Location = new System.Drawing.Point(0, 1605);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(820, 3);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1448,7 +1431,7 @@
             // pictureBox24
             // 
             this.pictureBox24.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox24.Location = new System.Drawing.Point(0, 1644);
+            this.pictureBox24.Location = new System.Drawing.Point(0, 1568);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(820, 3);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1458,7 +1441,7 @@
             // pictureBox23
             // 
             this.pictureBox23.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox23.Location = new System.Drawing.Point(0, 1603);
+            this.pictureBox23.Location = new System.Drawing.Point(0, 1527);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(820, 3);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1468,7 +1451,7 @@
             // pictureBox22
             // 
             this.pictureBox22.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox22.Location = new System.Drawing.Point(1, 1557);
+            this.pictureBox22.Location = new System.Drawing.Point(1, 1481);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(820, 3);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1478,7 +1461,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox8.Location = new System.Drawing.Point(0, 1508);
+            this.pictureBox8.Location = new System.Drawing.Point(0, 1432);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(820, 3);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1488,7 +1471,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox5.Location = new System.Drawing.Point(-1, 1353);
+            this.pictureBox5.Location = new System.Drawing.Point(-1, 1277);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(820, 3);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1498,7 +1481,7 @@
             // pictureBox21
             // 
             this.pictureBox21.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox21.Location = new System.Drawing.Point(-1, 1272);
+            this.pictureBox21.Location = new System.Drawing.Point(-1, 1196);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(820, 3);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1508,7 +1491,7 @@
             // pictureBox20
             // 
             this.pictureBox20.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox20.Location = new System.Drawing.Point(-5, 1181);
+            this.pictureBox20.Location = new System.Drawing.Point(-5, 1105);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(820, 3);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1680,7 +1663,7 @@
             this.pictureBox1.Image = global::PrintDocument.Properties.Resources.BlackLine;
             this.pictureBox1.Location = new System.Drawing.Point(293, -4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(3, 1930);
+            this.pictureBox1.Size = new System.Drawing.Size(3, 1855);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 213;
             this.pictureBox1.TabStop = false;
@@ -1723,7 +1706,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(9, 928);
+            this.label8.Location = new System.Drawing.Point(3, 928);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(200, 16);
             this.label8.TabIndex = 211;
@@ -1731,114 +1714,60 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.radioButton1);
-            this.groupBox5.Controls.Add(this.radioButton2);
-            this.groupBox5.Controls.Add(this.radioButton3);
-            this.groupBox5.Controls.Add(this.textBox1);
-            this.groupBox5.Location = new System.Drawing.Point(306, 512);
+            this.groupBox5.Controls.Add(this.radioButton__EducationOther);
+            this.groupBox5.Controls.Add(this.radioButton_EducationBachelor);
+            this.groupBox5.Controls.Add(this.radioButton_EducationMaster);
+            this.groupBox5.Controls.Add(this.textBox_EducationOther);
+            this.groupBox5.Location = new System.Drawing.Point(302, 514);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(513, 94);
             this.groupBox5.TabIndex = 210;
             this.groupBox5.TabStop = false;
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton1.Location = new System.Drawing.Point(7, 63);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(151, 20);
-            this.radioButton1.TabIndex = 212;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Иное (уточнить):";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton__EducationOther_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton2.Location = new System.Drawing.Point(7, 40);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(98, 20);
-            this.radioButton2.TabIndex = 213;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Бакалавр";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton3.Location = new System.Drawing.Point(7, 17);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(88, 20);
-            this.radioButton3.TabIndex = 211;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Магистр";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(161, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(348, 22);
-            this.textBox1.TabIndex = 210;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.radioButton__EducationOther);
-            this.groupBox3.Controls.Add(this.radioButton_EducationBachelor);
-            this.groupBox3.Controls.Add(this.radioButton_EducationMaster);
-            this.groupBox3.Controls.Add(this.textBox_EducationOther);
-            this.groupBox3.Location = new System.Drawing.Point(306, 512);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(513, 100);
-            this.groupBox3.TabIndex = 210;
-            this.groupBox3.TabStop = false;
-            // 
             // radioButton__EducationOther
             // 
             this.radioButton__EducationOther.AutoSize = true;
-            this.radioButton__EducationOther.Location = new System.Drawing.Point(9, 63);
+            this.radioButton__EducationOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton__EducationOther.Location = new System.Drawing.Point(7, 63);
             this.radioButton__EducationOther.Name = "radioButton__EducationOther";
-            this.radioButton__EducationOther.Size = new System.Drawing.Size(176, 17);
+            this.radioButton__EducationOther.Size = new System.Drawing.Size(151, 20);
             this.radioButton__EducationOther.TabIndex = 212;
             this.radioButton__EducationOther.TabStop = true;
-            this.radioButton__EducationOther.Text = "其他(请说明) Иное (уточнить):";
+            this.radioButton__EducationOther.Text = "Иное (уточнить):";
             this.radioButton__EducationOther.UseVisualStyleBackColor = true;
             this.radioButton__EducationOther.CheckedChanged += new System.EventHandler(this.radioButton__EducationOther_CheckedChanged);
             // 
             // radioButton_EducationBachelor
             // 
             this.radioButton_EducationBachelor.AutoSize = true;
-            this.radioButton_EducationBachelor.Location = new System.Drawing.Point(9, 40);
+            this.radioButton_EducationBachelor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton_EducationBachelor.Location = new System.Drawing.Point(7, 40);
             this.radioButton_EducationBachelor.Name = "radioButton_EducationBachelor";
-            this.radioButton_EducationBachelor.Size = new System.Drawing.Size(101, 17);
+            this.radioButton_EducationBachelor.Size = new System.Drawing.Size(98, 20);
             this.radioButton_EducationBachelor.TabIndex = 213;
             this.radioButton_EducationBachelor.TabStop = true;
-            this.radioButton_EducationBachelor.Text = "大学 Бакалавр";
+            this.radioButton_EducationBachelor.Text = "Бакалавр";
             this.radioButton_EducationBachelor.UseVisualStyleBackColor = true;
             // 
             // radioButton_EducationMaster
             // 
             this.radioButton_EducationMaster.AutoSize = true;
-            this.radioButton_EducationMaster.Location = new System.Drawing.Point(9, 17);
+            this.radioButton_EducationMaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton_EducationMaster.Location = new System.Drawing.Point(7, 17);
             this.radioButton_EducationMaster.Name = "radioButton_EducationMaster";
-            this.radioButton_EducationMaster.Size = new System.Drawing.Size(107, 17);
+            this.radioButton_EducationMaster.Size = new System.Drawing.Size(88, 20);
             this.radioButton_EducationMaster.TabIndex = 211;
             this.radioButton_EducationMaster.TabStop = true;
-            this.radioButton_EducationMaster.Text = "研究生 Магистр";
+            this.radioButton_EducationMaster.Text = "Магистр";
             this.radioButton_EducationMaster.UseVisualStyleBackColor = true;
             // 
             // textBox_EducationOther
             // 
             this.textBox_EducationOther.Enabled = false;
-            this.textBox_EducationOther.Location = new System.Drawing.Point(229, 63);
+            this.textBox_EducationOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_EducationOther.Location = new System.Drawing.Point(161, 63);
             this.textBox_EducationOther.Name = "textBox_EducationOther";
-            this.textBox_EducationOther.Size = new System.Drawing.Size(233, 20);
+            this.textBox_EducationOther.Size = new System.Drawing.Size(348, 22);
             this.textBox_EducationOther.TabIndex = 210;
             // 
             // textBox_PassportValidUntil
@@ -1848,7 +1777,6 @@
             this.textBox_PassportValidUntil.Name = "textBox_PassportValidUntil";
             this.textBox_PassportValidUntil.Size = new System.Drawing.Size(233, 22);
             this.textBox_PassportValidUntil.TabIndex = 207;
-            this.textBox_PassportValidUntil.Text = "31,04,2000";
             // 
             // textBox_DateOfIssue
             // 
@@ -1857,7 +1785,6 @@
             this.textBox_DateOfIssue.Name = "textBox_DateOfIssue";
             this.textBox_DateOfIssue.Size = new System.Drawing.Size(233, 22);
             this.textBox_DateOfIssue.TabIndex = 206;
-            this.textBox_DateOfIssue.Text = "12/02/1993";
             // 
             // groupBox1
             // 
@@ -1876,52 +1803,20 @@
             this.radioButton__GenderWoman.Location = new System.Drawing.Point(163, 11);
             this.radioButton__GenderWoman.Name = "radioButton__GenderWoman";
             this.radioButton__GenderWoman.Size = new System.Drawing.Size(92, 20);
-            this.radioButton__GenderWoman.TabIndex = 204;
+            this.radioButton__GenderWoman.TabIndex = 4;
             this.radioButton__GenderWoman.Text = "Женский";
             this.radioButton__GenderWoman.UseVisualStyleBackColor = true;
             // 
             // radioButton_GenderMan
             // 
             this.radioButton_GenderMan.AutoSize = true;
-            this.radioButton_GenderMan.Checked = true;
             this.radioButton_GenderMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_GenderMan.Location = new System.Drawing.Point(5, 11);
             this.radioButton_GenderMan.Name = "radioButton_GenderMan";
             this.radioButton_GenderMan.Size = new System.Drawing.Size(91, 20);
-            this.radioButton_GenderMan.TabIndex = 203;
-            this.radioButton_GenderMan.TabStop = true;
+            this.radioButton_GenderMan.TabIndex = 3;
             this.radioButton_GenderMan.Text = "Mужской";
             this.radioButton_GenderMan.UseVisualStyleBackColor = true;
-            // 
-            // button_Print
-            // 
-            this.button_Print.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_Print.Location = new System.Drawing.Point(10, 2001);
-            this.button_Print.Name = "button_Print";
-            this.button_Print.Size = new System.Drawing.Size(175, 40);
-            this.button_Print.TabIndex = 274;
-            this.button_Print.Text = "Печать";
-            this.button_Print.UseVisualStyleBackColor = true;
-            // 
-            // button_PrintPreview
-            // 
-            this.button_PrintPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_PrintPreview.Location = new System.Drawing.Point(10, 1942);
-            this.button_PrintPreview.Name = "button_PrintPreview";
-            this.button_PrintPreview.Size = new System.Drawing.Size(175, 40);
-            this.button_PrintPreview.TabIndex = 275;
-            this.button_PrintPreview.Text = "Предварительный просмотр";
-            this.button_PrintPreview.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox29
-            // 
-            this.pictureBox29.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox29.Location = new System.Drawing.Point(1, 1923);
-            this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(820, 3);
-            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox29.TabIndex = 233;
-            this.pictureBox29.TabStop = false;
             // 
             // Form1
             // 
@@ -1943,6 +1838,7 @@
             this.panel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
@@ -1975,11 +1871,8 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2022,7 +1915,6 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -2078,10 +1970,6 @@
         public System.Windows.Forms.RadioButton radioButton_GenderMan;
         public System.Windows.Forms.TextBox textBox_PassportValidUntil;
         public System.Windows.Forms.TextBox textBox_DateOfIssue;
-        public System.Windows.Forms.RadioButton radioButton__EducationOther;
-        public System.Windows.Forms.RadioButton radioButton_EducationBachelor;
-        public System.Windows.Forms.RadioButton radioButton_EducationMaster;
-        public System.Windows.Forms.TextBox textBox_EducationOther;
         public System.Windows.Forms.RadioButton radioButton_FamilyStatusSingle;
         public System.Windows.Forms.RadioButton radioButton_FamilyStatusMarried;
         public System.Windows.Forms.TextBox textBox_TargetOther;
@@ -2107,10 +1995,10 @@
         public System.Windows.Forms.TextBox textBox_ArrivalDate;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox5;
-        public System.Windows.Forms.RadioButton radioButton1;
-        public System.Windows.Forms.RadioButton radioButton2;
-        public System.Windows.Forms.RadioButton radioButton3;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.RadioButton radioButton__EducationOther;
+        public System.Windows.Forms.RadioButton radioButton_EducationBachelor;
+        public System.Windows.Forms.RadioButton radioButton_EducationMaster;
+        public System.Windows.Forms.TextBox textBox_EducationOther;
         public System.Windows.Forms.ComboBox comboBox_Tenure;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox23;
