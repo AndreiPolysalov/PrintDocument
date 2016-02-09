@@ -94,7 +94,6 @@
             this.checkBox_OccupationRetired = new System.Windows.Forms.CheckBox();
             this.textBox_DateOfTime = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_Print = new System.Windows.Forms.Button();
             this.button_PrintPreview = new System.Windows.Forms.Button();
             this.comboBox_FIO = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -173,6 +172,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton__GenderWoman = new System.Windows.Forms.RadioButton();
             this.radioButton_GenderMan = new System.Windows.Forms.RadioButton();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -874,7 +874,6 @@
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.CausesValidation = false;
-            this.panel1.Controls.Add(this.button_Print);
             this.panel1.Controls.Add(this.button_PrintPreview);
             this.panel1.Controls.Add(this.comboBox_FIO);
             this.panel1.Controls.Add(this.label19);
@@ -990,16 +989,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(844, 661);
             this.panel1.TabIndex = 70;
-            // 
-            // button_Print
-            // 
-            this.button_Print.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_Print.Location = new System.Drawing.Point(10, 1925);
-            this.button_Print.Name = "button_Print";
-            this.button_Print.Size = new System.Drawing.Size(175, 40);
-            this.button_Print.TabIndex = 274;
-            this.button_Print.Text = "Печать";
-            this.button_Print.UseVisualStyleBackColor = true;
             // 
             // button_PrintPreview
             // 
@@ -1818,15 +1807,20 @@
             this.radioButton_GenderMan.Text = "Mужской";
             this.radioButton_GenderMan.UseVisualStyleBackColor = true;
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(844, 661);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Раздел 1";
+            this.Text = "Анкета";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -2022,7 +2016,7 @@
         private System.Windows.Forms.PictureBox pictureBox28;
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.Button button_PrintPreview;
-        private System.Windows.Forms.Button button_Print;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
 

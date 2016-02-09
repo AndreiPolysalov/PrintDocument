@@ -47,19 +47,20 @@ namespace PrintDocument
         }
 
 
-        
         private void button_PrintPreview_Click(object sender, EventArgs e)
         {
             if (FieldIsNull() == true)
             {
+                printDocument1.PrintPage -= new PrintPageEventHandler(PrintPackage);
                 printPreviewDialog1.Document = printDocument1;
                 printDocument1.PrintPage += new PrintPageEventHandler(PrintPackage);
                 printPreviewDialog1.ShowDialog();
             }
         }
 
+
         public void PrintPackage(object sender, PrintPageEventArgs e)
-        {
+        {            
             switch (page)
             {
                 case (0): PageOne(e); break;//Заполняем поля для второй страницы
