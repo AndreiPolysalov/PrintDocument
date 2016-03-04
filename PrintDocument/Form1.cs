@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
+using System.Text;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace PrintDocument
 {
@@ -16,6 +19,8 @@ namespace PrintDocument
 
         private List<int> numberPagesForPrint = new List<int> { 1, 2, 3, 4 }; //Номера страниц которое необходимо расспечатать
         private int list = 0;
+
+        private List<Profile> profiles = new List<Profile>();
 
         string textBox_DateOfTime_EnteredSymbols;
 
@@ -50,6 +55,10 @@ namespace PrintDocument
             }
         }
 
+        private void button_SaveProfile_Click(object sender, EventArgs e)
+        {
+            SaveXMLFile();
+        }
 
         public void PrintPackage(object sender, PrintPageEventArgs e)
         {
@@ -89,8 +98,6 @@ namespace PrintDocument
 
         private bool FieldIsNull()
         {
-            return true;
-
             if (string.IsNullOrEmpty(TextBox_LastName.Text)) { MessageBox.Show("В пункте 1.1 не указана фамилия"); return false; }
             if (string.IsNullOrEmpty(TextBox_FirstName.Text)) { MessageBox.Show("В пункте 1.1 не указано имя"); return false; }
 
@@ -143,8 +150,6 @@ namespace PrintDocument
 
             if (string.IsNullOrEmpty(comboBox_Tenure.Text)) { MessageBox.Show("В пункте 2.5 не указан срок пребывания в КНР"); return false; }
 
-            if (string.IsNullOrEmpty(textBox_RouteData.Text)) { MessageBox.Show("В пункте 2.6 не указана дата"); return false; }
-
             if (!radioButton_PaysApplicant.Checked && !radioButton_PaysParents.Checked) { MessageBox.Show("В пункте 2.7 ни чего не выбрано"); return false; }
 
             if (string.IsNullOrEmpty(comboBox_FIO.Text)) { MessageBox.Show("В пункте 5.1 не указан срок пребывания в КНР"); return false; }
@@ -154,8 +159,6 @@ namespace PrintDocument
 
         private void PageOne(PrintPageEventArgs e)
         {
-            //return;
-
             e.Graphics.DrawImage(ListA4_1, 0, 0, e.PageBounds.Width, e.PageBounds.Height);
 
             //Ф.И.О.
@@ -186,20 +189,22 @@ namespace PrintDocument
             if (checkBox_OccupationRetired.Checked) e.Graphics.DrawImage(Krestik, 177, 878, 15, 15);//Пенсионеры
 
             //Образование
-            if (radioButton_EducationMaster.Checked) e.Graphics.DrawImage(Krestik, 178, 956, 15, 15);
-            else if (radioButton_EducationBachelor.Checked) e.Graphics.DrawImage(Krestik, 412, 956, 15, 15);
+            if (radioButton_EducationMaster.Checked)
+            {
+                e.Graphics.DrawImage(Krestik, 178, 974, 15, 15);//Учащийся, студент
+                e.Graphics.DrawString("Учащийся, студент", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 370, 975);
+            }
+            else if (radioButton_EducationBachelor.Checked) e.Graphics.DrawImage(Krestik, 412, 956, 15, 15);//Бакалавр
 
             //Место работы
             e.Graphics.DrawString(textBox_WorkName.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 234, 1024);//Название
-            e.Graphics.DrawString(textBox_WorkAddress.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 246, 1064);//Адрес
+            e.Graphics.DrawString(textBox_WorkAddress.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 246, 1056);//Адрес
             e.Graphics.DrawString(textBox_WorkPhoneNumber.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 642, 1026);//Телефон
             e.Graphics.DrawString(textBox_WorkPostcode.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 650, 1074);//Индекс
         }
 
         private void PageTwo(PrintPageEventArgs e)
         {
-            //return;
-
             e.Graphics.DrawImage(ListA4_2, 0, 0, e.PageBounds.Width, e.PageBounds.Height);
 
             e.Graphics.DrawString(textBox_HomeAddress.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 163, 38);//Домашний адрес
@@ -215,8 +220,8 @@ namespace PrintDocument
             e.Graphics.DrawString(textBox_Row2FIO.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 230, 260);//Стр2 ФИО
             e.Graphics.DrawString(textBox_Row1Citizenship.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 390, 225);//Стр1 Гражданство
             e.Graphics.DrawString(textBox_Row2Citizenship.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 390, 260);//Стр2 Гражданство
-            e.Graphics.DrawString(textBox_Row1Profession.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 225);//Стр1 Профессия
-            e.Graphics.DrawString(textBox_Row2Profession.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 260);//Стр2 Профессия
+            e.Graphics.DrawString(textBox_Row1Profession.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 470, 225);//Стр1 Профессия
+            e.Graphics.DrawString(textBox_Row2Profession.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 470, 260);//Стр2 Профессия
             e.Graphics.DrawString(textBox_Row1Relation.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 645, 225);//Стр1 Отношения
             e.Graphics.DrawString(textBox_Row2Relation.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 645, 260);//Стр2 Отношения
 
@@ -249,15 +254,13 @@ namespace PrintDocument
 
         private void PageThree(PrintPageEventArgs e)
         {
-            //return;
-
             e.Graphics.DrawImage(ListA4_3, 0, 0, e.PageBounds.Width, e.PageBounds.Height);
 
             e.Graphics.DrawString(textBox_ArrivalDate.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 620, 53);//Предполагаемая дата въезда в КНР
             e.Graphics.DrawString(comboBox_Tenure.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 630, 95);//Срок пребывания каждой поездки
 
             //Маршрут в КНР
-            e.Graphics.DrawString(textBox_RouteData.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 330, 175);//Дата стр 1
+            e.Graphics.DrawString(textBox_ArrivalDate.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 330, 175);//Дата стр 1
             e.Graphics.DrawString("№1, Nanheyan street," + "\n" + "Beijing 100006", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 164);//Адрес стр 1
             e.Graphics.DrawString("Jade Garden Hotel,", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 216);//Адрес стр 2
             e.Graphics.DrawString("010 – 5858 0909", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 258);//Адрес стр 3
@@ -265,14 +268,6 @@ namespace PrintDocument
             //Кто оплачивает расходы заявителя
             if (radioButton_PaysApplicant.Checked) e.Graphics.DrawString("Заявитель", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 600, 392);
             else if (radioButton_PaysParents.Checked) e.Graphics.DrawString("Родители", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 600, 392);
-
-            //Информация о приглашающей стороне
-            if (radioButton_VisitsRepeatedly.Checked || radioButton_VisitsRepeatedly2.Checked)
-            {
-                e.Graphics.DrawString("«010 65224434»", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 450, 441);//Название
-                e.Graphics.DrawString("maofahaiwaibu@hotmail.com", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 400, 485);//Адрес
-            }
-
 
             e.Graphics.DrawString(textBox_PaymentOfExpenses.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 620);//Вам когда-нибудь были предоставлены китайские визы?
             e.Graphics.DrawString(textBox_OtherСountries.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 685);//Были ли вы в других странах 
@@ -294,8 +289,6 @@ namespace PrintDocument
 
         private void PageFour(PrintPageEventArgs e)
         {
-            //return;
-
             e.Graphics.DrawImage(ListA4_4, 0, 0, e.PageBounds.Width, e.PageBounds.Height);
 
             //////////////////////////////
@@ -318,9 +311,153 @@ namespace PrintDocument
             textBox_DateOfTime_EnteredSymbols += e.KeyChar.ToString();
         }
 
-        private void textBox_DateOfTime_Click(object sender, EventArgs e)
+        
+        private void button_OpenProfile_Click(object sender, EventArgs e)
         {
-
+            if (File.Exists("ProfileDataBase.xml") == false)
+            {
+                MessageBox.Show("Файл с базой данных не найден, возможно, он еще не был создан" + "\n" + "либо, поместите файл с базой в папку с программой");
+                return;
+            }
+            else
+            {
+                GetProfileData();
+                MessageBox.Show(profiles.Count.ToString());
+                MessageBox.Show(profiles[0].FirstName);
+            }
         }
+
+        private void SaveXMLFile()
+        {
+            if (File.Exists("ProfileDataBase.xml") == false)//У нас нету базы с анкетами, поэтому создаем новую базу
+            {
+                XmlTextWriter writer = new XmlTextWriter("ProfileDataBase.xml", Encoding.UTF8) { Formatting = Formatting.Indented };
+                writer.WriteStartDocument();
+
+                writer.WriteStartElement("Profiles");
+                {
+                    writer.WriteStartElement("Profile");
+                    {
+                        writer.WriteAttributeString("LastName", TextBox_LastName.Text);
+                        writer.WriteAttributeString("FirstName", TextBox_FirstName.Text);
+                        writer.WriteAttributeString("Gender", (radioButton_GenderMan.Checked == true ? 0 : 1).ToString());
+                        writer.WriteAttributeString("DateOfTime", textBox_DateOfTime.Text);
+                        writer.WriteAttributeString("CityRegionCountry", textBox_CityRegionCountry.Text);
+                        writer.WriteAttributeString("OrdinaryPassportNumber", textBox_OrdinaryPassportNumber.Text);
+                    }
+                    writer.WriteEndElement();
+                }
+                writer.WriteEndElement();
+
+                writer.WriteEndDocument();
+                writer.Close();
+            }
+            else//У нас уже есть база с анкетами, поэтому надо добавить туда новую анкету
+            {
+                //Получаем все анкеты из базы
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.Load("ProfileDataBase.xml");
+                foreach (XmlNode item in xmlDoc.DocumentElement)
+                {
+                    GetProfileData();
+                }
+
+                FindMatch();
+
+                ////Добавляем новую анкету
+                //profiles.Add(new Profile()
+                //{
+                //    LastName = TextBox_LastName.Text,
+                //    FirstName = TextBox_FirstName.Text,
+                //    Gender = (radioButton_GenderMan.Checked == true ? 0 : 1).ToString(),
+                //    DateOfTime = textBox_DateOfTime.Text,
+                //    CityRegionCountry = textBox_CityRegionCountry.Text,
+                //    OrdinaryPassportNumber = textBox_OrdinaryPassportNumber.Text
+                //});
+
+                ////создаем новую базу, записываем в нее ранее полученные анкеты
+                //XmlTextWriter writer = new XmlTextWriter("ProfileDataBase.xml", Encoding.UTF8) { Formatting = Formatting.Indented };
+                //writer.WriteStartDocument();
+
+                //writer.WriteStartElement("Profiles");
+                //{
+                //    foreach (Profile item in profiles)
+                //    {
+                //        writer.WriteStartElement("Profile");
+                //        {
+                //            writer.WriteAttributeString("LastName", item.LastName);
+                //            writer.WriteAttributeString("FirstName", item.FirstName);
+                //            writer.WriteAttributeString("Gender", item.Gender);
+                //            writer.WriteAttributeString("DateOfTime", item.DateOfTime);
+                //            writer.WriteAttributeString("CityRegionCountry", item.CityRegionCountry);
+                //            writer.WriteAttributeString("OrdinaryPassportNumber", item.OrdinaryPassportNumber);
+                //        }
+                //        writer.WriteEndElement();
+                //    }
+                //}
+                //writer.WriteEndElement();
+
+                //writer.WriteEndDocument();
+                //writer.Close();
+            }
+        }
+
+        //Ищем в базе совпадения по фамилии и имени
+        private void FindMatch()
+        {
+            foreach (Profile item in profiles)
+            {
+                string ProfileLastName = item.LastName;
+                string ProfileFirstName = item.FirstName;
+                string CurrentLastName = TextBox_LastName.Text;
+                string CurrentFirstName = TextBox_FirstName.Text;
+
+                if (ProfileLastName == CurrentLastName &&
+                    ProfileFirstName == CurrentFirstName)
+                {
+                    MessageBox.Show("В базе уже имеется клиент с такой фамилией и именем");
+                }
+            }
+        }
+
+        //Получаем все анкеты из базы
+        private void GetProfileData()
+        {
+            profiles.Clear();
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load("ProfileDataBase.xml");
+            foreach (XmlNode item in xmlDoc.DocumentElement)
+            {
+                string LastName = item.Attributes["LastName"].Value;
+                string FirstName = item.Attributes["FirstName"].Value;
+                string Gender = item.Attributes["Gender"].Value;
+                string DateOfTime = item.Attributes["DateOfTime"].Value;
+                string CityRegionCountry = item.Attributes["CityRegionCountry"].Value;
+                string OrdinaryPassportNumber = item.Attributes["OrdinaryPassportNumber"].Value;
+
+                profiles.Add(new Profile()
+                {
+                    LastName = LastName,
+                    FirstName = FirstName,
+                    Gender = Gender,
+                    DateOfTime = DateOfTime,
+                    CityRegionCountry = CityRegionCountry,
+                    OrdinaryPassportNumber = OrdinaryPassportNumber
+                });
+            }
+        }
+    }
+
+
+
+    class Profile
+    {
+        public string LastName;
+        public string FirstName;
+        public string Gender;
+        public string DateOfTime;
+        public string CityRegionCountry;
+        public string OrdinaryPassportNumber;
     }
 }
