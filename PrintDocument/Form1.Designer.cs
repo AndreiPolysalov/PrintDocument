@@ -982,18 +982,18 @@
             this.button_OpenProfile.Name = "button_OpenProfile";
             this.button_OpenProfile.Size = new System.Drawing.Size(175, 40);
             this.button_OpenProfile.TabIndex = 279;
-            this.button_OpenProfile.Text = "Открыть анкету";
+            this.button_OpenProfile.Text = "Открыть";
             this.button_OpenProfile.UseVisualStyleBackColor = true;
             this.button_OpenProfile.Click += new System.EventHandler(this.button_OpenProfile_Click);
             // 
             // button_SaveProfile
             // 
             this.button_SaveProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button_SaveProfile.Location = new System.Drawing.Point(12, 1749);
+            this.button_SaveProfile.Location = new System.Drawing.Point(193, 1703);
             this.button_SaveProfile.Name = "button_SaveProfile";
             this.button_SaveProfile.Size = new System.Drawing.Size(175, 40);
             this.button_SaveProfile.TabIndex = 278;
-            this.button_SaveProfile.Text = "Сохранить анкету";
+            this.button_SaveProfile.Text = "Сохранить";
             this.button_SaveProfile.UseVisualStyleBackColor = true;
             this.button_SaveProfile.Click += new System.EventHandler(this.button_SaveProfile_Click);
             // 
@@ -1001,7 +1001,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(344, 1791);
+            this.label14.Location = new System.Drawing.Point(223, 1760);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(414, 16);
             this.label14.TabIndex = 277;
@@ -1011,7 +1011,7 @@
             // 
             this.checkBox_PageForPrint4.AutoSize = true;
             this.checkBox_PageForPrint4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint4.Location = new System.Drawing.Point(675, 1815);
+            this.checkBox_PageForPrint4.Location = new System.Drawing.Point(554, 1784);
             this.checkBox_PageForPrint4.Name = "checkBox_PageForPrint4";
             this.checkBox_PageForPrint4.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint4.TabIndex = 276;
@@ -1022,7 +1022,7 @@
             // 
             this.checkBox_PageForPrint3.AutoSize = true;
             this.checkBox_PageForPrint3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint3.Location = new System.Drawing.Point(559, 1815);
+            this.checkBox_PageForPrint3.Location = new System.Drawing.Point(438, 1784);
             this.checkBox_PageForPrint3.Name = "checkBox_PageForPrint3";
             this.checkBox_PageForPrint3.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint3.TabIndex = 276;
@@ -1035,7 +1035,7 @@
             this.checkBox_PageForPrint2.Checked = true;
             this.checkBox_PageForPrint2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_PageForPrint2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint2.Location = new System.Drawing.Point(443, 1815);
+            this.checkBox_PageForPrint2.Location = new System.Drawing.Point(322, 1784);
             this.checkBox_PageForPrint2.Name = "checkBox_PageForPrint2";
             this.checkBox_PageForPrint2.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint2.TabIndex = 276;
@@ -1048,7 +1048,7 @@
             this.checkBox_PageForPrint1.Checked = true;
             this.checkBox_PageForPrint1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_PageForPrint1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint1.Location = new System.Drawing.Point(327, 1815);
+            this.checkBox_PageForPrint1.Location = new System.Drawing.Point(206, 1784);
             this.checkBox_PageForPrint1.Name = "checkBox_PageForPrint1";
             this.checkBox_PageForPrint1.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint1.TabIndex = 276;
@@ -1058,7 +1058,7 @@
             // button_PrintPreview
             // 
             this.button_PrintPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_PrintPreview.Location = new System.Drawing.Point(12, 1795);
+            this.button_PrintPreview.Location = new System.Drawing.Point(12, 1764);
             this.button_PrintPreview.Name = "button_PrintPreview";
             this.button_PrintPreview.Size = new System.Drawing.Size(175, 40);
             this.button_PrintPreview.TabIndex = 275;
@@ -1764,6 +1764,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(844, 661);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

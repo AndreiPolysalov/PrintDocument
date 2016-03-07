@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace PrintDocument
 {
@@ -20,8 +18,6 @@ namespace PrintDocument
         private List<int> numberPagesForPrint = new List<int> { 1, 2, 3, 4 }; //Номера страниц которое необходимо расспечатать
         private int list = 0;
 
-        private List<Profile> profiles = new List<Profile>();
-
         string textBox_DateOfTime_EnteredSymbols;
 
 
@@ -35,12 +31,18 @@ namespace PrintDocument
             textBox_DateOfTime.KeyPress += new KeyPressEventHandler(textBox_DateOfTime_keypressed);
         }
 
+
+
         private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
 
-        //Активация поля ввода Other
+        private void textBox_DateOfTime_keypressed(Object o, KeyPressEventArgs e)
+        {
+            textBox_DateOfTime_EnteredSymbols += e.KeyChar.ToString();
+        }
+
 
         private void button_PrintPreview_Click(object sender, EventArgs e)
         {
@@ -55,10 +57,31 @@ namespace PrintDocument
             }
         }
 
+        private void button_OpenProfile_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("ProfileDataBase.xml") == false)
+            {
+                MessageBox.Show("Файл с базой данных не найден, возможно, он еще не был создан" + "\n" + "либо, поместите файл с базой в папку с программой");
+                return;
+            }
+            else
+            {
+                Form3 f3 = new Form3();
+                f3.FillTable();
+
+                Program.f1 = this;
+                Program.f3 = f3;
+                Program.OpenForm3();
+            }
+        }
+
         private void button_SaveProfile_Click(object sender, EventArgs e)
         {
-            SaveXMLFile();
+            DataBase.f1 = this;
+            DataBase.SaveToXMLFile();
         }
+
+
 
         public void PrintPackage(object sender, PrintPageEventArgs e)
         {
@@ -80,6 +103,7 @@ namespace PrintDocument
                 e.HasMorePages = false;
             }
         }
+
 
 
         private void checkPageForPrint()
@@ -300,164 +324,5 @@ namespace PrintDocument
             e.Graphics.DrawString("Екатеринбург," + "\n" + "пр. Ленина, 52/4", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 196, 945);//Адрес
             e.Graphics.DrawString("8-922-100-66-55", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 604, 955);//Номер телефона
         }
-
-
-
-        //////////////////////////////////
-        //textBox_DateOfTime
-        //////////////////////////////////
-        private void textBox_DateOfTime_keypressed(Object o, KeyPressEventArgs e)
-        {
-            textBox_DateOfTime_EnteredSymbols += e.KeyChar.ToString();
-        }
-
-        
-        private void button_OpenProfile_Click(object sender, EventArgs e)
-        {
-            if (File.Exists("ProfileDataBase.xml") == false)
-            {
-                MessageBox.Show("Файл с базой данных не найден, возможно, он еще не был создан" + "\n" + "либо, поместите файл с базой в папку с программой");
-                return;
-            }
-            else
-            {
-                GetProfileData();
-                MessageBox.Show(profiles.Count.ToString());
-                MessageBox.Show(profiles[0].FirstName);
-            }
-        }
-
-        private void SaveXMLFile()
-        {
-            if (File.Exists("ProfileDataBase.xml") == false)//У нас нету базы с анкетами, поэтому создаем новую базу
-            {
-                XmlTextWriter writer = new XmlTextWriter("ProfileDataBase.xml", Encoding.UTF8) { Formatting = Formatting.Indented };
-                writer.WriteStartDocument();
-
-                writer.WriteStartElement("Profiles");
-                {
-                    writer.WriteStartElement("Profile");
-                    {
-                        writer.WriteAttributeString("LastName", TextBox_LastName.Text);
-                        writer.WriteAttributeString("FirstName", TextBox_FirstName.Text);
-                        writer.WriteAttributeString("Gender", (radioButton_GenderMan.Checked == true ? 0 : 1).ToString());
-                        writer.WriteAttributeString("DateOfTime", textBox_DateOfTime.Text);
-                        writer.WriteAttributeString("CityRegionCountry", textBox_CityRegionCountry.Text);
-                        writer.WriteAttributeString("OrdinaryPassportNumber", textBox_OrdinaryPassportNumber.Text);
-                    }
-                    writer.WriteEndElement();
-                }
-                writer.WriteEndElement();
-
-                writer.WriteEndDocument();
-                writer.Close();
-            }
-            else//У нас уже есть база с анкетами, поэтому надо добавить туда новую анкету
-            {
-                //Получаем все анкеты из базы
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load("ProfileDataBase.xml");
-                foreach (XmlNode item in xmlDoc.DocumentElement)
-                {
-                    GetProfileData();
-                }
-
-                FindMatch();
-
-                ////Добавляем новую анкету
-                //profiles.Add(new Profile()
-                //{
-                //    LastName = TextBox_LastName.Text,
-                //    FirstName = TextBox_FirstName.Text,
-                //    Gender = (radioButton_GenderMan.Checked == true ? 0 : 1).ToString(),
-                //    DateOfTime = textBox_DateOfTime.Text,
-                //    CityRegionCountry = textBox_CityRegionCountry.Text,
-                //    OrdinaryPassportNumber = textBox_OrdinaryPassportNumber.Text
-                //});
-
-                ////создаем новую базу, записываем в нее ранее полученные анкеты
-                //XmlTextWriter writer = new XmlTextWriter("ProfileDataBase.xml", Encoding.UTF8) { Formatting = Formatting.Indented };
-                //writer.WriteStartDocument();
-
-                //writer.WriteStartElement("Profiles");
-                //{
-                //    foreach (Profile item in profiles)
-                //    {
-                //        writer.WriteStartElement("Profile");
-                //        {
-                //            writer.WriteAttributeString("LastName", item.LastName);
-                //            writer.WriteAttributeString("FirstName", item.FirstName);
-                //            writer.WriteAttributeString("Gender", item.Gender);
-                //            writer.WriteAttributeString("DateOfTime", item.DateOfTime);
-                //            writer.WriteAttributeString("CityRegionCountry", item.CityRegionCountry);
-                //            writer.WriteAttributeString("OrdinaryPassportNumber", item.OrdinaryPassportNumber);
-                //        }
-                //        writer.WriteEndElement();
-                //    }
-                //}
-                //writer.WriteEndElement();
-
-                //writer.WriteEndDocument();
-                //writer.Close();
-            }
-        }
-
-        //Ищем в базе совпадения по фамилии и имени
-        private void FindMatch()
-        {
-            foreach (Profile item in profiles)
-            {
-                string ProfileLastName = item.LastName;
-                string ProfileFirstName = item.FirstName;
-                string CurrentLastName = TextBox_LastName.Text;
-                string CurrentFirstName = TextBox_FirstName.Text;
-
-                if (ProfileLastName == CurrentLastName &&
-                    ProfileFirstName == CurrentFirstName)
-                {
-                    MessageBox.Show("В базе уже имеется клиент с такой фамилией и именем");
-                }
-            }
-        }
-
-        //Получаем все анкеты из базы
-        private void GetProfileData()
-        {
-            profiles.Clear();
-
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("ProfileDataBase.xml");
-            foreach (XmlNode item in xmlDoc.DocumentElement)
-            {
-                string LastName = item.Attributes["LastName"].Value;
-                string FirstName = item.Attributes["FirstName"].Value;
-                string Gender = item.Attributes["Gender"].Value;
-                string DateOfTime = item.Attributes["DateOfTime"].Value;
-                string CityRegionCountry = item.Attributes["CityRegionCountry"].Value;
-                string OrdinaryPassportNumber = item.Attributes["OrdinaryPassportNumber"].Value;
-
-                profiles.Add(new Profile()
-                {
-                    LastName = LastName,
-                    FirstName = FirstName,
-                    Gender = Gender,
-                    DateOfTime = DateOfTime,
-                    CityRegionCountry = CityRegionCountry,
-                    OrdinaryPassportNumber = OrdinaryPassportNumber
-                });
-            }
-        }
-    }
-
-
-
-    class Profile
-    {
-        public string LastName;
-        public string FirstName;
-        public string Gender;
-        public string DateOfTime;
-        public string CityRegionCountry;
-        public string OrdinaryPassportNumber;
     }
 }

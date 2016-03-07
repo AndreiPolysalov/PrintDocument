@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Profiles>
+  <Profile LastName="Иванов" FirstName="Андрей" Gender="0" DateOfTime="1993.12.04" CityRegionCountry="Екатеринбург" OrdinaryPassportNumber="123 123" />
+  <Profile LastName="Полысалов" FirstName="Андрей" Gender="0" DateOfTime="1993.12.04" CityRegionCountry="Екатеринбург" OrdinaryPassportNumber="123 123" />
+  <Profile LastName="Петров" FirstName="Андрей" Gender="0" DateOfTime="1993.12.04" CityRegionCountry="Екатеринбург" OrdinaryPassportNumber="123 123" />
+  <Profile LastName="Сидоров" FirstName="Андрей" Gender="0" DateOfTime="1993.12.04" CityRegionCountry="Екатеринбург" OrdinaryPassportNumber="123 123" />
+  <Profile LastName="Пидоров" FirstName="Андрей" Gender="0" DateOfTime="1993.12.04" CityRegionCountry="Екатеринбург" OrdinaryPassportNumber="123 123" />
+</Profiles>
