@@ -319,7 +319,7 @@
             this.textBox_OrdinaryPassportNumber.Name = "textBox_OrdinaryPassportNumber";
             this.textBox_OrdinaryPassportNumber.Size = new System.Drawing.Size(233, 22);
             this.textBox_OrdinaryPassportNumber.TabIndex = 7;
-            this.textBox_OrdinaryPassportNumber.Text = "123 123";
+            this.textBox_OrdinaryPassportNumber.Text = "542 854";
             // 
             // label24
             // 
@@ -338,6 +338,7 @@
             this.textBox_PassportNumber.Name = "textBox_PassportNumber";
             this.textBox_PassportNumber.Size = new System.Drawing.Size(233, 22);
             this.textBox_PassportNumber.TabIndex = 100;
+            this.textBox_PassportNumber.Text = "32 434 546";
             // 
             // label25
             // 
@@ -366,6 +367,7 @@
             this.textBox_PassportPlaceOfIssue.Name = "textBox_PassportPlaceOfIssue";
             this.textBox_PassportPlaceOfIssue.Size = new System.Drawing.Size(233, 22);
             this.textBox_PassportPlaceOfIssue.TabIndex = 104;
+            this.textBox_PassportPlaceOfIssue.Text = "Хуй знает";
             this.textBox_PassportPlaceOfIssue.WordWrap = false;
             // 
             // label27
@@ -416,6 +418,7 @@
             this.textBox_WorkName.Name = "textBox_WorkName";
             this.textBox_WorkName.Size = new System.Drawing.Size(296, 22);
             this.textBox_WorkName.TabIndex = 129;
+            this.textBox_WorkName.Text = "УрФУ";
             // 
             // label37
             // 
@@ -436,6 +439,7 @@
             this.textBox_WorkAddress.Name = "textBox_WorkAddress";
             this.textBox_WorkAddress.Size = new System.Drawing.Size(296, 39);
             this.textBox_WorkAddress.TabIndex = 131;
+            this.textBox_WorkAddress.Text = "Ленина 110а";
             // 
             // label36
             // 
@@ -454,6 +458,7 @@
             this.textBox_WorkPhoneNumber.Name = "textBox_WorkPhoneNumber";
             this.textBox_WorkPhoneNumber.Size = new System.Drawing.Size(296, 22);
             this.textBox_WorkPhoneNumber.TabIndex = 133;
+            this.textBox_WorkPhoneNumber.Text = "348 12 77";
             // 
             // label35
             // 
@@ -472,6 +477,7 @@
             this.textBox_WorkPostcode.Name = "textBox_WorkPostcode";
             this.textBox_WorkPostcode.Size = new System.Drawing.Size(296, 22);
             this.textBox_WorkPostcode.TabIndex = 135;
+            this.textBox_WorkPostcode.Text = "480 236";
             // 
             // label39
             // 
@@ -491,6 +497,7 @@
             this.textBox_HomeAddress.Name = "textBox_HomeAddress";
             this.textBox_HomeAddress.Size = new System.Drawing.Size(321, 57);
             this.textBox_HomeAddress.TabIndex = 137;
+            this.textBox_HomeAddress.Text = "Новгородцевой 19\\1 кв 82";
             this.textBox_HomeAddress.WordWrap = false;
             // 
             // label40
@@ -510,6 +517,7 @@
             this.textBox_HomePostcode.Name = "textBox_HomePostcode";
             this.textBox_HomePostcode.Size = new System.Drawing.Size(233, 22);
             this.textBox_HomePostcode.TabIndex = 139;
+            this.textBox_HomePostcode.Text = "620 072";
             // 
             // label41
             // 
@@ -528,6 +536,7 @@
             this.textBox_HomeMobileNumber.Name = "textBox_HomeMobileNumber";
             this.textBox_HomeMobileNumber.Size = new System.Drawing.Size(233, 22);
             this.textBox_HomeMobileNumber.TabIndex = 141;
+            this.textBox_HomeMobileNumber.Text = "+7 912 61 84 203";
             // 
             // label42
             // 
@@ -583,6 +592,7 @@
             this.textBox_Row2Relation.Name = "textBox_Row2Relation";
             this.textBox_Row2Relation.Size = new System.Drawing.Size(108, 20);
             this.textBox_Row2Relation.TabIndex = 156;
+            this.textBox_Row2Relation.Text = "Батя";
             this.textBox_Row2Relation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row2Profession
@@ -595,6 +605,7 @@
             this.textBox_Row2Profession.Name = "textBox_Row2Profession";
             this.textBox_Row2Profession.Size = new System.Drawing.Size(130, 20);
             this.textBox_Row2Profession.TabIndex = 155;
+            this.textBox_Row2Profession.Text = "миллиардер";
             this.textBox_Row2Profession.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row2Citizenship
@@ -607,6 +618,7 @@
             this.textBox_Row2Citizenship.Name = "textBox_Row2Citizenship";
             this.textBox_Row2Citizenship.Size = new System.Drawing.Size(131, 20);
             this.textBox_Row2Citizenship.TabIndex = 154;
+            this.textBox_Row2Citizenship.Text = "РФ";
             this.textBox_Row2Citizenship.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row2FIO
@@ -619,6 +631,7 @@
             this.textBox_Row2FIO.Name = "textBox_Row2FIO";
             this.textBox_Row2FIO.Size = new System.Drawing.Size(111, 20);
             this.textBox_Row2FIO.TabIndex = 153;
+            this.textBox_Row2FIO.Text = "Полысалов В.А.";
             this.textBox_Row2FIO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row1Relation
@@ -631,6 +644,7 @@
             this.textBox_Row1Relation.Name = "textBox_Row1Relation";
             this.textBox_Row1Relation.Size = new System.Drawing.Size(108, 20);
             this.textBox_Row1Relation.TabIndex = 152;
+            this.textBox_Row1Relation.Text = "Мать";
             this.textBox_Row1Relation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row1Profession
@@ -643,6 +657,7 @@
             this.textBox_Row1Profession.Name = "textBox_Row1Profession";
             this.textBox_Row1Profession.Size = new System.Drawing.Size(130, 20);
             this.textBox_Row1Profession.TabIndex = 151;
+            this.textBox_Row1Profession.Text = "продавец";
             this.textBox_Row1Profession.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row1Citizenship
@@ -655,6 +670,7 @@
             this.textBox_Row1Citizenship.Name = "textBox_Row1Citizenship";
             this.textBox_Row1Citizenship.Size = new System.Drawing.Size(131, 20);
             this.textBox_Row1Citizenship.TabIndex = 150;
+            this.textBox_Row1Citizenship.Text = "РФ";
             this.textBox_Row1Citizenship.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label47
@@ -723,6 +739,7 @@
             this.textBox_Row1FIO.Name = "textBox_Row1FIO";
             this.textBox_Row1FIO.Size = new System.Drawing.Size(111, 20);
             this.textBox_Row1FIO.TabIndex = 149;
+            this.textBox_Row1FIO.Text = "Полысалова Л.Ю.";
             this.textBox_Row1FIO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label43
@@ -752,6 +769,7 @@
             this.textBox_ChPFIO.Name = "textBox_ChPFIO";
             this.textBox_ChPFIO.Size = new System.Drawing.Size(260, 22);
             this.textBox_ChPFIO.TabIndex = 148;
+            this.textBox_ChPFIO.Text = "Полысалова Анна Викторовна";
             // 
             // label51
             // 
@@ -770,6 +788,7 @@
             this.textBox_ChPNumberMobilePhone.Name = "textBox_ChPNumberMobilePhone";
             this.textBox_ChPNumberMobilePhone.Size = new System.Drawing.Size(260, 22);
             this.textBox_ChPNumberMobilePhone.TabIndex = 150;
+            this.textBox_ChPNumberMobilePhone.Text = "8-908-9011189";
             // 
             // label50
             // 
@@ -788,6 +807,7 @@
             this.textBox_ChPRelation.Name = "textBox_ChPRelation";
             this.textBox_ChPRelation.Size = new System.Drawing.Size(260, 22);
             this.textBox_ChPRelation.TabIndex = 152;
+            this.textBox_ChPRelation.Text = "Сестра";
             // 
             // label49
             // 
@@ -802,6 +822,8 @@
             // checkBox_OccupationOtherCompanies
             // 
             this.checkBox_OccupationOtherCompanies.AutoSize = true;
+            this.checkBox_OccupationOtherCompanies.Checked = true;
+            this.checkBox_OccupationOtherCompanies.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_OccupationOtherCompanies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox_OccupationOtherCompanies.Location = new System.Drawing.Point(305, 372);
             this.checkBox_OccupationOtherCompanies.Name = "checkBox_OccupationOtherCompanies";
@@ -813,6 +835,8 @@
             // checkBox_OccupationStudent
             // 
             this.checkBox_OccupationStudent.AutoSize = true;
+            this.checkBox_OccupationStudent.Checked = true;
+            this.checkBox_OccupationStudent.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_OccupationStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox_OccupationStudent.Location = new System.Drawing.Point(305, 395);
             this.checkBox_OccupationStudent.Name = "checkBox_OccupationStudent";
@@ -835,6 +859,8 @@
             // checkBox_OccupationRetired
             // 
             this.checkBox_OccupationRetired.AutoSize = true;
+            this.checkBox_OccupationRetired.Checked = true;
+            this.checkBox_OccupationRetired.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_OccupationRetired.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox_OccupationRetired.Location = new System.Drawing.Point(305, 441);
             this.checkBox_OccupationRetired.Name = "checkBox_OccupationRetired";
@@ -851,7 +877,7 @@
             this.textBox_DateOfTime.Name = "textBox_DateOfTime";
             this.textBox_DateOfTime.Size = new System.Drawing.Size(233, 21);
             this.textBox_DateOfTime.TabIndex = 5;
-            this.textBox_DateOfTime.Text = "1993.12.04";
+            this.textBox_DateOfTime.Text = "1993.04.17";
             // 
             // panel1
             // 
@@ -1099,6 +1125,7 @@
             this.textBox_OtherСountries.Name = "textBox_OtherСountries";
             this.textBox_OtherСountries.Size = new System.Drawing.Size(252, 56);
             this.textBox_OtherСountries.TabIndex = 271;
+            this.textBox_OtherСountries.Text = "2001.09.11, страна США, цель \r\nвзрыв башен близнецов";
             this.textBox_OtherСountries.WordWrap = false;
             // 
             // label18
@@ -1119,6 +1146,7 @@
             this.textBox_PaymentOfExpenses.Name = "textBox_PaymentOfExpenses";
             this.textBox_PaymentOfExpenses.Size = new System.Drawing.Size(253, 54);
             this.textBox_PaymentOfExpenses.TabIndex = 269;
+            this.textBox_PaymentOfExpenses.Text = "Небыло";
             this.textBox_PaymentOfExpenses.WordWrap = false;
             // 
             // label17
@@ -1155,11 +1183,13 @@
             // radioButton_PaysApplicant
             // 
             this.radioButton_PaysApplicant.AutoSize = true;
+            this.radioButton_PaysApplicant.Checked = true;
             this.radioButton_PaysApplicant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_PaysApplicant.Location = new System.Drawing.Point(6, 12);
             this.radioButton_PaysApplicant.Name = "radioButton_PaysApplicant";
             this.radioButton_PaysApplicant.Size = new System.Drawing.Size(105, 20);
             this.radioButton_PaysApplicant.TabIndex = 261;
+            this.radioButton_PaysApplicant.TabStop = true;
             this.radioButton_PaysApplicant.Text = "Заявитель";
             this.radioButton_PaysApplicant.UseVisualStyleBackColor = true;
             // 
@@ -1204,6 +1234,7 @@
             this.textBox_ArrivalDate.Name = "textBox_ArrivalDate";
             this.textBox_ArrivalDate.Size = new System.Drawing.Size(253, 22);
             this.textBox_ArrivalDate.TabIndex = 260;
+            this.textBox_ArrivalDate.Text = "2017.07.20";
             // 
             // label10
             // 
@@ -1238,11 +1269,13 @@
             // radioButton_ServiceNo
             // 
             this.radioButton_ServiceNo.AutoSize = true;
+            this.radioButton_ServiceNo.Checked = true;
             this.radioButton_ServiceNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_ServiceNo.Location = new System.Drawing.Point(154, 10);
             this.radioButton_ServiceNo.Name = "radioButton_ServiceNo";
             this.radioButton_ServiceNo.Size = new System.Drawing.Size(54, 20);
             this.radioButton_ServiceNo.TabIndex = 251;
+            this.radioButton_ServiceNo.TabStop = true;
             this.radioButton_ServiceNo.Text = "Нет";
             this.radioButton_ServiceNo.UseVisualStyleBackColor = true;
             // 
@@ -1292,11 +1325,13 @@
             // radioButton_VisitsRepeatedly
             // 
             this.radioButton_VisitsRepeatedly.AutoSize = true;
+            this.radioButton_VisitsRepeatedly.Checked = true;
             this.radioButton_VisitsRepeatedly.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_VisitsRepeatedly.Location = new System.Drawing.Point(5, 67);
             this.radioButton_VisitsRepeatedly.Name = "radioButton_VisitsRepeatedly";
             this.radioButton_VisitsRepeatedly.Size = new System.Drawing.Size(278, 19);
             this.radioButton_VisitsRepeatedly.TabIndex = 253;
+            this.radioButton_VisitsRepeatedly.TabStop = true;
             this.radioButton_VisitsRepeatedly.Text = "Многократный (в течение 6 месяцев)\r\n";
             this.radioButton_VisitsRepeatedly.UseVisualStyleBackColor = true;
             // 
@@ -1336,6 +1371,8 @@
             // checkBox_TargetTourism
             // 
             this.checkBox_TargetTourism.AutoSize = true;
+            this.checkBox_TargetTourism.Checked = true;
+            this.checkBox_TargetTourism.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_TargetTourism.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox_TargetTourism.Location = new System.Drawing.Point(309, 1141);
             this.checkBox_TargetTourism.Name = "checkBox_TargetTourism";
@@ -1647,11 +1684,13 @@
             // radioButton_FamilyStatusSingle
             // 
             this.radioButton_FamilyStatusSingle.AutoSize = true;
+            this.radioButton_FamilyStatusSingle.Checked = true;
             this.radioButton_FamilyStatusSingle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_FamilyStatusSingle.Location = new System.Drawing.Point(10, 40);
             this.radioButton_FamilyStatusSingle.Name = "radioButton_FamilyStatusSingle";
             this.radioButton_FamilyStatusSingle.Size = new System.Drawing.Size(167, 20);
             this.radioButton_FamilyStatusSingle.TabIndex = 213;
+            this.radioButton_FamilyStatusSingle.TabStop = true;
             this.radioButton_FamilyStatusSingle.Text = "Холост/незамужем";
             this.radioButton_FamilyStatusSingle.UseVisualStyleBackColor = true;
             // 
@@ -1689,11 +1728,13 @@
             // radioButton_EducationBachelor
             // 
             this.radioButton_EducationBachelor.AutoSize = true;
+            this.radioButton_EducationBachelor.Checked = true;
             this.radioButton_EducationBachelor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_EducationBachelor.Location = new System.Drawing.Point(7, 34);
             this.radioButton_EducationBachelor.Name = "radioButton_EducationBachelor";
             this.radioButton_EducationBachelor.Size = new System.Drawing.Size(98, 20);
             this.radioButton_EducationBachelor.TabIndex = 213;
+            this.radioButton_EducationBachelor.TabStop = true;
             this.radioButton_EducationBachelor.Text = "Бакалавр";
             this.radioButton_EducationBachelor.UseVisualStyleBackColor = true;
             // 
@@ -1716,6 +1757,7 @@
             this.textBox_PassportValidUntil.Name = "textBox_PassportValidUntil";
             this.textBox_PassportValidUntil.Size = new System.Drawing.Size(233, 22);
             this.textBox_PassportValidUntil.TabIndex = 207;
+            this.textBox_PassportValidUntil.Text = "2019.02.18";
             // 
             // textBox_DateOfIssue
             // 
@@ -1725,6 +1767,7 @@
             this.textBox_DateOfIssue.Name = "textBox_DateOfIssue";
             this.textBox_DateOfIssue.Size = new System.Drawing.Size(233, 22);
             this.textBox_DateOfIssue.TabIndex = 206;
+            this.textBox_DateOfIssue.Text = "2016.02.18";
             // 
             // groupBox1
             // 
@@ -1948,7 +1991,6 @@
         public System.Windows.Forms.TextBox textBox_OtherСountries;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox27;
-        private System.Windows.Forms.ComboBox comboBox_FIO;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox28;
         private System.Windows.Forms.PictureBox pictureBox29;
@@ -1960,6 +2002,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button_OpenProfile;
         private System.Windows.Forms.Button button_SaveProfile;
+        public System.Windows.Forms.ComboBox comboBox_FIO;
     }
 }
 

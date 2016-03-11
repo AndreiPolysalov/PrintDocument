@@ -33,12 +33,12 @@ namespace PrintDocument
 
 
 
-        private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
 
-        private void textBox_DateOfTime_keypressed(Object o, KeyPressEventArgs e)
+        private void textBox_DateOfTime_keypressed(object o, KeyPressEventArgs e)
         {
             textBox_DateOfTime_EnteredSymbols += e.KeyChar.ToString();
         }
@@ -61,23 +61,30 @@ namespace PrintDocument
         {
             if (File.Exists("ProfileDataBase.xml") == false)
             {
-                MessageBox.Show("Файл с базой данных не найден, возможно, он еще не был создан" + "\n" + "либо, поместите файл с базой в папку с программой");
+                MessageBox.Show("Файл с базой данных не найден.");
                 return;
             }
             else
             {
-                Form3 f3 = new Form3();
-                f3.FillTable();
+                if (DataBase.GetCountElements() > 0)
+                {
+                    Form2 f2 = new Form2();
+                    f2.FillTable();
 
-                Program.f1 = this;
-                Program.f3 = f3;
-                Program.OpenForm3();
+                    Program.f1 = this;
+                    Program.f2 = f2;
+                    Program.OpenForm2();
+                }
+                else
+                {
+                    MessageBox.Show("База пуста.");
+                }
             }
         }
 
         private void button_SaveProfile_Click(object sender, EventArgs e)
         {
-            DataBase.f1 = this;
+            Program.f1 = this;
             DataBase.SaveToXMLFile();
         }
 

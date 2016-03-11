@@ -28,66 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_UpdateProfile = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button_Cancel = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_DateOfTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_RemoveSelectedProfile = new System.Windows.Forms.Button();
+            this.button = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button_UpdateProfile
+            // dataGridView1
             // 
-            this.button_UpdateProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button_UpdateProfile.Location = new System.Drawing.Point(12, 77);
-            this.button_UpdateProfile.Name = "button_UpdateProfile";
-            this.button_UpdateProfile.Size = new System.Drawing.Size(175, 40);
-            this.button_UpdateProfile.TabIndex = 0;
-            this.button_UpdateProfile.Text = "Обновить анкету";
-            this.button_UpdateProfile.UseVisualStyleBackColor = true;
-            this.button_UpdateProfile.Click += new System.EventHandler(this.button_UpdateProfile_Click);
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column_ID,
+            this.Column_LastName,
+            this.Column_FirstName,
+            this.Column_DateOfTime});
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(604, 561);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // label1
+            // Column_ID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(7, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(576, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "В базе обнаружена анкета с такой же фамилией, именем и датой рождения.\r\nВы можете" +
-    " обновить анкету в базе или вернуться в окно заполнения.";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Column_ID.HeaderText = "ProfileID";
+            this.Column_ID.Name = "Column_ID";
+            this.Column_ID.Visible = false;
+            this.Column_ID.Width = 30;
             // 
-            // button_Cancel
+            // Column_LastName
             // 
-            this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button_Cancel.Location = new System.Drawing.Point(402, 77);
-            this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Size = new System.Drawing.Size(175, 40);
-            this.button_Cancel.TabIndex = 0;
-            this.button_Cancel.Text = "Отмена";
-            this.button_Cancel.UseVisualStyleBackColor = true;
-            this.button_Cancel.Click += new System.EventHandler(this.button3_Click);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Column_LastName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column_LastName.HeaderText = "Фамилия";
+            this.Column_LastName.Name = "Column_LastName";
+            this.Column_LastName.ReadOnly = true;
+            this.Column_LastName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column_LastName.Width = 250;
+            // 
+            // Column_FirstName
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Column_FirstName.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Column_FirstName.HeaderText = "Имя";
+            this.Column_FirstName.Name = "Column_FirstName";
+            this.Column_FirstName.ReadOnly = true;
+            this.Column_FirstName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column_FirstName.Width = 240;
+            // 
+            // Column_DateOfTime
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Column_DateOfTime.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column_DateOfTime.HeaderText = "Дата рождения";
+            this.Column_DateOfTime.Name = "Column_DateOfTime";
+            this.Column_DateOfTime.ReadOnly = true;
+            this.Column_DateOfTime.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column_DateOfTime.Width = 90;
+            // 
+            // button_RemoveSelectedProfile
+            // 
+            this.button_RemoveSelectedProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button_RemoveSelectedProfile.Location = new System.Drawing.Point(423, 574);
+            this.button_RemoveSelectedProfile.Name = "button_RemoveSelectedProfile";
+            this.button_RemoveSelectedProfile.Size = new System.Drawing.Size(175, 40);
+            this.button_RemoveSelectedProfile.TabIndex = 280;
+            this.button_RemoveSelectedProfile.Text = "Удалить выбранную анкету";
+            this.button_RemoveSelectedProfile.UseVisualStyleBackColor = true;
+            this.button_RemoveSelectedProfile.Click += new System.EventHandler(this.button_RemoveSelectedProfile_Click);
+            // 
+            // button
+            // 
+            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button.Location = new System.Drawing.Point(12, 574);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(175, 40);
+            this.button.TabIndex = 281;
+            this.button.Text = "Открыть выбранную анкету";
+            this.button.UseVisualStyleBackColor = true;
+            this.button.Click += new System.EventHandler(this.button_OpenSelectedProfile_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 129);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button_Cancel);
-            this.Controls.Add(this.button_UpdateProfile);
+            this.ClientSize = new System.Drawing.Size(604, 626);
+            this.Controls.Add(this.button);
+            this.Controls.Add(this.button_RemoveSelectedProfile);
+            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Такая анкета уже существует";
+            this.Text = "Анкеты";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button_UpdateProfile;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button_Cancel;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button_RemoveSelectedProfile;
+        private System.Windows.Forms.Button button;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_DateOfTime;
     }
 }
