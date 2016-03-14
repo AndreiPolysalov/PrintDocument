@@ -34,6 +34,7 @@ namespace PrintDocument
         public string OccupationStudent;
         public string OccupationPrivateEnterpreneuer;
         public string OccupationRetired;
+        public string OccupationOther;
 
         public string Education;
 
@@ -105,7 +106,12 @@ namespace PrintDocument
                         writer.WriteAttributeString("ID", "1");
                         writer.WriteAttributeString("LastName", f1.TextBox_LastName.Text);
                         writer.WriteAttributeString("FirstName", f1.TextBox_FirstName.Text);
-                        writer.WriteAttributeString("Gender", f1.radioButton_GenderMan.Checked == true ? "1" : "2");
+
+                        string gender = "0";
+                        if (f1.radioButton_GenderMan.Checked) gender = "1";
+                        if (f1.radioButton__GenderWoman.Checked) gender = "2";
+                        writer.WriteAttributeString("Gender", gender);
+
                         writer.WriteAttributeString("DateOfTime", f1.textBox_DateOfTime.Text);
                         writer.WriteAttributeString("CityRegionCountry", f1.textBox_CityRegionCountry.Text);
                         writer.WriteAttributeString("OrdinaryPassportNumber", f1.textBox_OrdinaryPassportNumber.Text);
@@ -119,8 +125,12 @@ namespace PrintDocument
                         writer.WriteAttributeString("OccupationStudent", f1.checkBox_OccupationStudent.Checked == true ? "1" : "2");
                         writer.WriteAttributeString("OccupationPrivateEnterpreneuer", f1.checkBox_OccupationPrivateEnterpreneuer.Checked == true ? "1" : "2");
                         writer.WriteAttributeString("OccupationRetired", f1.checkBox_OccupationRetired.Checked == true ? "1" : "2");
+                        writer.WriteAttributeString("OccupationOther", f1.textBox_OccupationOther.Text);
 
-                        writer.WriteAttributeString("Education", f1.radioButton_EducationMaster.Checked == true ? "1" : "2");
+                        string education = "0";
+                        if (f1.radioButton_EducationMaster.Checked) education = "1";
+                        if (f1.radioButton_EducationBachelor.Checked) education = "2";
+                        writer.WriteAttributeString("Education", education);
 
                         writer.WriteAttributeString("WorkName", f1.textBox_WorkName.Text);
                         writer.WriteAttributeString("WorkAddress", f1.textBox_WorkAddress.Text);
@@ -131,7 +141,10 @@ namespace PrintDocument
                         writer.WriteAttributeString("HomePostcode", f1.textBox_HomePostcode.Text);
                         writer.WriteAttributeString("HomeMobileNumber", f1.textBox_HomeMobileNumber.Text);
 
-                        writer.WriteAttributeString("FamilyStatus", f1.radioButton_FamilyStatusMarried.Checked == true ? "1" : "2");
+                        string familyStatus = "0";
+                        if (f1.radioButton_FamilyStatusMarried.Checked) familyStatus = "1";
+                        if (f1.radioButton_FamilyStatusSingle.Checked) familyStatus = "2";
+                        writer.WriteAttributeString("FamilyStatus", familyStatus);
 
                         writer.WriteAttributeString("Row1FIO", f1.textBox_Row1FIO.Text);
                         writer.WriteAttributeString("Row1Citizenship", f1.textBox_Row1Citizenship.Text);
@@ -156,13 +169,19 @@ namespace PrintDocument
                         if (f1.radioButton_VisitsRepeatedly2.Checked) visit = "4";
                         writer.WriteAttributeString("Visit", visit);
 
-                        writer.WriteAttributeString("Service", f1.radioButton_ServiceYes.Checked == true ? "1" : "2");
+                        string service = "0";
+                        if (f1.radioButton_ServiceYes.Checked) service = "1";
+                        if (f1.radioButton_ServiceNo.Checked) service = "2";
+                        writer.WriteAttributeString("Service", service);
 
                         writer.WriteAttributeString("ArrivalDate", f1.textBox_ArrivalDate.Text);
 
                         writer.WriteAttributeString("Tenure", f1.comboBox_Tenure.SelectedIndex.ToString());
 
-                        writer.WriteAttributeString("Pays", f1.radioButton_PaysApplicant.Checked == true ? "1" : "2");
+                        string pays = "0";
+                        if (f1.radioButton_PaysApplicant.Checked) pays = "1";
+                        if (f1.radioButton_PaysParents.Checked) pays = "2";
+                        writer.WriteAttributeString("Pays", pays);
 
                         writer.WriteAttributeString("PaymentOfExpenses", f1.textBox_PaymentOfExpenses.Text);
 
@@ -188,7 +207,7 @@ namespace PrintDocument
                 string findMatchID = FindMatch();
                 if (findMatchID != "0")//Совпадение найдено, обновляем анкету
                 {
-                    DialogResult result = MessageBox.Show("В базе обнаружена анкета с такой же фамилией и именем. \n Обновить анкету в базе?", "Обновить анкету в базе?", MessageBoxButtons.YesNo);
+                    DialogResult result = MessageBox.Show("В базе обнаружена анкета с такой же фамилией, именем и датой рождения. \n Обновить анкету в базе?", "Обновить анкету в базе?", MessageBoxButtons.YesNo);
                     if (result == DialogResult.No)
                     {
                         return;
@@ -202,7 +221,12 @@ namespace PrintDocument
                                 //Обновляем анкету
                                 profiles[i].LastName = f1.TextBox_LastName.Text;
                                 profiles[i].FirstName = f1.TextBox_FirstName.Text;
-                                profiles[i].Gender = f1.radioButton_GenderMan.Checked == true ? "1" : "2";
+
+                                string gender = "0";
+                                if (f1.radioButton_GenderMan.Checked) gender = "1";
+                                if (f1.radioButton__GenderWoman.Checked) gender = "2";
+                                profiles[i].Gender = gender;
+
                                 profiles[i].DateOfTime = f1.textBox_DateOfTime.Text;
                                 profiles[i].CityRegionCountry = f1.textBox_CityRegionCountry.Text;
                                 profiles[i].OrdinaryPassportNumber = f1.textBox_OrdinaryPassportNumber.Text;
@@ -216,8 +240,13 @@ namespace PrintDocument
                                 profiles[i].OccupationStudent = f1.checkBox_OccupationStudent.Checked == true ? "1" : "2";
                                 profiles[i].OccupationPrivateEnterpreneuer = f1.checkBox_OccupationPrivateEnterpreneuer.Checked == true ? "1" : "2";
                                 profiles[i].OccupationRetired = f1.checkBox_OccupationRetired.Checked == true ? "1" : "2";
+                                profiles[i].OccupationOther = f1.textBox_OccupationOther.Text;
+                                
 
-                                profiles[i].Education = f1.radioButton_EducationMaster.Checked == true ? "1" : "2";
+                                string education = "0";
+                                if (f1.radioButton_EducationMaster.Checked) education = "1";
+                                if (f1.radioButton_EducationBachelor.Checked) education = "2";
+                                profiles[i].Education = education;
 
                                 profiles[i].WorkName = f1.textBox_WorkName.Text;
                                 profiles[i].WorkAddress = f1.textBox_WorkAddress.Text;
@@ -228,7 +257,10 @@ namespace PrintDocument
                                 profiles[i].HomePostcode = f1.textBox_HomePostcode.Text;
                                 profiles[i].HomeMobileNumber = f1.textBox_HomeMobileNumber.Text;
 
-                                profiles[i].FamilyStatus = f1.radioButton_FamilyStatusMarried.Checked == true ? "1" : "2";
+                                string familyStatus = "0";
+                                if (f1.radioButton_FamilyStatusMarried.Checked) familyStatus = "1";
+                                if (f1.radioButton_FamilyStatusSingle.Checked) familyStatus = "2";
+                                profiles[i].FamilyStatus = familyStatus;
 
                                 profiles[i].Row1FIO = f1.textBox_Row1FIO.Text;
                                 profiles[i].Row1Citizenship = f1.textBox_Row1Citizenship.Text;
@@ -252,13 +284,19 @@ namespace PrintDocument
                                 if (f1.radioButton_VisitsRepeatedly.Checked) profiles[i].Visit = "3";
                                 if (f1.radioButton_VisitsRepeatedly2.Checked) profiles[i].Visit = "4";
 
-                                profiles[i].Service = f1.radioButton_ServiceYes.Checked == true ? "1" : "2";
+                                string service = "0";
+                                if (f1.radioButton_ServiceYes.Checked) service = "1";
+                                if (f1.radioButton_ServiceNo.Checked) service = "2";
+                                profiles[i].Service = service;
 
                                 profiles[i].ArrivalDate = f1.textBox_ArrivalDate.Text;
 
                                 profiles[i].Tenure = f1.comboBox_Tenure.SelectedIndex.ToString();
 
-                                profiles[i].Pays = f1.radioButton_PaysApplicant.Checked == true ? "1" : "2";
+                                string pays = "0";
+                                if (f1.radioButton_PaysApplicant.Checked) pays = "1";
+                                if (f1.radioButton_PaysParents.Checked) pays = "2";
+                                profiles[i].Pays = pays;
 
                                 profiles[i].PaymentOfExpenses = f1.textBox_PaymentOfExpenses.Text;
 
@@ -272,11 +310,31 @@ namespace PrintDocument
                 }
                 else//Совпадение не найдено, добавляем анкету
                 {
+                    string gender = "0";
+                    if (f1.radioButton_GenderMan.Checked) gender = "1";
+                    if (f1.radioButton__GenderWoman.Checked) gender = "2";
+
+                    string education = "0";
+                    if (f1.radioButton_EducationMaster.Checked) education = "1";
+                    if (f1.radioButton_EducationBachelor.Checked) education = "2";
+
+                    string familyStatus = "0";
+                    if (f1.radioButton_FamilyStatusMarried.Checked) familyStatus = "1";
+                    if (f1.radioButton_FamilyStatusSingle.Checked) familyStatus = "2";
+
                     string visit = "0";
                     if (f1.radioButton_VisitsSingle.Checked) visit = "1";
                     if (f1.radioButton_VisitsTwice.Checked) visit = "2";
                     if (f1.radioButton_VisitsRepeatedly.Checked) visit = "3";
                     if (f1.radioButton_VisitsRepeatedly2.Checked) visit = "4";
+
+                    string service = "0";
+                    if (f1.radioButton_ServiceYes.Checked) service = "1";
+                    if (f1.radioButton_ServiceNo.Checked) service = "2";
+
+                    string pays = "0";
+                    if (f1.radioButton_PaysApplicant.Checked) pays = "1";
+                    if (f1.radioButton_PaysParents.Checked) pays = "2";
 
                     //Добавляем новую анкету
                     profiles.Add(new Profile()
@@ -284,7 +342,7 @@ namespace PrintDocument
                         Id = (LastID + 1).ToString(),
                         LastName = f1.TextBox_LastName.Text,
                         FirstName = f1.TextBox_FirstName.Text,
-                        Gender = f1.radioButton_GenderMan.Checked == true ? "1" : "2",
+                        Gender = gender,
                         DateOfTime = f1.textBox_DateOfTime.Text,
                         CityRegionCountry = f1.textBox_CityRegionCountry.Text,
                         OrdinaryPassportNumber = f1.textBox_OrdinaryPassportNumber.Text,
@@ -298,8 +356,9 @@ namespace PrintDocument
                         OccupationStudent = f1.checkBox_OccupationStudent.Checked == true ? "1" : "2",
                         OccupationPrivateEnterpreneuer = f1.checkBox_OccupationPrivateEnterpreneuer.Checked == true ? "1" : "2",
                         OccupationRetired = f1.checkBox_OccupationRetired.Checked == true ? "1" : "2",
+                        OccupationOther = f1.textBox_OccupationOther.Text,
 
-                        Education = f1.radioButton_EducationMaster.Checked == true ? "1" : "2",
+                        Education = education,
 
                         WorkName = f1.textBox_WorkName.Text,
                         WorkAddress = f1.textBox_WorkAddress.Text,
@@ -310,7 +369,7 @@ namespace PrintDocument
                         HomePostcode = f1.textBox_HomePostcode.Text,
                         HomeMobileNumber = f1.textBox_HomeMobileNumber.Text,
 
-                        FamilyStatus = f1.radioButton_FamilyStatusMarried.Checked == true ? "1" : "2",
+                        FamilyStatus = familyStatus,
 
                         Row1FIO = f1.textBox_Row1FIO.Text,
                         Row1Citizenship = f1.textBox_Row1Citizenship.Text,
@@ -330,13 +389,13 @@ namespace PrintDocument
 
                         Visit = visit,
 
-                        Service = f1.radioButton_ServiceYes.Checked == true ? "1" : "2",
+                        Service = service,
 
                         ArrivalDate = f1.textBox_ArrivalDate.Text,
 
                         Tenure = f1.comboBox_Tenure.SelectedIndex.ToString(),
 
-                        Pays = f1.radioButton_PaysApplicant.Checked == true ? "1" : "2",
+                        Pays = pays,
 
                         PaymentOfExpenses = f1.textBox_PaymentOfExpenses.Text,
 
@@ -373,6 +432,7 @@ namespace PrintDocument
                             writer.WriteAttributeString("OccupationStudent", item.OccupationStudent);
                             writer.WriteAttributeString("OccupationPrivateEnterpreneuer", item.OccupationPrivateEnterpreneuer);
                             writer.WriteAttributeString("OccupationRetired", item.OccupationRetired);
+                            writer.WriteAttributeString("OccupationOther", item.OccupationOther);
 
                             writer.WriteAttributeString("Education", item.Education);
 
@@ -465,6 +525,7 @@ namespace PrintDocument
                         writer.WriteAttributeString("OccupationStudent", item.OccupationStudent);
                         writer.WriteAttributeString("OccupationPrivateEnterpreneuer", item.OccupationPrivateEnterpreneuer);
                         writer.WriteAttributeString("OccupationRetired", item.OccupationRetired);
+                        writer.WriteAttributeString("OccupationOther", item.OccupationOther);
 
                         writer.WriteAttributeString("Education", item.Education);
 
@@ -554,6 +615,7 @@ namespace PrintDocument
                         OccupationStudent = item.Attributes["OccupationStudent"].Value,
                         OccupationPrivateEnterpreneuer = item.Attributes["OccupationPrivateEnterpreneuer"].Value,
                         OccupationRetired = item.Attributes["OccupationRetired"].Value,
+                        OccupationOther = item.Attributes["OccupationOther"].Value,
 
                         Education = item.Attributes["Education"].Value,
 
@@ -642,6 +704,7 @@ namespace PrintDocument
                             OccupationStudent = item.Attributes["OccupationStudent"].Value,
                             OccupationPrivateEnterpreneuer = item.Attributes["OccupationPrivateEnterpreneuer"].Value,
                             OccupationRetired = item.Attributes["OccupationRetired"].Value,
+                            OccupationOther = item.Attributes["OccupationOther"].Value,
 
                             Education = item.Attributes["Education"].Value,
 

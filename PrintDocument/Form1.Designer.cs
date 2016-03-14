@@ -167,6 +167,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton__GenderWoman = new System.Windows.Forms.RadioButton();
             this.radioButton_GenderMan = new System.Windows.Forms.RadioButton();
+            this.textBox_OccupationOther = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -384,7 +386,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label29.Location = new System.Drawing.Point(3, 411);
+            this.label29.Location = new System.Drawing.Point(4, 419);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(142, 16);
             this.label29.TabIndex = 107;
@@ -394,7 +396,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label33.Location = new System.Drawing.Point(3, 498);
+            this.label33.Location = new System.Drawing.Point(3, 520);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(141, 16);
             this.label33.TabIndex = 123;
@@ -404,7 +406,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label38.Location = new System.Drawing.Point(3, 600);
+            this.label38.Location = new System.Drawing.Point(3, 622);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(244, 32);
             this.label38.TabIndex = 128;
@@ -413,7 +415,7 @@
             // textBox_WorkName
             // 
             this.textBox_WorkName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_WorkName.Location = new System.Drawing.Point(458, 550);
+            this.textBox_WorkName.Location = new System.Drawing.Point(458, 572);
             this.textBox_WorkName.MaxLength = 90;
             this.textBox_WorkName.Name = "textBox_WorkName";
             this.textBox_WorkName.Size = new System.Drawing.Size(296, 22);
@@ -424,7 +426,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label37.Location = new System.Drawing.Point(306, 553);
+            this.label37.Location = new System.Drawing.Point(306, 575);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(82, 16);
             this.label37.TabIndex = 130;
@@ -433,7 +435,7 @@
             // textBox_WorkAddress
             // 
             this.textBox_WorkAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_WorkAddress.Location = new System.Drawing.Point(458, 577);
+            this.textBox_WorkAddress.Location = new System.Drawing.Point(458, 599);
             this.textBox_WorkAddress.MaxLength = 90;
             this.textBox_WorkAddress.Multiline = true;
             this.textBox_WorkAddress.Name = "textBox_WorkAddress";
@@ -445,7 +447,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label36.Location = new System.Drawing.Point(307, 591);
+            this.label36.Location = new System.Drawing.Point(307, 613);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(53, 16);
             this.label36.TabIndex = 132;
@@ -454,7 +456,7 @@
             // textBox_WorkPhoneNumber
             // 
             this.textBox_WorkPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_WorkPhoneNumber.Location = new System.Drawing.Point(458, 622);
+            this.textBox_WorkPhoneNumber.Location = new System.Drawing.Point(458, 644);
             this.textBox_WorkPhoneNumber.Name = "textBox_WorkPhoneNumber";
             this.textBox_WorkPhoneNumber.Size = new System.Drawing.Size(296, 22);
             this.textBox_WorkPhoneNumber.TabIndex = 133;
@@ -464,7 +466,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label35.Location = new System.Drawing.Point(306, 625);
+            this.label35.Location = new System.Drawing.Point(306, 647);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(134, 16);
             this.label35.TabIndex = 134;
@@ -473,7 +475,7 @@
             // textBox_WorkPostcode
             // 
             this.textBox_WorkPostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_WorkPostcode.Location = new System.Drawing.Point(458, 649);
+            this.textBox_WorkPostcode.Location = new System.Drawing.Point(458, 671);
             this.textBox_WorkPostcode.Name = "textBox_WorkPostcode";
             this.textBox_WorkPostcode.Size = new System.Drawing.Size(296, 22);
             this.textBox_WorkPostcode.TabIndex = 135;
@@ -483,7 +485,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label39.Location = new System.Drawing.Point(306, 652);
+            this.label39.Location = new System.Drawing.Point(306, 674);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(138, 16);
             this.label39.TabIndex = 136;
@@ -492,7 +494,7 @@
             // textBox_HomeAddress
             // 
             this.textBox_HomeAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_HomeAddress.Location = new System.Drawing.Point(309, 693);
+            this.textBox_HomeAddress.Location = new System.Drawing.Point(309, 715);
             this.textBox_HomeAddress.Multiline = true;
             this.textBox_HomeAddress.Name = "textBox_HomeAddress";
             this.textBox_HomeAddress.Size = new System.Drawing.Size(321, 57);
@@ -504,7 +506,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label40.Location = new System.Drawing.Point(3, 714);
+            this.label40.Location = new System.Drawing.Point(3, 736);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(163, 16);
             this.label40.TabIndex = 138;
@@ -513,7 +515,7 @@
             // textBox_HomePostcode
             // 
             this.textBox_HomePostcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_HomePostcode.Location = new System.Drawing.Point(310, 765);
+            this.textBox_HomePostcode.Location = new System.Drawing.Point(310, 788);
             this.textBox_HomePostcode.Name = "textBox_HomePostcode";
             this.textBox_HomePostcode.Size = new System.Drawing.Size(233, 22);
             this.textBox_HomePostcode.TabIndex = 139;
@@ -523,7 +525,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label41.Location = new System.Drawing.Point(3, 768);
+            this.label41.Location = new System.Drawing.Point(3, 791);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(170, 16);
             this.label41.TabIndex = 140;
@@ -532,7 +534,7 @@
             // textBox_HomeMobileNumber
             // 
             this.textBox_HomeMobileNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_HomeMobileNumber.Location = new System.Drawing.Point(310, 802);
+            this.textBox_HomeMobileNumber.Location = new System.Drawing.Point(310, 825);
             this.textBox_HomeMobileNumber.Name = "textBox_HomeMobileNumber";
             this.textBox_HomeMobileNumber.Size = new System.Drawing.Size(233, 22);
             this.textBox_HomeMobileNumber.TabIndex = 141;
@@ -542,7 +544,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label42.Location = new System.Drawing.Point(3, 805);
+            this.label42.Location = new System.Drawing.Point(3, 828);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(276, 16);
             this.label42.TabIndex = 142;
@@ -568,7 +570,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label44, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label45, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox_Row1FIO, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(302, 920);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(302, 943);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.85714F));
@@ -644,7 +646,7 @@
             this.textBox_Row1Relation.Name = "textBox_Row1Relation";
             this.textBox_Row1Relation.Size = new System.Drawing.Size(108, 20);
             this.textBox_Row1Relation.TabIndex = 152;
-            this.textBox_Row1Relation.Text = "Мать";
+            this.textBox_Row1Relation.Text = "Мамик";
             this.textBox_Row1Relation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row1Profession
@@ -746,7 +748,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label43.Location = new System.Drawing.Point(3, 971);
+            this.label43.Location = new System.Drawing.Point(3, 994);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(212, 16);
             this.label43.TabIndex = 144;
@@ -756,7 +758,7 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label48.Location = new System.Drawing.Point(3, 1083);
+            this.label48.Location = new System.Drawing.Point(3, 1106);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(223, 16);
             this.label48.TabIndex = 147;
@@ -765,7 +767,7 @@
             // textBox_ChPFIO
             // 
             this.textBox_ChPFIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_ChPFIO.Location = new System.Drawing.Point(547, 1049);
+            this.textBox_ChPFIO.Location = new System.Drawing.Point(547, 1072);
             this.textBox_ChPFIO.Name = "textBox_ChPFIO";
             this.textBox_ChPFIO.Size = new System.Drawing.Size(260, 22);
             this.textBox_ChPFIO.TabIndex = 148;
@@ -775,7 +777,7 @@
             // 
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label51.Location = new System.Drawing.Point(308, 1052);
+            this.label51.Location = new System.Drawing.Point(308, 1075);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(54, 16);
             this.label51.TabIndex = 149;
@@ -784,7 +786,7 @@
             // textBox_ChPNumberMobilePhone
             // 
             this.textBox_ChPNumberMobilePhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_ChPNumberMobilePhone.Location = new System.Drawing.Point(547, 1076);
+            this.textBox_ChPNumberMobilePhone.Location = new System.Drawing.Point(547, 1099);
             this.textBox_ChPNumberMobilePhone.Name = "textBox_ChPNumberMobilePhone";
             this.textBox_ChPNumberMobilePhone.Size = new System.Drawing.Size(260, 22);
             this.textBox_ChPNumberMobilePhone.TabIndex = 150;
@@ -794,7 +796,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label50.Location = new System.Drawing.Point(308, 1078);
+            this.label50.Location = new System.Drawing.Point(308, 1101);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(226, 16);
             this.label50.TabIndex = 151;
@@ -803,7 +805,7 @@
             // textBox_ChPRelation
             // 
             this.textBox_ChPRelation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_ChPRelation.Location = new System.Drawing.Point(547, 1103);
+            this.textBox_ChPRelation.Location = new System.Drawing.Point(547, 1126);
             this.textBox_ChPRelation.Name = "textBox_ChPRelation";
             this.textBox_ChPRelation.Size = new System.Drawing.Size(260, 22);
             this.textBox_ChPRelation.TabIndex = 152;
@@ -813,7 +815,7 @@
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label49.Location = new System.Drawing.Point(308, 1104);
+            this.label49.Location = new System.Drawing.Point(308, 1127);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(195, 16);
             this.label49.TabIndex = 153;
@@ -822,8 +824,6 @@
             // checkBox_OccupationOtherCompanies
             // 
             this.checkBox_OccupationOtherCompanies.AutoSize = true;
-            this.checkBox_OccupationOtherCompanies.Checked = true;
-            this.checkBox_OccupationOtherCompanies.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_OccupationOtherCompanies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox_OccupationOtherCompanies.Location = new System.Drawing.Point(305, 372);
             this.checkBox_OccupationOtherCompanies.Name = "checkBox_OccupationOtherCompanies";
@@ -835,8 +835,6 @@
             // checkBox_OccupationStudent
             // 
             this.checkBox_OccupationStudent.AutoSize = true;
-            this.checkBox_OccupationStudent.Checked = true;
-            this.checkBox_OccupationStudent.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_OccupationStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox_OccupationStudent.Location = new System.Drawing.Point(305, 395);
             this.checkBox_OccupationStudent.Name = "checkBox_OccupationStudent";
@@ -859,8 +857,6 @@
             // checkBox_OccupationRetired
             // 
             this.checkBox_OccupationRetired.AutoSize = true;
-            this.checkBox_OccupationRetired.Checked = true;
-            this.checkBox_OccupationRetired.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_OccupationRetired.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox_OccupationRetired.Location = new System.Drawing.Point(305, 441);
             this.checkBox_OccupationRetired.Name = "checkBox_OccupationRetired";
@@ -886,6 +882,7 @@
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.CausesValidation = false;
+            this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.button_OpenProfile);
             this.panel1.Controls.Add(this.button_SaveProfile);
             this.panel1.Controls.Add(this.label14);
@@ -974,6 +971,7 @@
             this.panel1.Controls.Add(this.label36);
             this.panel1.Controls.Add(this.textBox_WorkAddress);
             this.panel1.Controls.Add(this.label37);
+            this.panel1.Controls.Add(this.textBox_OccupationOther);
             this.panel1.Controls.Add(this.textBox_WorkName);
             this.panel1.Controls.Add(this.label38);
             this.panel1.Controls.Add(this.label33);
@@ -1004,7 +1002,7 @@
             // button_OpenProfile
             // 
             this.button_OpenProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button_OpenProfile.Location = new System.Drawing.Point(12, 1703);
+            this.button_OpenProfile.Location = new System.Drawing.Point(12, 1732);
             this.button_OpenProfile.Name = "button_OpenProfile";
             this.button_OpenProfile.Size = new System.Drawing.Size(175, 40);
             this.button_OpenProfile.TabIndex = 279;
@@ -1015,7 +1013,7 @@
             // button_SaveProfile
             // 
             this.button_SaveProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button_SaveProfile.Location = new System.Drawing.Point(193, 1703);
+            this.button_SaveProfile.Location = new System.Drawing.Point(193, 1732);
             this.button_SaveProfile.Name = "button_SaveProfile";
             this.button_SaveProfile.Size = new System.Drawing.Size(175, 40);
             this.button_SaveProfile.TabIndex = 278;
@@ -1027,7 +1025,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(223, 1760);
+            this.label14.Location = new System.Drawing.Point(223, 1789);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(414, 16);
             this.label14.TabIndex = 277;
@@ -1037,7 +1035,7 @@
             // 
             this.checkBox_PageForPrint4.AutoSize = true;
             this.checkBox_PageForPrint4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint4.Location = new System.Drawing.Point(554, 1784);
+            this.checkBox_PageForPrint4.Location = new System.Drawing.Point(554, 1813);
             this.checkBox_PageForPrint4.Name = "checkBox_PageForPrint4";
             this.checkBox_PageForPrint4.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint4.TabIndex = 276;
@@ -1048,7 +1046,7 @@
             // 
             this.checkBox_PageForPrint3.AutoSize = true;
             this.checkBox_PageForPrint3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint3.Location = new System.Drawing.Point(438, 1784);
+            this.checkBox_PageForPrint3.Location = new System.Drawing.Point(438, 1813);
             this.checkBox_PageForPrint3.Name = "checkBox_PageForPrint3";
             this.checkBox_PageForPrint3.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint3.TabIndex = 276;
@@ -1061,7 +1059,7 @@
             this.checkBox_PageForPrint2.Checked = true;
             this.checkBox_PageForPrint2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_PageForPrint2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint2.Location = new System.Drawing.Point(322, 1784);
+            this.checkBox_PageForPrint2.Location = new System.Drawing.Point(322, 1813);
             this.checkBox_PageForPrint2.Name = "checkBox_PageForPrint2";
             this.checkBox_PageForPrint2.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint2.TabIndex = 276;
@@ -1074,7 +1072,7 @@
             this.checkBox_PageForPrint1.Checked = true;
             this.checkBox_PageForPrint1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_PageForPrint1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint1.Location = new System.Drawing.Point(206, 1784);
+            this.checkBox_PageForPrint1.Location = new System.Drawing.Point(206, 1813);
             this.checkBox_PageForPrint1.Name = "checkBox_PageForPrint1";
             this.checkBox_PageForPrint1.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint1.TabIndex = 276;
@@ -1084,7 +1082,7 @@
             // button_PrintPreview
             // 
             this.button_PrintPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_PrintPreview.Location = new System.Drawing.Point(12, 1764);
+            this.button_PrintPreview.Location = new System.Drawing.Point(12, 1793);
             this.button_PrintPreview.Name = "button_PrintPreview";
             this.button_PrintPreview.Size = new System.Drawing.Size(175, 40);
             this.button_PrintPreview.TabIndex = 275;
@@ -1102,7 +1100,7 @@
             "Дмитрий",
             "Кристина",
             "Елена"});
-            this.comboBox_FIO.Location = new System.Drawing.Point(303, 1663);
+            this.comboBox_FIO.Location = new System.Drawing.Point(303, 1692);
             this.comboBox_FIO.Name = "comboBox_FIO";
             this.comboBox_FIO.Size = new System.Drawing.Size(252, 21);
             this.comboBox_FIO.TabIndex = 273;
@@ -1111,7 +1109,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(3, 1664);
+            this.label19.Location = new System.Drawing.Point(3, 1693);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(178, 16);
             this.label19.TabIndex = 272;
@@ -1120,7 +1118,7 @@
             // textBox_OtherСountries
             // 
             this.textBox_OtherСountries.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_OtherСountries.Location = new System.Drawing.Point(303, 1590);
+            this.textBox_OtherСountries.Location = new System.Drawing.Point(303, 1619);
             this.textBox_OtherСountries.Multiline = true;
             this.textBox_OtherСountries.Name = "textBox_OtherСountries";
             this.textBox_OtherСountries.Size = new System.Drawing.Size(252, 56);
@@ -1132,7 +1130,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(3, 1591);
+            this.label18.Location = new System.Drawing.Point(3, 1620);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(260, 48);
             this.label18.TabIndex = 270;
@@ -1141,19 +1139,19 @@
             // textBox_PaymentOfExpenses
             // 
             this.textBox_PaymentOfExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_PaymentOfExpenses.Location = new System.Drawing.Point(302, 1521);
+            this.textBox_PaymentOfExpenses.Location = new System.Drawing.Point(302, 1550);
             this.textBox_PaymentOfExpenses.Multiline = true;
             this.textBox_PaymentOfExpenses.Name = "textBox_PaymentOfExpenses";
             this.textBox_PaymentOfExpenses.Size = new System.Drawing.Size(253, 54);
             this.textBox_PaymentOfExpenses.TabIndex = 269;
-            this.textBox_PaymentOfExpenses.Text = "Небыло";
+            this.textBox_PaymentOfExpenses.Text = "Были китайские трусы, а \r\nкитайской визы небыло";
             this.textBox_PaymentOfExpenses.WordWrap = false;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(3, 1522);
+            this.label17.Location = new System.Drawing.Point(3, 1551);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(240, 48);
             this.label17.TabIndex = 268;
@@ -1163,7 +1161,7 @@
             // 
             this.groupBox6.Controls.Add(this.radioButton_PaysParents);
             this.groupBox6.Controls.Add(this.radioButton_PaysApplicant);
-            this.groupBox6.Location = new System.Drawing.Point(302, 1461);
+            this.groupBox6.Location = new System.Drawing.Point(302, 1490);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(253, 38);
             this.groupBox6.TabIndex = 267;
@@ -1183,13 +1181,11 @@
             // radioButton_PaysApplicant
             // 
             this.radioButton_PaysApplicant.AutoSize = true;
-            this.radioButton_PaysApplicant.Checked = true;
             this.radioButton_PaysApplicant.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_PaysApplicant.Location = new System.Drawing.Point(6, 12);
             this.radioButton_PaysApplicant.Name = "radioButton_PaysApplicant";
             this.radioButton_PaysApplicant.Size = new System.Drawing.Size(105, 20);
             this.radioButton_PaysApplicant.TabIndex = 261;
-            this.radioButton_PaysApplicant.TabStop = true;
             this.radioButton_PaysApplicant.Text = "Заявитель";
             this.radioButton_PaysApplicant.UseVisualStyleBackColor = true;
             // 
@@ -1197,7 +1193,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(3, 1461);
+            this.label16.Location = new System.Drawing.Point(3, 1490);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(220, 48);
             this.label16.TabIndex = 266;
@@ -1211,7 +1207,7 @@
             "30",
             "60",
             "90"});
-            this.comboBox_Tenure.Location = new System.Drawing.Point(305, 1423);
+            this.comboBox_Tenure.Location = new System.Drawing.Point(305, 1452);
             this.comboBox_Tenure.Name = "comboBox_Tenure";
             this.comboBox_Tenure.Size = new System.Drawing.Size(250, 21);
             this.comboBox_Tenure.TabIndex = 262;
@@ -1220,7 +1216,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(3, 1420);
+            this.label13.Location = new System.Drawing.Point(3, 1449);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(224, 32);
             this.label13.TabIndex = 261;
@@ -1229,7 +1225,7 @@
             // textBox_ArrivalDate
             // 
             this.textBox_ArrivalDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_ArrivalDate.Location = new System.Drawing.Point(305, 1381);
+            this.textBox_ArrivalDate.Location = new System.Drawing.Point(305, 1410);
             this.textBox_ArrivalDate.MaxLength = 10;
             this.textBox_ArrivalDate.Name = "textBox_ArrivalDate";
             this.textBox_ArrivalDate.Size = new System.Drawing.Size(253, 22);
@@ -1240,7 +1236,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(3, 1376);
+            this.label10.Location = new System.Drawing.Point(3, 1405);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(209, 32);
             this.label10.TabIndex = 259;
@@ -1250,7 +1246,7 @@
             // 
             this.panel2.Controls.Add(this.radioButton_ServiceYes);
             this.panel2.Controls.Add(this.radioButton_ServiceNo);
-            this.panel2.Location = new System.Drawing.Point(305, 1324);
+            this.panel2.Location = new System.Drawing.Point(305, 1353);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 37);
             this.panel2.TabIndex = 258;
@@ -1269,13 +1265,11 @@
             // radioButton_ServiceNo
             // 
             this.radioButton_ServiceNo.AutoSize = true;
-            this.radioButton_ServiceNo.Checked = true;
             this.radioButton_ServiceNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_ServiceNo.Location = new System.Drawing.Point(154, 10);
             this.radioButton_ServiceNo.Name = "radioButton_ServiceNo";
             this.radioButton_ServiceNo.Size = new System.Drawing.Size(54, 20);
             this.radioButton_ServiceNo.TabIndex = 251;
-            this.radioButton_ServiceNo.TabStop = true;
             this.radioButton_ServiceNo.Text = "Нет";
             this.radioButton_ServiceNo.UseVisualStyleBackColor = true;
             // 
@@ -1283,7 +1277,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(3, 1334);
+            this.label9.Location = new System.Drawing.Point(3, 1363);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(99, 16);
             this.label9.TabIndex = 257;
@@ -1293,7 +1287,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(3, 1248);
+            this.label4.Location = new System.Drawing.Point(3, 1277);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(267, 16);
             this.label4.TabIndex = 252;
@@ -1305,7 +1299,7 @@
             this.groupBox2.Controls.Add(this.radioButton_VisitsRepeatedly);
             this.groupBox2.Controls.Add(this.radioButton_VisitsTwice);
             this.groupBox2.Controls.Add(this.radioButton_VisitsSingle);
-            this.groupBox2.Location = new System.Drawing.Point(305, 1196);
+            this.groupBox2.Location = new System.Drawing.Point(305, 1221);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(513, 113);
             this.groupBox2.TabIndex = 253;
@@ -1325,13 +1319,11 @@
             // radioButton_VisitsRepeatedly
             // 
             this.radioButton_VisitsRepeatedly.AutoSize = true;
-            this.radioButton_VisitsRepeatedly.Checked = true;
             this.radioButton_VisitsRepeatedly.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_VisitsRepeatedly.Location = new System.Drawing.Point(5, 67);
             this.radioButton_VisitsRepeatedly.Name = "radioButton_VisitsRepeatedly";
             this.radioButton_VisitsRepeatedly.Size = new System.Drawing.Size(278, 19);
             this.radioButton_VisitsRepeatedly.TabIndex = 253;
-            this.radioButton_VisitsRepeatedly.TabStop = true;
             this.radioButton_VisitsRepeatedly.Text = "Многократный (в течение 6 месяцев)\r\n";
             this.radioButton_VisitsRepeatedly.UseVisualStyleBackColor = true;
             // 
@@ -1361,7 +1353,7 @@
             // 
             this.checkBox_TargetBusiness.AutoSize = true;
             this.checkBox_TargetBusiness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_TargetBusiness.Location = new System.Drawing.Point(309, 1164);
+            this.checkBox_TargetBusiness.Location = new System.Drawing.Point(309, 1187);
             this.checkBox_TargetBusiness.Name = "checkBox_TargetBusiness";
             this.checkBox_TargetBusiness.Size = new System.Drawing.Size(81, 20);
             this.checkBox_TargetBusiness.TabIndex = 249;
@@ -1371,10 +1363,8 @@
             // checkBox_TargetTourism
             // 
             this.checkBox_TargetTourism.AutoSize = true;
-            this.checkBox_TargetTourism.Checked = true;
-            this.checkBox_TargetTourism.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_TargetTourism.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_TargetTourism.Location = new System.Drawing.Point(309, 1141);
+            this.checkBox_TargetTourism.Location = new System.Drawing.Point(309, 1164);
             this.checkBox_TargetTourism.Name = "checkBox_TargetTourism";
             this.checkBox_TargetTourism.Size = new System.Drawing.Size(83, 20);
             this.checkBox_TargetTourism.TabIndex = 250;
@@ -1385,7 +1375,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(3, 1154);
+            this.label1.Location = new System.Drawing.Point(3, 1177);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 16);
             this.label1.TabIndex = 247;
@@ -1394,7 +1384,7 @@
             // pictureBox29
             // 
             this.pictureBox29.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox29.Location = new System.Drawing.Point(1, 1694);
+            this.pictureBox29.Location = new System.Drawing.Point(1, 1723);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(820, 3);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1404,7 +1394,7 @@
             // pictureBox28
             // 
             this.pictureBox28.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox28.Location = new System.Drawing.Point(0, 1652);
+            this.pictureBox28.Location = new System.Drawing.Point(0, 1681);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(820, 3);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1414,7 +1404,7 @@
             // pictureBox27
             // 
             this.pictureBox27.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox27.Location = new System.Drawing.Point(0, 1581);
+            this.pictureBox27.Location = new System.Drawing.Point(0, 1610);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(820, 3);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1424,7 +1414,7 @@
             // pictureBox26
             // 
             this.pictureBox26.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox26.Location = new System.Drawing.Point(0, 1512);
+            this.pictureBox26.Location = new System.Drawing.Point(0, 1541);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(820, 3);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1434,7 +1424,7 @@
             // pictureBox24
             // 
             this.pictureBox24.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox24.Location = new System.Drawing.Point(0, 1455);
+            this.pictureBox24.Location = new System.Drawing.Point(0, 1484);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(820, 3);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1444,7 +1434,7 @@
             // pictureBox23
             // 
             this.pictureBox23.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox23.Location = new System.Drawing.Point(0, 1414);
+            this.pictureBox23.Location = new System.Drawing.Point(0, 1443);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(820, 3);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1454,7 +1444,7 @@
             // pictureBox22
             // 
             this.pictureBox22.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox22.Location = new System.Drawing.Point(1, 1368);
+            this.pictureBox22.Location = new System.Drawing.Point(1, 1397);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(820, 3);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1464,7 +1454,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox8.Location = new System.Drawing.Point(0, 1315);
+            this.pictureBox8.Location = new System.Drawing.Point(0, 1344);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(820, 3);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1474,7 +1464,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox5.Location = new System.Drawing.Point(-1, 1187);
+            this.pictureBox5.Location = new System.Drawing.Point(-1, 1210);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(820, 3);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1484,7 +1474,7 @@
             // pictureBox21
             // 
             this.pictureBox21.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox21.Location = new System.Drawing.Point(-1, 1132);
+            this.pictureBox21.Location = new System.Drawing.Point(-1, 1155);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(820, 3);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1494,7 +1484,7 @@
             // pictureBox20
             // 
             this.pictureBox20.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox20.Location = new System.Drawing.Point(-5, 1040);
+            this.pictureBox20.Location = new System.Drawing.Point(-5, 1063);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(820, 3);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1504,7 +1494,7 @@
             // pictureBox19
             // 
             this.pictureBox19.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox19.Location = new System.Drawing.Point(-1, 911);
+            this.pictureBox19.Location = new System.Drawing.Point(-1, 934);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(820, 3);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1514,7 +1504,7 @@
             // pictureBox18
             // 
             this.pictureBox18.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox18.Location = new System.Drawing.Point(-1, 830);
+            this.pictureBox18.Location = new System.Drawing.Point(-1, 853);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(820, 3);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1524,7 +1514,7 @@
             // pictureBox17
             // 
             this.pictureBox17.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox17.Location = new System.Drawing.Point(-1, 793);
+            this.pictureBox17.Location = new System.Drawing.Point(-1, 816);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(820, 3);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1534,7 +1524,7 @@
             // pictureBox16
             // 
             this.pictureBox16.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox16.Location = new System.Drawing.Point(-1, 756);
+            this.pictureBox16.Location = new System.Drawing.Point(-1, 778);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(820, 3);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1544,7 +1534,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox15.Location = new System.Drawing.Point(-1, 681);
+            this.pictureBox15.Location = new System.Drawing.Point(-1, 703);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(820, 3);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1554,7 +1544,7 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox14.Location = new System.Drawing.Point(-1, 538);
+            this.pictureBox14.Location = new System.Drawing.Point(-1, 560);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(820, 3);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1564,7 +1554,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox13.Location = new System.Drawing.Point(6, 467);
+            this.pictureBox13.Location = new System.Drawing.Point(6, 489);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(820, 3);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1664,9 +1654,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox1.Location = new System.Drawing.Point(293, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(293, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(3, 1690);
+            this.pictureBox1.Size = new System.Drawing.Size(3, 1720);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 213;
             this.pictureBox1.TabStop = false;
@@ -1675,7 +1665,7 @@
             // 
             this.groupBox4.Controls.Add(this.radioButton_FamilyStatusSingle);
             this.groupBox4.Controls.Add(this.radioButton_FamilyStatusMarried);
-            this.groupBox4.Location = new System.Drawing.Point(306, 833);
+            this.groupBox4.Location = new System.Drawing.Point(306, 856);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(216, 72);
             this.groupBox4.TabIndex = 212;
@@ -1684,13 +1674,11 @@
             // radioButton_FamilyStatusSingle
             // 
             this.radioButton_FamilyStatusSingle.AutoSize = true;
-            this.radioButton_FamilyStatusSingle.Checked = true;
             this.radioButton_FamilyStatusSingle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_FamilyStatusSingle.Location = new System.Drawing.Point(10, 40);
             this.radioButton_FamilyStatusSingle.Name = "radioButton_FamilyStatusSingle";
             this.radioButton_FamilyStatusSingle.Size = new System.Drawing.Size(167, 20);
             this.radioButton_FamilyStatusSingle.TabIndex = 213;
-            this.radioButton_FamilyStatusSingle.TabStop = true;
             this.radioButton_FamilyStatusSingle.Text = "Холост/незамужем";
             this.radioButton_FamilyStatusSingle.UseVisualStyleBackColor = true;
             // 
@@ -1709,7 +1697,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(3, 864);
+            this.label8.Location = new System.Drawing.Point(3, 887);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(200, 16);
             this.label8.TabIndex = 211;
@@ -1719,7 +1707,7 @@
             // 
             this.groupBox5.Controls.Add(this.radioButton_EducationBachelor);
             this.groupBox5.Controls.Add(this.radioButton_EducationMaster);
-            this.groupBox5.Location = new System.Drawing.Point(302, 473);
+            this.groupBox5.Location = new System.Drawing.Point(302, 495);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(513, 56);
             this.groupBox5.TabIndex = 210;
@@ -1728,13 +1716,11 @@
             // radioButton_EducationBachelor
             // 
             this.radioButton_EducationBachelor.AutoSize = true;
-            this.radioButton_EducationBachelor.Checked = true;
             this.radioButton_EducationBachelor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_EducationBachelor.Location = new System.Drawing.Point(7, 34);
             this.radioButton_EducationBachelor.Name = "radioButton_EducationBachelor";
             this.radioButton_EducationBachelor.Size = new System.Drawing.Size(98, 20);
             this.radioButton_EducationBachelor.TabIndex = 213;
-            this.radioButton_EducationBachelor.TabStop = true;
             this.radioButton_EducationBachelor.Text = "Бакалавр";
             this.radioButton_EducationBachelor.UseVisualStyleBackColor = true;
             // 
@@ -1793,15 +1779,32 @@
             // radioButton_GenderMan
             // 
             this.radioButton_GenderMan.AutoSize = true;
-            this.radioButton_GenderMan.Checked = true;
             this.radioButton_GenderMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_GenderMan.Location = new System.Drawing.Point(5, 13);
             this.radioButton_GenderMan.Name = "radioButton_GenderMan";
             this.radioButton_GenderMan.Size = new System.Drawing.Size(91, 20);
             this.radioButton_GenderMan.TabIndex = 3;
-            this.radioButton_GenderMan.TabStop = true;
             this.radioButton_GenderMan.Text = "Mужской";
             this.radioButton_GenderMan.UseVisualStyleBackColor = true;
+            // 
+            // textBox_OccupationOther
+            // 
+            this.textBox_OccupationOther.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_OccupationOther.Location = new System.Drawing.Point(357, 462);
+            this.textBox_OccupationOther.MaxLength = 90;
+            this.textBox_OccupationOther.Name = "textBox_OccupationOther";
+            this.textBox_OccupationOther.Size = new System.Drawing.Size(296, 22);
+            this.textBox_OccupationOther.TabIndex = 129;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(303, 465);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(50, 16);
+            this.label15.TabIndex = 280;
+            this.label15.Text = "Иное:";
             // 
             // Form1
             // 
@@ -2003,6 +2006,8 @@
         private System.Windows.Forms.Button button_OpenProfile;
         private System.Windows.Forms.Button button_SaveProfile;
         public System.Windows.Forms.ComboBox comboBox_FIO;
+        private System.Windows.Forms.Label label15;
+        public System.Windows.Forms.TextBox textBox_OccupationOther;
     }
 }
 

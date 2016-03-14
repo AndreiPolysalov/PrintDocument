@@ -64,6 +64,18 @@ namespace PrintDocument
             int countSelectedRows = dataGridView1.SelectedRows.Count;//Кол-во выделенных строк
             if (countSelectedRows == 1)
             {
+                //Проверяем, есть ли среди выделенных строк пустая
+                foreach (DataGridViewRow rw in dataGridView1.SelectedRows)
+                {
+                    for (int i = 0; i < rw.Cells.Count; i++)
+                    {
+                        if (rw.Cells[i].Value == null || rw.Cells[i].Value == DBNull.Value || string.IsNullOrEmpty(rw.Cells[i].Value.ToString()))
+                        {
+                            return;
+                        }
+                    }
+                }
+
                 Form1 f1 = Program.f1;
 
                 foreach (DataGridViewRow item in dataGridView1.SelectedRows)
@@ -80,7 +92,7 @@ namespace PrintDocument
                     f1.textBox_DateOfTime.Text = profile.DateOfTime;
                     f1.textBox_CityRegionCountry.Text = profile.CityRegionCountry;
                     f1.textBox_OrdinaryPassportNumber.Text = profile.OrdinaryPassportNumber;
-                    f1.textBox_PassportNumber.Text = profile.OrdinaryPassportNumber;
+                    f1.textBox_PassportNumber.Text = profile.PassportNumber;
                     f1.textBox_DateOfIssue.Text = profile.DateOfIssue;
                     f1.textBox_PassportValidUntil.Text = profile.PassportValidUntil;
                     f1.textBox_PassportPlaceOfIssue.Text = profile.PassportPlaceOfIssue;
@@ -89,6 +101,7 @@ namespace PrintDocument
                     f1.checkBox_OccupationStudent.Checked = profile.OccupationStudent == "1" ? true : false;
                     f1.checkBox_OccupationPrivateEnterpreneuer.Checked = profile.OccupationPrivateEnterpreneuer== "1" ? true : false;
                     f1.checkBox_OccupationRetired.Checked = profile.OccupationRetired == "1" ? true : false;
+                    f1.textBox_OccupationOther.Text = profile.OccupationOther;
 
                     if (profile.Education == "0") { f1.radioButton_EducationMaster.Checked = false; f1.radioButton_EducationBachelor.Checked = false; }
                     else if (profile.Education == "1") f1.radioButton_EducationMaster.Checked = true;

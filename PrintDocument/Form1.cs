@@ -144,7 +144,8 @@ namespace PrintDocument
             if (string.IsNullOrEmpty(textBox_PassportValidUntil.Text)) { MessageBox.Show("В пункте 1.14 не указана дата действия паспорта"); return false; }
 
             if (!checkBox_OccupationOtherCompanies.Checked && !checkBox_OccupationStudent.Checked &&
-                !checkBox_OccupationPrivateEnterpreneuer.Checked && !checkBox_OccupationRetired.Checked) { MessageBox.Show("В пункте 1.15 не выбрано ни одиной профессии"); return false; }
+                !checkBox_OccupationPrivateEnterpreneuer.Checked && !checkBox_OccupationRetired.Checked &&
+                string.IsNullOrEmpty(textBox_OccupationOther.Text)) { MessageBox.Show("В пункте 1.15 не выбрано ни одиной профессии"); return false; }
 
             if (!radioButton_EducationMaster.Checked && !radioButton_EducationBachelor.Checked) { MessageBox.Show("В пункте 1.16 не указано образование"); return false; }
 
@@ -218,6 +219,11 @@ namespace PrintDocument
             if (checkBox_OccupationStudent.Checked) e.Graphics.DrawImage(Krestik, 177, 785, 15, 15);//Студент
             if (checkBox_OccupationPrivateEnterpreneuer.Checked) e.Graphics.DrawImage(Krestik, 177, 832, 15, 15);//Частный предпринематель
             if (checkBox_OccupationRetired.Checked) e.Graphics.DrawImage(Krestik, 177, 878, 15, 15);//Пенсионеры
+            if(!string.IsNullOrEmpty(textBox_OccupationOther.Text))//Иное
+            {
+                e.Graphics.DrawImage(Krestik, 177, 920, 15, 15);
+                e.Graphics.DrawString(textBox_OccupationOther.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 360, 920);
+            }
 
             //Образование
             if (radioButton_EducationMaster.Checked)
