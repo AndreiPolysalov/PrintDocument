@@ -92,6 +92,7 @@
             this.checkBox_OccupationRetired = new System.Windows.Forms.CheckBox();
             this.textBox_DateOfTime = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.button_OpenProfile = new System.Windows.Forms.Button();
             this.button_SaveProfile = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -168,7 +169,6 @@
             this.radioButton__GenderWoman = new System.Windows.Forms.RadioButton();
             this.radioButton_GenderMan = new System.Windows.Forms.RadioButton();
             this.textBox_OccupationOther = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -244,7 +244,6 @@
             this.textBox_CityRegionCountry.Name = "textBox_CityRegionCountry";
             this.textBox_CityRegionCountry.Size = new System.Drawing.Size(515, 22);
             this.textBox_CityRegionCountry.TabIndex = 6;
-            this.textBox_CityRegionCountry.Text = "Екатеринбург";
             // 
             // label6
             // 
@@ -273,7 +272,6 @@
             this.TextBox_FirstName.Name = "TextBox_FirstName";
             this.TextBox_FirstName.Size = new System.Drawing.Size(233, 22);
             this.TextBox_FirstName.TabIndex = 2;
-            this.TextBox_FirstName.Text = "Андрей";
             // 
             // label3
             // 
@@ -292,7 +290,6 @@
             this.TextBox_LastName.Name = "TextBox_LastName";
             this.TextBox_LastName.Size = new System.Drawing.Size(233, 22);
             this.TextBox_LastName.TabIndex = 1;
-            this.TextBox_LastName.Text = "Полысалов";
             // 
             // label12
             // 
@@ -321,7 +318,6 @@
             this.textBox_OrdinaryPassportNumber.Name = "textBox_OrdinaryPassportNumber";
             this.textBox_OrdinaryPassportNumber.Size = new System.Drawing.Size(233, 22);
             this.textBox_OrdinaryPassportNumber.TabIndex = 7;
-            this.textBox_OrdinaryPassportNumber.Text = "542 854";
             // 
             // label24
             // 
@@ -340,7 +336,6 @@
             this.textBox_PassportNumber.Name = "textBox_PassportNumber";
             this.textBox_PassportNumber.Size = new System.Drawing.Size(233, 22);
             this.textBox_PassportNumber.TabIndex = 100;
-            this.textBox_PassportNumber.Text = "32 434 546";
             // 
             // label25
             // 
@@ -369,7 +364,6 @@
             this.textBox_PassportPlaceOfIssue.Name = "textBox_PassportPlaceOfIssue";
             this.textBox_PassportPlaceOfIssue.Size = new System.Drawing.Size(233, 22);
             this.textBox_PassportPlaceOfIssue.TabIndex = 104;
-            this.textBox_PassportPlaceOfIssue.Text = "Хуй знает";
             this.textBox_PassportPlaceOfIssue.WordWrap = false;
             // 
             // label27
@@ -420,7 +414,6 @@
             this.textBox_WorkName.Name = "textBox_WorkName";
             this.textBox_WorkName.Size = new System.Drawing.Size(296, 22);
             this.textBox_WorkName.TabIndex = 129;
-            this.textBox_WorkName.Text = "УрФУ";
             // 
             // label37
             // 
@@ -441,7 +434,6 @@
             this.textBox_WorkAddress.Name = "textBox_WorkAddress";
             this.textBox_WorkAddress.Size = new System.Drawing.Size(296, 39);
             this.textBox_WorkAddress.TabIndex = 131;
-            this.textBox_WorkAddress.Text = "Ленина 110а";
             // 
             // label36
             // 
@@ -460,7 +452,6 @@
             this.textBox_WorkPhoneNumber.Name = "textBox_WorkPhoneNumber";
             this.textBox_WorkPhoneNumber.Size = new System.Drawing.Size(296, 22);
             this.textBox_WorkPhoneNumber.TabIndex = 133;
-            this.textBox_WorkPhoneNumber.Text = "348 12 77";
             // 
             // label35
             // 
@@ -479,7 +470,6 @@
             this.textBox_WorkPostcode.Name = "textBox_WorkPostcode";
             this.textBox_WorkPostcode.Size = new System.Drawing.Size(296, 22);
             this.textBox_WorkPostcode.TabIndex = 135;
-            this.textBox_WorkPostcode.Text = "480 236";
             // 
             // label39
             // 
@@ -499,7 +489,6 @@
             this.textBox_HomeAddress.Name = "textBox_HomeAddress";
             this.textBox_HomeAddress.Size = new System.Drawing.Size(321, 57);
             this.textBox_HomeAddress.TabIndex = 137;
-            this.textBox_HomeAddress.Text = "Новгородцевой 19\\1 кв 82";
             this.textBox_HomeAddress.WordWrap = false;
             // 
             // label40
@@ -519,7 +508,6 @@
             this.textBox_HomePostcode.Name = "textBox_HomePostcode";
             this.textBox_HomePostcode.Size = new System.Drawing.Size(233, 22);
             this.textBox_HomePostcode.TabIndex = 139;
-            this.textBox_HomePostcode.Text = "620 072";
             // 
             // label41
             // 
@@ -538,7 +526,6 @@
             this.textBox_HomeMobileNumber.Name = "textBox_HomeMobileNumber";
             this.textBox_HomeMobileNumber.Size = new System.Drawing.Size(233, 22);
             this.textBox_HomeMobileNumber.TabIndex = 141;
-            this.textBox_HomeMobileNumber.Text = "+7 912 61 84 203";
             // 
             // label42
             // 
@@ -594,7 +581,6 @@
             this.textBox_Row2Relation.Name = "textBox_Row2Relation";
             this.textBox_Row2Relation.Size = new System.Drawing.Size(108, 20);
             this.textBox_Row2Relation.TabIndex = 156;
-            this.textBox_Row2Relation.Text = "Батя";
             this.textBox_Row2Relation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row2Profession
@@ -607,7 +593,6 @@
             this.textBox_Row2Profession.Name = "textBox_Row2Profession";
             this.textBox_Row2Profession.Size = new System.Drawing.Size(130, 20);
             this.textBox_Row2Profession.TabIndex = 155;
-            this.textBox_Row2Profession.Text = "миллиардер";
             this.textBox_Row2Profession.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row2Citizenship
@@ -620,7 +605,6 @@
             this.textBox_Row2Citizenship.Name = "textBox_Row2Citizenship";
             this.textBox_Row2Citizenship.Size = new System.Drawing.Size(131, 20);
             this.textBox_Row2Citizenship.TabIndex = 154;
-            this.textBox_Row2Citizenship.Text = "РФ";
             this.textBox_Row2Citizenship.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row2FIO
@@ -633,7 +617,6 @@
             this.textBox_Row2FIO.Name = "textBox_Row2FIO";
             this.textBox_Row2FIO.Size = new System.Drawing.Size(111, 20);
             this.textBox_Row2FIO.TabIndex = 153;
-            this.textBox_Row2FIO.Text = "Полысалов В.А.";
             this.textBox_Row2FIO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row1Relation
@@ -646,7 +629,6 @@
             this.textBox_Row1Relation.Name = "textBox_Row1Relation";
             this.textBox_Row1Relation.Size = new System.Drawing.Size(108, 20);
             this.textBox_Row1Relation.TabIndex = 152;
-            this.textBox_Row1Relation.Text = "Мамик";
             this.textBox_Row1Relation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row1Profession
@@ -659,7 +641,6 @@
             this.textBox_Row1Profession.Name = "textBox_Row1Profession";
             this.textBox_Row1Profession.Size = new System.Drawing.Size(130, 20);
             this.textBox_Row1Profession.TabIndex = 151;
-            this.textBox_Row1Profession.Text = "продавец";
             this.textBox_Row1Profession.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox_Row1Citizenship
@@ -672,7 +653,6 @@
             this.textBox_Row1Citizenship.Name = "textBox_Row1Citizenship";
             this.textBox_Row1Citizenship.Size = new System.Drawing.Size(131, 20);
             this.textBox_Row1Citizenship.TabIndex = 150;
-            this.textBox_Row1Citizenship.Text = "РФ";
             this.textBox_Row1Citizenship.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label47
@@ -741,7 +721,6 @@
             this.textBox_Row1FIO.Name = "textBox_Row1FIO";
             this.textBox_Row1FIO.Size = new System.Drawing.Size(111, 20);
             this.textBox_Row1FIO.TabIndex = 149;
-            this.textBox_Row1FIO.Text = "Полысалова Л.Ю.";
             this.textBox_Row1FIO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label43
@@ -771,7 +750,6 @@
             this.textBox_ChPFIO.Name = "textBox_ChPFIO";
             this.textBox_ChPFIO.Size = new System.Drawing.Size(260, 22);
             this.textBox_ChPFIO.TabIndex = 148;
-            this.textBox_ChPFIO.Text = "Полысалова Анна Викторовна";
             // 
             // label51
             // 
@@ -790,7 +768,6 @@
             this.textBox_ChPNumberMobilePhone.Name = "textBox_ChPNumberMobilePhone";
             this.textBox_ChPNumberMobilePhone.Size = new System.Drawing.Size(260, 22);
             this.textBox_ChPNumberMobilePhone.TabIndex = 150;
-            this.textBox_ChPNumberMobilePhone.Text = "8-908-9011189";
             // 
             // label50
             // 
@@ -809,7 +786,6 @@
             this.textBox_ChPRelation.Name = "textBox_ChPRelation";
             this.textBox_ChPRelation.Size = new System.Drawing.Size(260, 22);
             this.textBox_ChPRelation.TabIndex = 152;
-            this.textBox_ChPRelation.Text = "Сестра";
             // 
             // label49
             // 
@@ -873,7 +849,6 @@
             this.textBox_DateOfTime.Name = "textBox_DateOfTime";
             this.textBox_DateOfTime.Size = new System.Drawing.Size(233, 21);
             this.textBox_DateOfTime.TabIndex = 5;
-            this.textBox_DateOfTime.Text = "1993.04.17";
             // 
             // panel1
             // 
@@ -999,6 +974,16 @@
             this.panel1.Size = new System.Drawing.Size(844, 661);
             this.panel1.TabIndex = 70;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(303, 465);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(50, 16);
+            this.label15.TabIndex = 280;
+            this.label15.Text = "Иное:";
+            // 
             // button_OpenProfile
             // 
             this.button_OpenProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
@@ -1123,7 +1108,6 @@
             this.textBox_OtherСountries.Name = "textBox_OtherСountries";
             this.textBox_OtherСountries.Size = new System.Drawing.Size(252, 56);
             this.textBox_OtherСountries.TabIndex = 271;
-            this.textBox_OtherСountries.Text = "2001.09.11, страна США, цель \r\nвзрыв башен близнецов";
             this.textBox_OtherСountries.WordWrap = false;
             // 
             // label18
@@ -1144,7 +1128,6 @@
             this.textBox_PaymentOfExpenses.Name = "textBox_PaymentOfExpenses";
             this.textBox_PaymentOfExpenses.Size = new System.Drawing.Size(253, 54);
             this.textBox_PaymentOfExpenses.TabIndex = 269;
-            this.textBox_PaymentOfExpenses.Text = "Были китайские трусы, а \r\nкитайской визы небыло";
             this.textBox_PaymentOfExpenses.WordWrap = false;
             // 
             // label17
@@ -1230,7 +1213,6 @@
             this.textBox_ArrivalDate.Name = "textBox_ArrivalDate";
             this.textBox_ArrivalDate.Size = new System.Drawing.Size(253, 22);
             this.textBox_ArrivalDate.TabIndex = 260;
-            this.textBox_ArrivalDate.Text = "2017.07.20";
             // 
             // label10
             // 
@@ -1743,7 +1725,6 @@
             this.textBox_PassportValidUntil.Name = "textBox_PassportValidUntil";
             this.textBox_PassportValidUntil.Size = new System.Drawing.Size(233, 22);
             this.textBox_PassportValidUntil.TabIndex = 207;
-            this.textBox_PassportValidUntil.Text = "2019.02.18";
             // 
             // textBox_DateOfIssue
             // 
@@ -1753,7 +1734,6 @@
             this.textBox_DateOfIssue.Name = "textBox_DateOfIssue";
             this.textBox_DateOfIssue.Size = new System.Drawing.Size(233, 22);
             this.textBox_DateOfIssue.TabIndex = 206;
-            this.textBox_DateOfIssue.Text = "2016.02.18";
             // 
             // groupBox1
             // 
@@ -1795,16 +1775,6 @@
             this.textBox_OccupationOther.Name = "textBox_OccupationOther";
             this.textBox_OccupationOther.Size = new System.Drawing.Size(296, 22);
             this.textBox_OccupationOther.TabIndex = 129;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(303, 465);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 16);
-            this.label15.TabIndex = 280;
-            this.label15.Text = "Иное:";
             // 
             // Form1
             // 
