@@ -1,5 +1,6 @@
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\bin\Release\PrintDocument.exe
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\bin\Release\PrintDocument.pdb
+C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\obj\Release\PrintDocument.csprojResolveAssemblyReference.cache
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\obj\Release\PrintDocument.Form1.resources
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\obj\Release\PrintDocument.Form2.resources
 C:\Users\Andrew\Documents\Visual Studio 2015\Projects\PrintDocument\PrintDocument\obj\Release\PrintDocument.Properties.Resources.resources

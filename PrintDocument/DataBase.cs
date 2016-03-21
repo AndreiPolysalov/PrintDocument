@@ -85,14 +85,16 @@ namespace PrintDocument
 
     public static class DataBase
     {
-        private static string Id = "0";//Хранит ID последней анкеты из базы
-
         public static Form1 f1 = new Form1();
         
 
         public static void SaveToXMLFile()
         {
             f1 = Program.f1;
+
+            if (string.IsNullOrEmpty(f1.TextBox_LastName.Text)) { MessageBox.Show("Поле Фамилия не заполнено"); return; }
+            if (string.IsNullOrEmpty(f1.TextBox_FirstName.Text)) { MessageBox.Show("Поле Имя не заполнено"); return; }
+            if (string.IsNullOrEmpty(f1.textBox_DateOfTime.Text)) { MessageBox.Show("Поле Дата рождения не заполнено"); return; }
 
             if (File.Exists("ProfileDataBase.xml") == false)//У нас нету базы с анкетами, поэтому создаем новую базу
             {
@@ -592,7 +594,7 @@ namespace PrintDocument
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load("ProfileDataBase.xml");
 
-            if(GetCountElements() > 0)
+            if (GetCountElements() > 0)
             {
                 foreach (XmlNode item in xmlDoc.DocumentElement)
                 {
