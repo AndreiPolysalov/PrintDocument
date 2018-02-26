@@ -92,6 +92,7 @@
             this.checkBox_OccupationRetired = new System.Windows.Forms.CheckBox();
             this.textBox_DateOfTime = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_CombineDB = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.button_OpenProfile = new System.Windows.Forms.Button();
             this.button_SaveProfile = new System.Windows.Forms.Button();
@@ -857,6 +858,7 @@
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.CausesValidation = false;
+            this.panel1.Controls.Add(this.button_CombineDB);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.button_OpenProfile);
             this.panel1.Controls.Add(this.button_SaveProfile);
@@ -973,6 +975,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(844, 661);
             this.panel1.TabIndex = 70;
+            // 
+            // button_CombineDB
+            // 
+            this.button_CombineDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button_CombineDB.Location = new System.Drawing.Point(374, 1732);
+            this.button_CombineDB.Name = "button_CombineDB";
+            this.button_CombineDB.Size = new System.Drawing.Size(175, 40);
+            this.button_CombineDB.TabIndex = 281;
+            this.button_CombineDB.Text = "Объединить базы";
+            this.button_CombineDB.UseVisualStyleBackColor = true;
+            this.button_CombineDB.Click += new System.EventHandler(this.button_CombineDB_Click);
             // 
             // label15
             // 
@@ -1978,6 +1991,7 @@
         public System.Windows.Forms.ComboBox comboBox_FIO;
         private System.Windows.Forms.Label label15;
         public System.Windows.Forms.TextBox textBox_OccupationOther;
+        private System.Windows.Forms.Button button_CombineDB;
     }
 }
 

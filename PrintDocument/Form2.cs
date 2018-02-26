@@ -6,6 +6,8 @@ namespace PrintDocument
 {
     public partial class Form2 : Form
     {
+        List<Profile> profiles = new List<Profile>();
+
         public Form2()
         {
             InitializeComponent();
@@ -13,17 +15,87 @@ namespace PrintDocument
 
         public void FillTable()
         {
-            List<Profile> profile = DataBase.GetProfilesFromXMLFile();
+            if(profiles == null || profiles.Count == 0)
+                profiles = DataBase.GetProfilesFromXMLFile(DataBase.dataBaseFileName);
 
-            for (int i = 0; i < profile.Count; i++)
+            if(DataBase.DATA_BASE_LIMIT(profiles.Count)) return;
+
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
+
+            for (int i = 0; i < profiles.Count; i++)
             {
                 dataGridView1.Rows.Add
                     (
-                        profile[i].Id,
-                        profile[i].LastName,
-                        profile[i].FirstName,
-                        profile[i].DateOfTime
+                        profiles[i].Id,
+                        profiles[i].LastName,
+                        profiles[i].FirstName,
+                        profiles[i].DateOfTime
                     );
+            }
+
+            label_CountProfiles.Text = profiles.Count.ToString();
+        }
+
+        private void button_Find_Click(object sender, EventArgs e)
+        {
+            List<Profile> findedProfiles = new List<Profile>();
+
+            string LastName = textBox_FindByLastName.Text.ToUpper();
+            string FirstName = textBox_FindByFirstName.Text.ToUpper();
+
+            if (string.IsNullOrEmpty(LastName) && string.IsNullOrEmpty(FirstName))
+            {
+                FillTable();
+
+                return;
+            }
+            else if (!string.IsNullOrEmpty(LastName) && !string.IsNullOrEmpty(FirstName))//Поиск по фамилии и имени
+            {
+                foreach (var item in profiles)
+                {
+                    if (item.LastName.Contains(LastName) && item.FirstName.Contains(FirstName))
+                        findedProfiles.Add(item);
+                }
+            }
+            else if (!string.IsNullOrEmpty(LastName))//Поиск по фамилии
+            {
+                foreach (var item in profiles)
+                {
+                    if (item.LastName.Contains(LastName))
+                        findedProfiles.Add(item);
+                }
+            }
+            else if (!string.IsNullOrEmpty(FirstName))//Поиск по имени
+            {
+                foreach (var item in profiles)
+                {
+                    if (item.FirstName.Contains(FirstName))
+                        findedProfiles.Add(item);
+                }
+            }
+
+            if (findedProfiles.Count > 0)
+            {
+                dataGridView1.Rows.Clear();
+                dataGridView1.Refresh();
+
+                for (int i = 0; i < findedProfiles.Count; i++)
+                {
+                    dataGridView1.Rows.Add
+                        (
+                            findedProfiles[i].Id,
+                            findedProfiles[i].LastName,
+                            findedProfiles[i].FirstName,
+                            findedProfiles[i].DateOfTime
+                        );
+                }
+
+                label_CountProfiles.Text = findedProfiles.Count.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Такой человек не найден =(");
             }
         }
 
@@ -54,6 +126,10 @@ namespace PrintDocument
                     int idProfile = int.Parse(dataGridView1.Rows[item.Index].Cells[0].Value.ToString());
                     DataBase.RemoveProfile(idProfile);
 
+                    //Получаем профиль который надо удалить из массива
+                    Profile profile = profiles.Find(x => x.Id == idProfile.ToString());
+                    profiles.Remove(profile);
+
                     dataGridView1.Rows.RemoveAt(item.Index);
                 }
             }
@@ -82,7 +158,7 @@ namespace PrintDocument
                 {
                     string idProfile = dataGridView1.Rows[item.Index].Cells[0].Value.ToString();
 
-                    Profile profile = DataBase.GetProfileFromXMLFile(idProfile);
+                    Profile profile = DataBase.GetProfileFromXMLFile(idProfile, DataBase.dataBaseFileName);
                     
                     f1.TextBox_LastName.Text = profile.LastName;
                     f1.TextBox_FirstName.Text = profile.FirstName;
@@ -179,6 +255,8 @@ namespace PrintDocument
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
+            profiles = null;
+
             Program.OpenForm1();
         }
     }

@@ -59,14 +59,14 @@ namespace PrintDocument
 
         private void button_OpenProfile_Click(object sender, EventArgs e)
         {
-            if (File.Exists("ProfileDataBase.xml") == false)
+            if (File.Exists(DataBase.dataBaseFileName) == false)
             {
                 MessageBox.Show("Файл с базой данных не найден.");
                 return;
             }
             else
             {
-                if (DataBase.GetCountElements() > 0)
+                if (DataBase.GetCountElements(DataBase.dataBaseFileName) > 0)
                 {
                     Form2 f2 = new Form2();
                     f2.FillTable();
@@ -88,6 +88,10 @@ namespace PrintDocument
             DataBase.SaveToXMLFile();
         }
 
+        private void button_CombineDB_Click(object sender, EventArgs e)
+        {
+            DataBase.CombineDataBaseFiles();
+        }
 
 
         public void PrintPackage(object sender, PrintPageEventArgs e)

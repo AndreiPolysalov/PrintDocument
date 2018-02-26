@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -85,8 +86,10 @@ namespace PrintDocument
 
     public static class DataBase
     {
+        public static string dataBaseFileName = "ProfileDataBase.xml";
+
         public static Form1 f1 = new Form1();
-        
+
 
         public static void SaveToXMLFile()
         {
@@ -96,9 +99,9 @@ namespace PrintDocument
             if (string.IsNullOrEmpty(f1.TextBox_FirstName.Text)) { MessageBox.Show("Поле Имя не заполнено"); return; }
             if (string.IsNullOrEmpty(f1.textBox_DateOfTime.Text)) { MessageBox.Show("Поле Дата рождения не заполнено"); return; }
 
-            if (File.Exists("ProfileDataBase.xml") == false)//У нас нету базы с анкетами, поэтому создаем новую базу
+            if (File.Exists(dataBaseFileName) == false)//У нас нету базы с анкетами, поэтому создаем новую базу
             {
-                XmlTextWriter writer = new XmlTextWriter("ProfileDataBase.xml", Encoding.UTF8) { Formatting = Formatting.Indented };
+                XmlTextWriter writer = new XmlTextWriter(dataBaseFileName, Encoding.UTF8) { Formatting = Formatting.Indented };
                 writer.WriteStartDocument();
 
                 writer.WriteStartElement("Profiles");
@@ -203,7 +206,7 @@ namespace PrintDocument
             else//У нас уже есть база с анкетами, поэтому надо добавить туда новую анкету либо обновить существующую
             {
                 List<Profile> profiles = new List<Profile>();
-                profiles = GetProfilesFromXMLFile();
+                profiles = GetProfilesFromXMLFile(dataBaseFileName);
 
                 //Ищем в базе совпадения по фамилии и имени
                 string findMatchID = FindMatch();
@@ -408,7 +411,7 @@ namespace PrintDocument
                 }
 
                 //создаем новую базу и записываем в нее ранее полученные анкеты
-                XmlTextWriter writer = new XmlTextWriter("ProfileDataBase.xml", Encoding.UTF8) { Formatting = Formatting.Indented };
+                XmlTextWriter writer = new XmlTextWriter(dataBaseFileName, Encoding.UTF8) { Formatting = Formatting.Indented };
                 writer.WriteStartDocument();
 
                 writer.WriteStartElement("Profiles");
@@ -493,19 +496,158 @@ namespace PrintDocument
             }
         }
 
+        public static void CombineDataBaseFiles()
+        {
+            if (!File.Exists(dataBaseFileName))
+            {
+                MessageBox.Show("Файл " + dataBaseFileName + " не найден!");
+            }
+            else
+            {
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                openFileDialog1.Filter = "xml files (*.xml)|*.xml";
+                openFileDialog1.RestoreDirectory = true;
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string pathToFile = openFileDialog1.InitialDirectory + openFileDialog1.FileName;
+
+                    List<Profile> dataBase1 = GetProfilesFromXMLFile(dataBaseFileName);//В эту базу будут добавляться профили из базы dataBase2
+                    List<Profile> dataBase2 = GetProfilesFromXMLFile(pathToFile);//Из этой базы будут браться новые профили и вставляться в базу dataBase1
+
+                    if (DATA_BASE_LIMIT(dataBase1.Count)) return;
+
+                    for (int i = 0; i < dataBase2.Count; i++)
+                    {
+                        //Если True значит такой же профиль уже имеется в базе dataBase1
+                        bool similarProfileIsFound = false;
+
+                        for (int j = 0; j < dataBase1.Count; j++)
+                        {
+                            if (dataBase1[j].LastName == dataBase2[i].LastName &&
+                                dataBase1[j].FirstName == dataBase2[i].FirstName &&
+                                dataBase1[j].DateOfTime == dataBase2[i].DateOfTime &&
+                                dataBase1[j].OrdinaryPassportNumber == dataBase2[i].OrdinaryPassportNumber &&
+                                dataBase1[j].HomeMobileNumber == dataBase2[i].HomeMobileNumber &&
+                                dataBase1[j].ChPNumberMobilePhone == dataBase2[i].ChPNumberMobilePhone)
+                            {
+                                similarProfileIsFound = true;
+                                break;
+                            }
+                        }
+
+                        if (similarProfileIsFound == false)
+                        {
+                            dataBase1.Add(dataBase2[i]);
+                        }
+                    }
+
+                    //Заново назначаем всем профилям ID-шники, чтобы все было по красоте.
+                    for (int i = 0; i < dataBase1.Count; i++)
+                    {
+                        dataBase1[i].Id = (i + 1).ToString();
+                    }
+
+                    //Перезаписываем XML файл
+                    XmlTextWriter writer = new XmlTextWriter(dataBaseFileName, Encoding.UTF8) { Formatting = Formatting.Indented };
+                    writer.WriteStartDocument();
+
+                    writer.WriteStartElement("Profiles");
+                    {
+                        foreach (Profile item in dataBase1)
+                        {
+                            writer.WriteStartElement("Profile");
+                            {
+                                writer.WriteAttributeString("ID", item.Id);
+                                writer.WriteAttributeString("LastName", item.LastName);
+                                writer.WriteAttributeString("FirstName", item.FirstName);
+                                writer.WriteAttributeString("Gender", item.Gender);
+                                writer.WriteAttributeString("DateOfTime", item.DateOfTime);
+                                writer.WriteAttributeString("CityRegionCountry", item.CityRegionCountry);
+                                writer.WriteAttributeString("OrdinaryPassportNumber", item.OrdinaryPassportNumber);
+
+                                writer.WriteAttributeString("PassportNumber", item.PassportNumber);
+                                writer.WriteAttributeString("DateOfIssue", item.DateOfIssue);
+                                writer.WriteAttributeString("PassportValidUntil", item.PassportValidUntil);
+                                writer.WriteAttributeString("PassportPlaceOfIssue", item.PassportPlaceOfIssue);
+
+                                writer.WriteAttributeString("OccupationOtherCompanies", item.OccupationOtherCompanies);
+                                writer.WriteAttributeString("OccupationStudent", item.OccupationStudent);
+                                writer.WriteAttributeString("OccupationPrivateEnterpreneuer", item.OccupationPrivateEnterpreneuer);
+                                writer.WriteAttributeString("OccupationRetired", item.OccupationRetired);
+                                writer.WriteAttributeString("OccupationOther", item.OccupationOther);
+
+                                writer.WriteAttributeString("Education", item.Education);
+
+                                writer.WriteAttributeString("WorkName", item.WorkName);
+                                writer.WriteAttributeString("WorkAddress", item.WorkAddress);
+                                writer.WriteAttributeString("WorkPhoneNumber", item.WorkPhoneNumber);
+                                writer.WriteAttributeString("WorkPostcode", item.WorkPostcode);
+
+                                writer.WriteAttributeString("HomeAddress", item.HomeAddress);
+                                writer.WriteAttributeString("HomePostcode", item.HomePostcode);
+                                writer.WriteAttributeString("HomeMobileNumber", item.HomeMobileNumber);
+
+                                writer.WriteAttributeString("FamilyStatus", item.FamilyStatus);
+
+                                writer.WriteAttributeString("Row1FIO", item.Row1FIO);
+                                writer.WriteAttributeString("Row1Citizenship", item.Row1Citizenship);
+                                writer.WriteAttributeString("Row1Profession", item.Row1Profession);
+                                writer.WriteAttributeString("Row1Relation", item.Row1Relation);
+                                writer.WriteAttributeString("Row2FIO", item.Row2FIO);
+                                writer.WriteAttributeString("Row2Citizenship", item.Row2Citizenship);
+                                writer.WriteAttributeString("Row2Profession", item.Row2Profession);
+                                writer.WriteAttributeString("Row2Relation", item.Row2Relation);
+
+                                writer.WriteAttributeString("ChPFIO", item.ChPFIO);
+                                writer.WriteAttributeString("ChPNumberMobilePhone", item.ChPNumberMobilePhone);
+                                writer.WriteAttributeString("ChPRelation", item.ChPRelation);
+
+                                writer.WriteAttributeString("TargetTourism", item.TargetTourism);
+                                writer.WriteAttributeString("TargetBusiness", item.TargetBusiness);
+
+                                writer.WriteAttributeString("Visit", item.Visit);
+
+                                writer.WriteAttributeString("Service", item.Service);
+
+                                writer.WriteAttributeString("ArrivalDate", item.ArrivalDate);
+
+                                writer.WriteAttributeString("Tenure", item.Tenure);
+
+                                writer.WriteAttributeString("Pays", item.Pays);
+
+                                writer.WriteAttributeString("PaymentOfExpenses", item.PaymentOfExpenses);
+
+                                writer.WriteAttributeString("OtherСountries", item.OtherСountries);
+
+                                writer.WriteAttributeString("FIO", item.FIO);
+                            }
+                            writer.WriteEndElement();
+                        }
+                    }
+                    writer.WriteEndElement();
+
+                    writer.WriteEndDocument();
+                    writer.Close();
+
+                    MessageBox.Show("Базы объединены.\n Анкет в базе: " + dataBase1.Count);
+                }
+            }
+        }
+
         public static void RemoveProfile(int IDProfile)
         {
-            List<Profile> profiles = GetProfilesFromXMLFile();
+            List<Profile> profiles = GetProfilesFromXMLFile(dataBaseFileName);
 
             //создаем новую базу
-            XmlTextWriter writer = new XmlTextWriter("ProfileDataBase.xml", Encoding.UTF8) { Formatting = Formatting.Indented };
+            XmlTextWriter writer = new XmlTextWriter(dataBaseFileName, Encoding.UTF8) { Formatting = Formatting.Indented };
             writer.WriteStartDocument();
 
             writer.WriteStartElement("Profiles");
             { 
                 foreach (Profile item in profiles)
                 {
-                    //За счет этой проверки мы исключаем из записи в файл определенную анкету
+                    //Этой проверкой мы исключаем из записи в файл определенную анкету
                     if (item.Id == IDProfile.ToString()) continue;
 
                     writer.WriteStartElement("Profile");
@@ -587,14 +729,14 @@ namespace PrintDocument
         /// Получаем все анкеты из базы.
         /// </summary>
         /// <returns></returns>
-        public static List<Profile> GetProfilesFromXMLFile()
+        public static List<Profile> GetProfilesFromXMLFile(string XMLFileName)
         {
             List<Profile> profiles = new List<Profile>();
 
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("ProfileDataBase.xml");
+            xmlDoc.Load(XMLFileName);
 
-            if (GetCountElements() > 0)
+            if (GetCountElements(XMLFileName) > 0)
             {
                 foreach (XmlNode item in xmlDoc.DocumentElement)
                 {
@@ -674,14 +816,14 @@ namespace PrintDocument
         /// Получаем из базы одну определенную анкету по ID номеру.
         /// </summary>
         /// <returns></returns>
-        public static Profile GetProfileFromXMLFile(string ID)
+        public static Profile GetProfileFromXMLFile(string ID, string XMLFileName)
         {
             Profile profile = new Profile();
 
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("ProfileDataBase.xml");
+            xmlDoc.Load(XMLFileName);
 
-            if (GetCountElements() > 0)
+            if (GetCountElements(XMLFileName) > 0)
             {
                 foreach (XmlNode item in xmlDoc.DocumentElement)
                 {
@@ -765,10 +907,10 @@ namespace PrintDocument
         /// Возвращает кол-во сохраненных анкет в файле
         /// </summary>
         /// <returns></returns>
-        public static int GetCountElements()
+        public static int GetCountElements(string XMLFileName)
         {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("ProfileDataBase.xml");
+            xmlDoc.Load(XMLFileName);
 
             XmlNodeList elemList = xmlDoc.GetElementsByTagName("Profile");
 
@@ -782,7 +924,7 @@ namespace PrintDocument
         private static string FindMatch()
         {
             f1 = Program.f1;
-            List<Profile> profiles = GetProfilesFromXMLFile();
+            List<Profile> profiles = GetProfilesFromXMLFile(dataBaseFileName);
             string result = "0";
 
             for (int i = 0; i < profiles.Count; i++)
@@ -815,10 +957,10 @@ namespace PrintDocument
         {
             get
             {
-                int lastID = 1;
+                int lastID = -1;
 
                 List<Profile> profiles = new List<Profile>();
-                profiles = GetProfilesFromXMLFile();
+                profiles = GetProfilesFromXMLFile(dataBaseFileName);
 
                 foreach (Profile item in profiles)
                 {
@@ -827,6 +969,23 @@ namespace PrintDocument
 
                 return lastID;
             }
+        }
+
+        public static bool DATA_BASE_LIMIT(int baseLenght)
+        {
+            if (baseLenght >= 14991 && baseLenght < 15091)
+            {
+                MessageBox.Show("Буфер данных скоро будет переполнен и чтение данных из базы будет невозможным! \nРекомендуется обратитесь к разработчику.", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return false;
+            }
+            else if (baseLenght >= 15092)
+            {
+                MessageBox.Show("Буфер переполнен, чтение данных из базы невозможно! \nДля решения данной проблемы обратитесь к разработчику.", "Ошибка чтения", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return true;
+            }
+            else return false;
         }
     }
 }
