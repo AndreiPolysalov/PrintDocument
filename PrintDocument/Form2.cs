@@ -232,6 +232,8 @@ namespace PrintDocument
 
                     f1.comboBox_Tenure.SelectedIndex = int.Parse(profile.Tenure);
 
+                    f1.comboBox_Hotel.SelectedIndex = int.Parse(profile.Hotel);
+
                     if (profile.Pays == "0") { f1.radioButton_PaysApplicant.Checked = false; f1.radioButton_PaysParents.Checked = false; }
                     else if (profile.Pays == "1") f1.radioButton_PaysApplicant.Checked = true;
                     else if (profile.Pays == "2") f1.radioButton_PaysParents.Checked = true;

@@ -186,6 +186,8 @@ namespace PrintDocument
 
             if (string.IsNullOrEmpty(comboBox_Tenure.Text)) { MessageBox.Show("В пункте 2.5 не указан срок пребывания в КНР"); return false; }
 
+            if (string.IsNullOrEmpty(comboBox_Hotel.Text)) { MessageBox.Show("В пункте 2.6 не выбран отель"); return false; }
+
             if (!radioButton_PaysApplicant.Checked && !radioButton_PaysParents.Checked) { MessageBox.Show("В пункте 2.7 ни чего не выбрано"); return false; }
 
             if (string.IsNullOrEmpty(comboBox_FIO.Text)) { MessageBox.Show("В пункте 5.1 не указан срок пребывания в КНР"); return false; }
@@ -302,9 +304,18 @@ namespace PrintDocument
 
             //Маршрут в КНР
             e.Graphics.DrawString(textBox_ArrivalDate.Text, new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 330, 175);//Дата стр 1
-            e.Graphics.DrawString("№1, Nanheyan street," + "\n" + "Beijing 100006", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 164);//Адрес стр 1
-            e.Graphics.DrawString("Jade Garden Hotel,", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 216);//Адрес стр 2
-            e.Graphics.DrawString("010 – 5858 0909", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 258);//Адрес стр 3
+            if (comboBox_Hotel.Text == "Jade Garden")//Первый отель
+            {
+                e.Graphics.DrawString("№1, Nanheyan street," + "\n" + "Beijing 100006", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 164);//Адрес стр 1
+                e.Graphics.DrawString("Jade Garden Hotel,", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 216);//Адрес стр 2
+                e.Graphics.DrawString("010 – 5858 0909", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 258);//Адрес стр 3
+            }
+            else if (comboBox_Hotel.Text == "Jianguo Hotel Shanghai")//Второй отель
+            {
+                e.Graphics.DrawString("439, North Caoxi Road," + "\n" + "Shanghai China", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 164);//Адрес стр 1
+                e.Graphics.DrawString("Jianguo Hotel Shanghai,", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 216);//Адрес стр 2
+                e.Graphics.DrawString("(+86) 216 43 99 299", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 530, 258);//Адрес стр 3
+            }
 
             //Кто оплачивает расходы заявителя
             if (radioButton_PaysApplicant.Checked) e.Graphics.DrawString("Заявитель", new Font("Arial", 11, FontStyle.Bold), Brushes.Black, 600, 392);

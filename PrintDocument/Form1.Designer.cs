@@ -170,6 +170,10 @@
             this.radioButton__GenderWoman = new System.Windows.Forms.RadioButton();
             this.radioButton_GenderMan = new System.Windows.Forms.RadioButton();
             this.textBox_OccupationOther = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.comboBox_Hotel = new System.Windows.Forms.ComboBox();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -206,6 +210,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             this.SuspendLayout();
             // 
             // printPreviewDialog1
@@ -858,6 +863,7 @@
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.CausesValidation = false;
+            this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.button_CombineDB);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.button_OpenProfile);
@@ -876,6 +882,8 @@
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.groupBox6);
             this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.comboBox_Hotel);
+            this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.comboBox_Tenure);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.textBox_ArrivalDate);
@@ -890,6 +898,7 @@
             this.panel1.Controls.Add(this.pictureBox29);
             this.panel1.Controls.Add(this.pictureBox28);
             this.panel1.Controls.Add(this.pictureBox27);
+            this.panel1.Controls.Add(this.pictureBox25);
             this.panel1.Controls.Add(this.pictureBox26);
             this.panel1.Controls.Add(this.pictureBox24);
             this.panel1.Controls.Add(this.pictureBox23);
@@ -979,7 +988,7 @@
             // button_CombineDB
             // 
             this.button_CombineDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button_CombineDB.Location = new System.Drawing.Point(374, 1732);
+            this.button_CombineDB.Location = new System.Drawing.Point(369, 1814);
             this.button_CombineDB.Name = "button_CombineDB";
             this.button_CombineDB.Size = new System.Drawing.Size(175, 40);
             this.button_CombineDB.TabIndex = 281;
@@ -1000,7 +1009,7 @@
             // button_OpenProfile
             // 
             this.button_OpenProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button_OpenProfile.Location = new System.Drawing.Point(12, 1732);
+            this.button_OpenProfile.Location = new System.Drawing.Point(7, 1814);
             this.button_OpenProfile.Name = "button_OpenProfile";
             this.button_OpenProfile.Size = new System.Drawing.Size(175, 40);
             this.button_OpenProfile.TabIndex = 279;
@@ -1011,7 +1020,7 @@
             // button_SaveProfile
             // 
             this.button_SaveProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button_SaveProfile.Location = new System.Drawing.Point(193, 1732);
+            this.button_SaveProfile.Location = new System.Drawing.Point(188, 1814);
             this.button_SaveProfile.Name = "button_SaveProfile";
             this.button_SaveProfile.Size = new System.Drawing.Size(175, 40);
             this.button_SaveProfile.TabIndex = 278;
@@ -1023,7 +1032,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(223, 1789);
+            this.label14.Location = new System.Drawing.Point(218, 1871);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(414, 16);
             this.label14.TabIndex = 277;
@@ -1033,7 +1042,7 @@
             // 
             this.checkBox_PageForPrint4.AutoSize = true;
             this.checkBox_PageForPrint4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint4.Location = new System.Drawing.Point(554, 1813);
+            this.checkBox_PageForPrint4.Location = new System.Drawing.Point(549, 1895);
             this.checkBox_PageForPrint4.Name = "checkBox_PageForPrint4";
             this.checkBox_PageForPrint4.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint4.TabIndex = 276;
@@ -1044,7 +1053,7 @@
             // 
             this.checkBox_PageForPrint3.AutoSize = true;
             this.checkBox_PageForPrint3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint3.Location = new System.Drawing.Point(438, 1813);
+            this.checkBox_PageForPrint3.Location = new System.Drawing.Point(433, 1895);
             this.checkBox_PageForPrint3.Name = "checkBox_PageForPrint3";
             this.checkBox_PageForPrint3.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint3.TabIndex = 276;
@@ -1057,7 +1066,7 @@
             this.checkBox_PageForPrint2.Checked = true;
             this.checkBox_PageForPrint2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_PageForPrint2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint2.Location = new System.Drawing.Point(322, 1813);
+            this.checkBox_PageForPrint2.Location = new System.Drawing.Point(317, 1895);
             this.checkBox_PageForPrint2.Name = "checkBox_PageForPrint2";
             this.checkBox_PageForPrint2.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint2.TabIndex = 276;
@@ -1070,7 +1079,7 @@
             this.checkBox_PageForPrint1.Checked = true;
             this.checkBox_PageForPrint1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_PageForPrint1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox_PageForPrint1.Location = new System.Drawing.Point(206, 1813);
+            this.checkBox_PageForPrint1.Location = new System.Drawing.Point(201, 1895);
             this.checkBox_PageForPrint1.Name = "checkBox_PageForPrint1";
             this.checkBox_PageForPrint1.Size = new System.Drawing.Size(111, 20);
             this.checkBox_PageForPrint1.TabIndex = 276;
@@ -1080,7 +1089,7 @@
             // button_PrintPreview
             // 
             this.button_PrintPreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_PrintPreview.Location = new System.Drawing.Point(12, 1793);
+            this.button_PrintPreview.Location = new System.Drawing.Point(7, 1875);
             this.button_PrintPreview.Name = "button_PrintPreview";
             this.button_PrintPreview.Size = new System.Drawing.Size(175, 40);
             this.button_PrintPreview.TabIndex = 275;
@@ -1098,7 +1107,7 @@
             "Дмитрий",
             "Кристина",
             "Елена"});
-            this.comboBox_FIO.Location = new System.Drawing.Point(303, 1692);
+            this.comboBox_FIO.Location = new System.Drawing.Point(305, 1766);
             this.comboBox_FIO.Name = "comboBox_FIO";
             this.comboBox_FIO.Size = new System.Drawing.Size(252, 21);
             this.comboBox_FIO.TabIndex = 273;
@@ -1107,7 +1116,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(3, 1693);
+            this.label19.Location = new System.Drawing.Point(3, 1767);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(178, 16);
             this.label19.TabIndex = 272;
@@ -1116,7 +1125,7 @@
             // textBox_OtherСountries
             // 
             this.textBox_OtherСountries.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_OtherСountries.Location = new System.Drawing.Point(303, 1619);
+            this.textBox_OtherСountries.Location = new System.Drawing.Point(304, 1695);
             this.textBox_OtherСountries.Multiline = true;
             this.textBox_OtherСountries.Name = "textBox_OtherСountries";
             this.textBox_OtherСountries.Size = new System.Drawing.Size(252, 56);
@@ -1127,7 +1136,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(3, 1620);
+            this.label18.Location = new System.Drawing.Point(4, 1696);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(260, 48);
             this.label18.TabIndex = 270;
@@ -1136,7 +1145,7 @@
             // textBox_PaymentOfExpenses
             // 
             this.textBox_PaymentOfExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_PaymentOfExpenses.Location = new System.Drawing.Point(302, 1550);
+            this.textBox_PaymentOfExpenses.Location = new System.Drawing.Point(303, 1624);
             this.textBox_PaymentOfExpenses.Multiline = true;
             this.textBox_PaymentOfExpenses.Name = "textBox_PaymentOfExpenses";
             this.textBox_PaymentOfExpenses.Size = new System.Drawing.Size(253, 54);
@@ -1147,7 +1156,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(3, 1551);
+            this.label17.Location = new System.Drawing.Point(4, 1625);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(240, 48);
             this.label17.TabIndex = 268;
@@ -1157,7 +1166,7 @@
             // 
             this.groupBox6.Controls.Add(this.radioButton_PaysParents);
             this.groupBox6.Controls.Add(this.radioButton_PaysApplicant);
-            this.groupBox6.Location = new System.Drawing.Point(302, 1490);
+            this.groupBox6.Location = new System.Drawing.Point(302, 1557);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(253, 38);
             this.groupBox6.TabIndex = 267;
@@ -1189,7 +1198,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(3, 1490);
+            this.label16.Location = new System.Drawing.Point(4, 1547);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(220, 48);
             this.label16.TabIndex = 266;
@@ -1379,7 +1388,7 @@
             // pictureBox29
             // 
             this.pictureBox29.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox29.Location = new System.Drawing.Point(1, 1723);
+            this.pictureBox29.Location = new System.Drawing.Point(-2, 1795);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(820, 3);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1389,7 +1398,7 @@
             // pictureBox28
             // 
             this.pictureBox28.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox28.Location = new System.Drawing.Point(0, 1681);
+            this.pictureBox28.Location = new System.Drawing.Point(-13, 1757);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(820, 3);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1399,7 +1408,7 @@
             // pictureBox27
             // 
             this.pictureBox27.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox27.Location = new System.Drawing.Point(0, 1610);
+            this.pictureBox27.Location = new System.Drawing.Point(0, 1686);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(820, 3);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1409,7 +1418,7 @@
             // pictureBox26
             // 
             this.pictureBox26.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox26.Location = new System.Drawing.Point(0, 1541);
+            this.pictureBox26.Location = new System.Drawing.Point(3, 1531);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(820, 3);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1651,7 +1660,7 @@
             this.pictureBox1.Image = global::PrintDocument.Properties.Resources.BlackLine;
             this.pictureBox1.Location = new System.Drawing.Point(293, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(3, 1720);
+            this.pictureBox1.Size = new System.Drawing.Size(3, 1795);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 213;
             this.pictureBox1.TabStop = false;
@@ -1789,6 +1798,47 @@
             this.textBox_OccupationOther.Size = new System.Drawing.Size(296, 22);
             this.textBox_OccupationOther.TabIndex = 129;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(4, 1501);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(77, 16);
+            this.label20.TabIndex = 261;
+            this.label20.Text = "2.6 Отель";
+            // 
+            // comboBox_Hotel
+            // 
+            this.comboBox_Hotel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Hotel.FormattingEnabled = true;
+            this.comboBox_Hotel.Items.AddRange(new object[] {
+            "Jade Garden",
+            "Jianguo Hotel Shanghai"});
+            this.comboBox_Hotel.Location = new System.Drawing.Point(305, 1499);
+            this.comboBox_Hotel.Name = "comboBox_Hotel";
+            this.comboBox_Hotel.Size = new System.Drawing.Size(250, 21);
+            this.comboBox_Hotel.TabIndex = 262;
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.Image = global::PrintDocument.Properties.Resources.BlackLine;
+            this.pictureBox25.Location = new System.Drawing.Point(0, 1615);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(820, 3);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox25.TabIndex = 233;
+            this.pictureBox25.TabStop = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(746, 1903);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(72, 13);
+            this.label21.TabIndex = 282;
+            this.label21.Text = "Version: 1.2.0";
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(844, 661);
@@ -1845,6 +1895,7 @@
             this.groupBox5.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1992,6 +2043,10 @@
         private System.Windows.Forms.Label label15;
         public System.Windows.Forms.TextBox textBox_OccupationOther;
         private System.Windows.Forms.Button button_CombineDB;
+        public System.Windows.Forms.ComboBox comboBox_Hotel;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.PictureBox pictureBox25;
+        private System.Windows.Forms.Label label21;
     }
 }
 

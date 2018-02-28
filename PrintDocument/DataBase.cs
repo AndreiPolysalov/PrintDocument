@@ -75,6 +75,8 @@ namespace PrintDocument
 
         public string Tenure;
 
+        public string Hotel;
+
         public string Pays;
 
         public string PaymentOfExpenses;
@@ -182,6 +184,8 @@ namespace PrintDocument
                         writer.WriteAttributeString("ArrivalDate", f1.textBox_ArrivalDate.Text);
 
                         writer.WriteAttributeString("Tenure", f1.comboBox_Tenure.SelectedIndex.ToString());
+
+                        writer.WriteAttributeString("Hotel", f1.comboBox_Hotel.SelectedIndex.ToString());
 
                         string pays = "0";
                         if (f1.radioButton_PaysApplicant.Checked) pays = "1";
@@ -298,6 +302,8 @@ namespace PrintDocument
 
                                 profiles[i].Tenure = f1.comboBox_Tenure.SelectedIndex.ToString();
 
+                                profiles[i].Hotel = f1.comboBox_Hotel.SelectedIndex.ToString();
+
                                 string pays = "0";
                                 if (f1.radioButton_PaysApplicant.Checked) pays = "1";
                                 if (f1.radioButton_PaysParents.Checked) pays = "2";
@@ -400,6 +406,8 @@ namespace PrintDocument
 
                         Tenure = f1.comboBox_Tenure.SelectedIndex.ToString(),
 
+                        Hotel = f1.comboBox_Hotel.SelectedIndex.ToString(),
+
                         Pays = pays,
 
                         PaymentOfExpenses = f1.textBox_PaymentOfExpenses.Text,
@@ -475,6 +483,8 @@ namespace PrintDocument
                             writer.WriteAttributeString("ArrivalDate", item.ArrivalDate);
 
                             writer.WriteAttributeString("Tenure", item.Tenure);
+
+                            writer.WriteAttributeString("Hotel", item.Hotel);
 
                             writer.WriteAttributeString("Pays", item.Pays);
 
@@ -614,6 +624,8 @@ namespace PrintDocument
 
                                 writer.WriteAttributeString("Tenure", item.Tenure);
 
+                                writer.WriteAttributeString("Hotel", item.Hotel);
+
                                 writer.WriteAttributeString("Pays", item.Pays);
 
                                 writer.WriteAttributeString("PaymentOfExpenses", item.PaymentOfExpenses);
@@ -708,6 +720,8 @@ namespace PrintDocument
 
                         writer.WriteAttributeString("Tenure", item.Tenure);
 
+                        writer.WriteAttributeString("Hotel", item.Hotel);
+
                         writer.WriteAttributeString("Pays", item.Pays);
 
                         writer.WriteAttributeString("PaymentOfExpenses", item.PaymentOfExpenses);
@@ -798,6 +812,8 @@ namespace PrintDocument
 
                         Tenure = item.Attributes["Tenure"].Value,
 
+                        Hotel = item.Attributes["Hotel"].Value,
+
                         Pays = item.Attributes["Pays"].Value,
 
                         PaymentOfExpenses = item.Attributes["PaymentOfExpenses"].Value,
@@ -886,6 +902,8 @@ namespace PrintDocument
                             ArrivalDate = item.Attributes["ArrivalDate"].Value,
 
                             Tenure = item.Attributes["Tenure"].Value,
+
+                            Hotel = item.Attributes["Hotel"].Value,
 
                             Pays = item.Attributes["Pays"].Value,
 
