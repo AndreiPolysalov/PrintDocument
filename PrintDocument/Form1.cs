@@ -93,6 +93,15 @@ namespace PrintDocument
             DataBase.CombineDataBaseFiles();
         }
 
+        private void comboBox_Hotel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Если мы выбрали последний эллемент из списка, значит, мы выбрали пустое поле.
+            if (comboBox_Hotel.SelectedIndex == comboBox_Hotel.Items.Count - 1)
+                //Назначаем -1 чтобы при сохранении этого поля в файл, он сохранился под номером -1,
+                //в дальнейшем это поможет без проблем добавлять новые отели в список, а также сохранять и загружать их.
+                comboBox_Hotel.SelectedIndex = -1;
+        }
+
 
         public void PrintPackage(object sender, PrintPageEventArgs e)
         {
@@ -186,11 +195,9 @@ namespace PrintDocument
 
             if (string.IsNullOrEmpty(comboBox_Tenure.Text)) { MessageBox.Show("В пункте 2.5 не указан срок пребывания в КНР"); return false; }
 
-            if (string.IsNullOrEmpty(comboBox_Hotel.Text)) { MessageBox.Show("В пункте 2.6 не выбран отель"); return false; }
-
             if (!radioButton_PaysApplicant.Checked && !radioButton_PaysParents.Checked) { MessageBox.Show("В пункте 2.7 ни чего не выбрано"); return false; }
 
-            if (string.IsNullOrEmpty(comboBox_FIO.Text)) { MessageBox.Show("В пункте 5.1 не указан срок пребывания в КНР"); return false; }
+            if (string.IsNullOrEmpty(comboBox_FIO.Text)) { MessageBox.Show("В пункте 5.1 не выбран представитель"); return false; }
 
             return true;
         }

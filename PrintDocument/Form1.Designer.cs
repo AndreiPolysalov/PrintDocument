@@ -92,6 +92,7 @@
             this.checkBox_OccupationRetired = new System.Windows.Forms.CheckBox();
             this.textBox_DateOfTime = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
             this.button_CombineDB = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.button_OpenProfile = new System.Windows.Forms.Button();
@@ -112,6 +113,8 @@
             this.radioButton_PaysParents = new System.Windows.Forms.RadioButton();
             this.radioButton_PaysApplicant = new System.Windows.Forms.RadioButton();
             this.label16 = new System.Windows.Forms.Label();
+            this.comboBox_Hotel = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.comboBox_Tenure = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox_ArrivalDate = new System.Windows.Forms.TextBox();
@@ -132,6 +135,7 @@
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
@@ -170,10 +174,6 @@
             this.radioButton__GenderWoman = new System.Windows.Forms.RadioButton();
             this.radioButton_GenderMan = new System.Windows.Forms.RadioButton();
             this.textBox_OccupationOther = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.comboBox_Hotel = new System.Windows.Forms.ComboBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -182,6 +182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
@@ -210,7 +211,6 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             this.SuspendLayout();
             // 
             // printPreviewDialog1
@@ -985,6 +985,15 @@
             this.panel1.Size = new System.Drawing.Size(844, 661);
             this.panel1.TabIndex = 70;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(746, 1903);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(72, 13);
+            this.label21.TabIndex = 282;
+            this.label21.Text = "Version: 1.3.0";
+            // 
             // button_CombineDB
             // 
             this.button_CombineDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
@@ -1204,6 +1213,30 @@
             this.label16.TabIndex = 266;
             this.label16.Text = "2.7 Кто оплачивает расходы \r\nзаявителя на проезд и во \r\nвремя пребывания в КНР?";
             // 
+            // comboBox_Hotel
+            // 
+            this.comboBox_Hotel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Hotel.FormattingEnabled = true;
+            this.comboBox_Hotel.Items.AddRange(new object[] {
+            "Jade Garden",
+            "Jianguo Hotel Shanghai",
+            "       "});
+            this.comboBox_Hotel.Location = new System.Drawing.Point(305, 1499);
+            this.comboBox_Hotel.Name = "comboBox_Hotel";
+            this.comboBox_Hotel.Size = new System.Drawing.Size(250, 21);
+            this.comboBox_Hotel.TabIndex = 262;
+            this.comboBox_Hotel.SelectedIndexChanged += new System.EventHandler(this.comboBox_Hotel_SelectedIndexChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(4, 1501);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(77, 16);
+            this.label20.TabIndex = 261;
+            this.label20.Text = "2.6 Отель";
+            // 
             // comboBox_Tenure
             // 
             this.comboBox_Tenure.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1414,6 +1447,16 @@
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox27.TabIndex = 233;
             this.pictureBox27.TabStop = false;
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.Image = global::PrintDocument.Properties.Resources.BlackLine;
+            this.pictureBox25.Location = new System.Drawing.Point(0, 1615);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(820, 3);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox25.TabIndex = 233;
+            this.pictureBox25.TabStop = false;
             // 
             // pictureBox26
             // 
@@ -1798,47 +1841,6 @@
             this.textBox_OccupationOther.Size = new System.Drawing.Size(296, 22);
             this.textBox_OccupationOther.TabIndex = 129;
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(4, 1501);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(77, 16);
-            this.label20.TabIndex = 261;
-            this.label20.Text = "2.6 Отель";
-            // 
-            // comboBox_Hotel
-            // 
-            this.comboBox_Hotel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_Hotel.FormattingEnabled = true;
-            this.comboBox_Hotel.Items.AddRange(new object[] {
-            "Jade Garden",
-            "Jianguo Hotel Shanghai"});
-            this.comboBox_Hotel.Location = new System.Drawing.Point(305, 1499);
-            this.comboBox_Hotel.Name = "comboBox_Hotel";
-            this.comboBox_Hotel.Size = new System.Drawing.Size(250, 21);
-            this.comboBox_Hotel.TabIndex = 262;
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.Image = global::PrintDocument.Properties.Resources.BlackLine;
-            this.pictureBox25.Location = new System.Drawing.Point(0, 1615);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(820, 3);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox25.TabIndex = 233;
-            this.pictureBox25.TabStop = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(746, 1903);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(72, 13);
-            this.label21.TabIndex = 282;
-            this.label21.Text = "Version: 1.2.0";
-            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(844, 661);
@@ -1864,6 +1866,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
@@ -1895,7 +1898,6 @@
             this.groupBox5.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
